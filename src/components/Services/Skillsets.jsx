@@ -6,8 +6,6 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { skillsetTranslations } from "@/lib/SkillsetTranslation";
 import styles from "./Skillsets.module.css";
-
-// Import Lottie animations
 import bigData from "@/assets/big.json";
 import customIntegration from "@/assets/custom.json";
 import dataInt from "@/assets/data.json";
@@ -108,7 +106,7 @@ export default function Skillsets() {
           >
             <div className={styles.headerImageContainer}>
               <Image
-                src="/services/skillset.jpg"
+                src="/services/skill.jpg"
                 alt="Vyanta Global Skillsets"
                 fill
                 className={styles.headerImage}
