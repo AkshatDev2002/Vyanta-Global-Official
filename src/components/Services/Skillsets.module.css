@@ -1,0 +1,427 @@
+.skillsetsContainer {
+  width: 100%;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  background: transparent;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+}
+
+.headerContent {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.headerReverseLayout {
+  grid-template-columns: 1fr 1.2fr;
+  direction: rtl;
+}
+
+.headerReverseLayout > * {
+  direction: ltr;
+}
+
+.headerImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.headerImageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.headerImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.headerTextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: rgb(70, 70, 70);
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.headerDescription {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.capabilitiesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.capabilitiesList li {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: rgb(70, 70, 70);
+  margin: 0;
+  padding-left: 24px;
+  position: relative;
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.capabilitiesList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff6b35;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.headerFooter {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.skillsetsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 100%;
+}
+
+.skillsetCard {
+  width: 100%;
+}
+
+.cardContent {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.normalLayout {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.reverseLayout {
+  grid-template-columns: 1.2fr 1fr;
+  direction: rtl;
+}
+
+.reverseLayout > * {
+  direction: ltr;
+}
+
+.animationWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.lottieContainer {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: rgb(70, 70, 70);
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.skillDescription {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+/* Tablet (iPad) */
+@media (max-width: 1024px) {
+  .skillsetsContainer {
+    padding: 60px 48px;
+    gap: 50px;
+  }
+
+  .headerContent {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 40px;
+    align-items: stretch;
+  }
+
+  .headerReverseLayout {
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .headerImageContainer {
+    min-height: 350px;
+  }
+
+  .sectionTitle {
+    font-size: 2.75rem;
+  }
+
+  .headerDescription {
+    font-size: 1rem;
+  }
+
+  .capabilitiesList li {
+    font-size: 0.95rem;
+  }
+
+  .headerFooter {
+    font-size: 0.95rem;
+  }
+
+  .skillsetsGrid {
+    gap: 60px;
+  }
+
+  .cardContent {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 40px;
+  }
+
+  .reverseLayout {
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .lottieContainer {
+    max-width: 350px;
+  }
+
+  .skillTitle {
+    font-size: 1.5rem;
+  }
+
+  .skillDescription {
+    font-size: 0.95rem;
+  }
+}
+
+/* Medium Tablets */
+@media (max-width: 768px) {
+  .skillsetsContainer {
+    padding: 50px 32px;
+    gap: 40px;
+  }
+
+  .headerContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .headerReverseLayout {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .headerReverseLayout > * {
+    direction: ltr;
+  }
+
+  .headerImageContainer {
+    max-width: 100%;
+    min-height: 300px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .headerDescription {
+    font-size: 0.95rem;
+  }
+
+  .skillsetsGrid {
+    gap: 50px;
+  }
+
+  .cardContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .normalLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .reverseLayout {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .reverseLayout > * {
+    direction: ltr;
+  }
+
+  .animationWrapper {
+    order: -1;
+  }
+
+  .lottieContainer {
+    max-width: 300px;
+  }
+
+  .skillTitle {
+    font-size: 1.35rem;
+  }
+
+  .skillDescription {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .skillsetsContainer {
+    padding: 40px 20px;
+    gap: 30px;
+    border-radius: 12px;
+  }
+
+  .headerContent {
+    gap: 20px;
+  }
+
+  .headerImageContainer {
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .headerDescription {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .skillsetsGrid {
+    gap: 40px;
+  }
+
+  .cardContent {
+    gap: 20px;
+  }
+
+  .lottieContainer {
+    max-width: 250px;
+    aspect-ratio: 1;
+  }
+
+  .skillTitle {
+    font-size: 1.15rem;
+  }
+
+  .skillDescription {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 360px) {
+  .skillsetsContainer {
+    padding: 30px 16px;
+    gap: 25px;
+  }
+
+  .headerContent {
+    gap: 15px;
+  }
+
+  .sectionTitle {
+    font-size: 1.35rem;
+  }
+
+  .headerDescription {
+    font-size: 0.8rem;
+  }
+
+  .lottieContainer {
+    max-width: 200px;
+  }
+
+  .skillTitle {
+    font-size: 1rem;
+  }
+
+  .skillDescription {
+    font-size: 0.8rem;
+  }
+}
+
+/* Smooth Hover Effects */
+.skillsetCard:hover .lottieContainer {
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.15));
+  transition: filter 0.3s ease;
+}
+
+.header:hover .headerImageContainer {
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.15));
+  transition: filter 0.3s ease;
+}

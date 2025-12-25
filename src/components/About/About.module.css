@@ -1,0 +1,946 @@
+/* About Page - Main Container */
+.aboutContainer {
+  width: 100%;
+  background: transparent;
+  color: rgb(70, 70, 70);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: rgb(0, 213, 14);
+  margin: 0 0 20px 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.sectionDescription {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* ===== HERO SECTION ===== */
+.heroSection {
+  padding: 100px 60px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: rgb(0, 213, 14);
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid rgb(0, 213, 14);
+  width: 0;
+
+  animation:
+    typing 2.8s steps(40, end) forwards,
+    blink 0.9s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Cursor blink */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  letter-spacing: 0.3px;
+  animation:alternate-reverse;
+}
+
+.heroImageWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.heroImageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.heroImageContainer:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+
+
+/* ===== STORY SECTION ===== */
+.storySection {
+  padding: 80px 60px;
+  background: transparent;
+}
+
+.storyContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.storyHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 700px;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.storyCard {
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.storyCard:hover {
+  border-color: rgb(0, 255, 156);
+  box-shadow: 0 8px 24px rgba(0, 255, 156, 0.1);
+}
+
+.storyCard h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: rgb(70, 70, 70);
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.storyCard p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* ===== PROBLEM SECTION ===== */
+.problemSection {
+  padding: 80px 60px;
+  background: transparent;
+}
+
+.problemContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.problemHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 700px;
+}
+
+.problemGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.problemCard {
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.problemCard:hover {
+  border-color: rgb(0, 255, 156);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.problemIcon {
+  font-size: 2.4rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: rgb(90, 150, 90);
+}
+
+
+.problemCard h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: rgb(70, 70, 70);
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.problemCard p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* ===== SOLUTION SECTION ===== */
+.solutionSection {
+  padding: 80px 60px;
+  background: transparent;
+}
+
+.solutionContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.solutionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 700px;
+}
+
+.solutionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.solutionCard {
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.solutionCard:hover {
+  border-color: rgb(0, 255, 156);
+  box-shadow: 0 8px 24px rgba(0, 255, 156, 0.1);
+}
+
+.solutionNumber {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(90, 150, 90);
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.solutionCard h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: rgb(70, 70, 70);
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.solutionCard p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.solutionConnector {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: rgb(0, 255, 156);
+  opacity: 0.3;
+}
+
+.solutionConnector:last-child {
+  display: none;
+}
+
+
+/* ===== CORE VALUES (HEX CARD LAYOUT) ===== */
+
+.sectionTitleCenter {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(0, 213, 14);
+  margin-bottom: 60px;
+  font-family: "Share Tech", sans-serif;
+}
+
+/* Grid */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hex-style Card */
+.valueHexCard {
+  position: relative;
+  padding: 48px 32px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+
+/* subtle connector feel */
+.valueHexCard::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  pointer-events: none;
+}
+
+.valueHexCard:hover {
+  transform: translateY(-10px);
+  border-color: rgb(0, 255, 156);
+  box-shadow: 0 8px 24px rgba(0, 255, 156, 0.1);
+}
+
+/* Icon */
+.valueIcon {
+  font-size: 2.4rem;
+  color: rgb(90, 150, 90);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Title */
+.valueHexCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  margin-bottom: 12px;
+  font-family: "Share Tech", sans-serif;
+}
+
+/* Description */
+.valueHexCard p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgb(0, 0, 0);
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitleCenter {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .valueHexCard {
+    padding: 40px 28px;
+  }
+}
+
+
+/* ===== TEAM SECTION ===== */
+.teamSection {
+  padding: 80px 60px;
+  background: transparent;
+}
+
+.teamContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.teamHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 700px;
+}
+
+.teamStats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.statCard {
+  padding: 40px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  border-color: #35ff61;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.1);
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(90, 150, 90);
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.statLabel {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(70, 70, 70);
+  margin: 0;
+}
+
+.teamImageWrapper {
+  width: 100%;
+}
+
+.teamImageContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.teamImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===== VISION SECTION ===== */
+.visionSection {
+  padding: 80px 60px;
+  background: transparent;
+}
+
+.visionContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.visionText {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.visionPoints {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.visionPoint {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.visionPoint h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(70, 70, 70);
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+.visionPoint p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.visionCTA {
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(70, 255, 53, 0.05) 0%, rgba(174, 255, 53, 0.02) 100%);
+  border-left: 4px solid rgb(0, 255, 156);
+  border-radius: 8px;
+}
+
+.visionCTA p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgb(70, 70, 70);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.visionImageWrapper {
+  width: 100%;
+}
+
+.visionImageContainer {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.visionImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===== VISION – SCROLL CONTAINER WRAPPER ===== */
+
+.visionHeaderBlock {
+  max-width: 900px;
+  margin: 0 auto 48px auto;
+}
+
+.visionScrollWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  /* Visual containment */
+  border-radius: 20px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);;
+  overflow: hidden;
+}
+
+
+/* ===== CONTACT CTA SECTION ===== */
+.ctaSection {
+  width: 100%;
+  margin: 48px auto;
+  border-radius: 2px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.ctaBanner {
+  background: rgb(90, 150, 90);
+  padding: 20px 12px;
+  text-align: center;
+}
+
+.ctaBanner h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: "Share Tech", sans-serif;
+  line-height: 1.3;
+}
+
+.ctaFormWrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.ctaForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(70, 70, 70);
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  font-family: "Nunito Sans", sans-serif;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: rgb(90, 150, 90);
+  box-shadow: 0 0 0 2px rgba(90, 150, 90, 0.15);
+}
+
+.ctaSubmit {
+  background: transparent;
+  color: rgb(100, 100, 100);
+  margin-top: 16px;
+  padding: 16px;
+  font-family: "Share Tech", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 2px solid rgb(0, 255, 156);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ctaSubmit:hover {
+  background-color: rgb(0, 255, 156);
+  color: rgb(20, 20, 20);
+  box-shadow: 0 8px 32px rgba(0, 255, 156, 0.4);
+}
+
+@media (max-width: 768px) {
+  .ctaBanner h2 {
+    font-size: 1.4rem;
+  }
+
+  .ctaFormWrapper {
+    padding: 40px 20px 48px;
+  }
+}
+
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet (1024px) */
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 80px 48px;
+    min-height: auto;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.25rem;
+  }
+
+  .storySection,
+  .problemSection,
+  .solutionSection,
+  .milestonesSection,
+  .valuesSection,
+  .teamSection,
+  .visionSection,
+  .ctaSection {
+    padding: 60px 48px;
+  }
+
+  .storyGrid,
+  .problemGrid,
+  .solutionGrid,
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .visionContent {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .teamStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ctaTitle {
+    font-size: 2.25rem;
+  }
+}
+
+/* Medium Tablet (768px) */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 60px 32px;
+    min-height: auto;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .heroImageContainer {
+    min-height: 400px;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .storySection,
+  .problemSection,
+  .solutionSection,
+  .milestonesSection,
+  .valuesSection,
+  .teamSection,
+  .visionSection,
+  .ctaSection {
+    padding: 50px 32px;
+  }
+
+  .storyGrid,
+  .problemGrid,
+  .solutionGrid,
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .timelineContainer {
+    padding-left: 40px;
+  }
+
+  .timelineContainer::before {
+    left: 10px;
+  }
+
+  .timelineMarker {
+    left: -40px;
+  }
+
+  .teamImageContainer,
+  .visionImageContainer {
+    height: 300px;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaDescription {
+    font-size: 1rem;
+  }
+}
+
+/* Small Phones (480px) */
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 50px 20px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .heroImageContainer {
+    min-height: 300px;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .storySection,
+  .problemSection,
+  .solutionSection,
+  .milestonesSection,
+  .valuesSection,
+  .teamSection,
+  .visionSection,
+  .ctaSection {
+    padding: 40px 20px;
+  }
+
+  .storyCard,
+  .problemCard,
+  .solutionCard,
+  .valueCard {
+    padding: 24px;
+  }
+
+  .storyCard h3,
+  .problemCard h3,
+  .solutionCard h3,
+  .valueCard h3 {
+    font-size: 1.15rem;
+  }
+
+  .storyCard p,
+  .problemCard p,
+  .solutionCard p,
+  .valueCard p {
+    font-size: 0.9rem;
+  }
+
+  .solutionNumber {
+    font-size: 2rem;
+  }
+
+  .statCard {
+    padding: 24px;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .teamStats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .timelineItem {
+    gap: 20px;
+  }
+
+  .timelineYear {
+    font-size: 0.75rem;
+  }
+
+  .timelineContent h3 {
+    font-size: 1.1rem;
+  }
+
+  .visionPoints {
+    gap: 24px;
+  }
+
+  .visionPoint h3 {
+    font-size: 1.1rem;
+  }
+
+  .visionCTA {
+    padding: 24px;
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ctaButtonPrimary,
+  .ctaButtonSecondary {
+    width: 100%;
+  }
+}

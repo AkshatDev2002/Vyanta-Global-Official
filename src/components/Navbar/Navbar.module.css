@@ -1,0 +1,308 @@
+/* MOBILE FIRST APPROACH */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  pointer-events: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(48px);
+  background: linear-gradient(
+    to right,
+    rgba(12, 12, 12, 0.95),
+    rgba(26, 26, 26, 0.95),
+    rgba(12, 12, 12, 0.95)
+  );
+  box-shadow: 0 12px 28px rgba(81, 78, 78, 0.553);
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+/* ---------------- NAV BODY ---------------- */
+.navBody {
+  position: relative;
+  z-index: 60;
+  margin: 0 auto;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  width: 100%;
+  height: 100%;
+}
+/* ---------------- NAV ITEMS ---------------- */
+.navItems {
+  display: none;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+}
+.navItemWrapper {
+  position: relative;
+}
+.navItem {
+  position: relative;
+  padding: 8px 0;
+  color: rgb(200, 200, 200);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+  transition: color 300ms ease;
+  white-space: nowrap;
+}
+.navItem:hover {
+  color: rgb(0, 255, 156);
+}
+.navItemHover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: rgb(0, 255, 156);
+  display: none;
+}
+.navItemWrapper:hover .navItemHover {
+  display: block;
+}
+.navItemText {
+  position: relative;
+  z-index: 1;
+}
+.chevronIcon {
+  transition: transform 300ms ease;
+}
+.chevronOpen {
+  transform: rotate(180deg);
+}
+/* ---------------- DESKTOP DROPDOWN ---------------- */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  background: linear-gradient(
+    135deg,
+    rgba(12, 12, 12, 0.98),
+    rgba(26, 26, 26, 0.98)
+  );
+  border: 1px solid rgba(0, 255, 156, 0.2);
+  border-radius: 8px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(48px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: dropdownFadeIn 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1001;
+  pointer-events: auto;   /* 🔥 THIS FIXES CLICKS */
+}
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dropdownItem {
+  padding: 12px 20px;
+  font-size: 0.875rem;
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+  transition: all 200ms ease;
+}
+.dropdownItem:hover {
+  background: rgba(0, 255, 156, 0.15);
+  color: rgb(0, 255, 156);
+  padding-left: 24px;
+}
+/* ---------------- MOBILE NAV ---------------- */
+.mobileNav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 70px;
+  z-index: 50;
+  background: linear-gradient(
+    to right,
+    rgba(12, 12, 12, 0.95),
+    rgba(26, 26, 26, 0.95),
+    rgba(12, 12, 12, 0.95)
+  );
+}
+.mobileNavHeader {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.mobileNavMenu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  max-height: calc(100vh - 70px);
+  background: linear-gradient(
+    to right,
+    rgba(12, 12, 12, 0.98),
+    rgba(26, 26, 26, 0.98),
+    rgba(12, 12, 12, 0.98)
+  );
+  overflow-y: auto;
+  animation: slideDown 300ms ease;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- MOBILE NAV ITEM ---------------- */
+.mobileNavItem {
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgb(200, 200, 200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.mobileNavItem:active {
+  background: rgba(0, 255, 156, 0.12);
+  color: rgb(0, 255, 156);
+}
+
+/* ---------------- MOBILE CHEVRON ---------------- */
+.mobileChevron {
+  display: flex;
+  align-items: center;
+  transition: transform 300ms ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* ---------------- MOBILE DROPDOWN ---------------- */
+.mobileDropdown {
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+  transition: max-height 350ms ease;
+}
+
+.mobileDropdown.open {
+  max-height: 500px; /* enough for all children */
+}
+
+.mobileDropdownItem {
+  display: block;
+  padding: 14px 32px;
+  font-size: 0.875rem;
+  color: rgb(180, 180, 180);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 200ms ease;
+}
+
+.mobileDropdownItem:hover,
+.mobileDropdownItem:active {
+  background: rgba(0, 255, 156, 0.12);
+  color: rgb(0, 255, 156);
+  border-left-color: rgb(0, 255, 156);
+  padding-left: 36px;
+}
+
+
+.mobileNavToggleIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  color: rgb(0, 255, 156) !important;
+  stroke: rgb(0, 255, 156) !important;
+}
+.mobileNavToggleIcon:active {
+  transform: scale(0.95);
+  color: rgb(0, 255, 156) !important;
+}
+/* ---------------- LOGO (FIXED) ---------------- */
+.navbarLogo {
+  display: flex;
+  align-items: flex-start; 
+  padding: 0 8px;
+  flex-shrink: 0;
+}
+
+.navbarLogo img {
+  max-height:60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ---------------- DESKTOP ---------------- */
+@media (min-width: 1024px) {
+  .navBody {
+    display: flex;
+    padding: 16px 80px;
+  }
+  .navItems {
+    display: flex;
+  }
+  .mobileNav {
+    display: none;
+  }
+}
+/* ---------------- LANDSCAPE MOBILE ---------------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .navbar {
+    height: 60px;
+  }
+  .mobileNavHeader {
+    height: 60px;
+  }
+  .navbarLogo img {
+    max-height: 30px;
+  }
+}
+/* ---------------- TOUCH OPTIMIZATION ---------------- */
+@media (hover: none) and (pointer: coarse) {
+  .navItemHover {
+    display: none !important;
+  }
+  .mobileNavToggleIcon {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 255, 156) !important;
+    stroke: rgb(0, 255, 156) !important;
+  }
+}

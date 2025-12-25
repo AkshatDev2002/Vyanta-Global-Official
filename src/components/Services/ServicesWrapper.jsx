@@ -1,0 +1,11 @@
+"use client";
+
+import dynamic from "next/dynamic";
+
+const Services = dynamic(() => import("./Services"), {
+  ssr: false,
+});
+
+export default function ServicesWrapper() {
+  return <Services />;
+}

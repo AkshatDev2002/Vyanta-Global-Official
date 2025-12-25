@@ -1,0 +1,148 @@
+.container {
+  margin: 0 auto;
+  padding: 64px 20px;
+  max-width: fit-content;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 120px;
+}
+
+.heroTitle {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #0a0e27;
+  margin-bottom: 16px;
+}
+
+.heroSubtitle {
+  font-size: 1.15rem;
+  color: #505050;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.heroImage:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 96px;
+}
+
+.sectionTitle {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #0a0e27;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, #109f61, #25f95e);
+}
+
+/* GRID */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* CARDS */
+.infoCard,
+.capabilityCard,
+.useCaseCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.infoCard:hover,
+.capabilityCard:hover,
+.useCaseCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.12);
+}
+
+.cardIcon {
+  color: #109f61;
+  margin-bottom: 16px;
+}
+
+/* TEXT */
+.infoCard h3,
+.capabilityCard h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0a0e27;
+}
+
+.infoCard p,
+.capabilityCard p {
+  font-size: 0.95rem;
+  color: #505050;
+  line-height: 1.65;
+}
+
+.useCaseCard {
+  background: #f8fafc;
+  font-weight: 500;
+  color: #0a0e27;
+}
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .heroImage img {
+    margin: 0 auto;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroTitle {
+    font-size: 2.3rem;
+  }
+}

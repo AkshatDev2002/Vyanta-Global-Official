@@ -1,0 +1,258 @@
+/* MOBILE FIRST APPROACH */
+
+.languageSwitcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.triggerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: rgb(40, 40, 40);
+  border: 1px solid rgb(60, 60, 60);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: "Share Tech", sans-serif;
+  min-width: 50px;
+  flex-shrink: 0;
+}
+
+.triggerButton:hover {
+  background-color: rgb(50, 50, 50);
+  border-color: rgb(80, 80, 80);
+  box-shadow: 0 4px 12px rgba(0, 255, 156, 0.1);
+}
+
+.triggerButton:active {
+  transform: scale(0.95);
+}
+
+.flag {
+  font-size: 1rem;
+  display: inline-block;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.code {
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+  min-width: 18px;
+  text-align: center;
+}
+
+.menu {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  background-color: rgb(30, 30, 30);
+  border: 1px solid rgb(60, 60, 60);
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 
+              0 0 0 1px rgba(255, 255, 255, 0.05);
+  z-index: 40;
+  max-height: calc(100vh - 70px);
+  overflow-y: auto;
+  animation: slideDown 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menuItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgb(180, 180, 180);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Share Tech", sans-serif;
+  transition: all 150ms ease;
+  text-align: left;
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+.menuItem:hover {
+  background-color: rgb(50, 50, 50);
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+}
+
+.menuItem.active {
+  background-color: rgb(0, 255, 156);
+  color: rgb(20, 20, 20);
+  font-weight: 600;
+}
+
+.menuItem.active:hover {
+  background-color: rgb(0, 235, 140);
+  padding-left: 16px;
+}
+
+.menuFlag {
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.menuName {
+  flex: 1;
+  text-align: left;
+}
+
+.checkmark {
+  font-size: 1rem;
+  color: currentColor;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+/* TABLET: 480px - 768px */
+@media (min-width: 480px) {
+  .triggerButton {
+    gap: 5px;
+    padding: 7px 11px;
+    font-size: 0.8rem;
+    min-width: 52px;
+  }
+
+  .flag {
+    font-size: 1.05rem;
+  }
+
+  .code {
+    font-size: 0.68rem;
+  }
+
+  .menu {
+    min-width: 200px;
+  }
+
+  .menuItem {
+    padding: 13px 16px;
+    font-size: 0.9rem;
+  }
+
+  .menuFlag {
+    font-size: 1.25rem;
+  }
+}
+
+/* TABLET: 768px - 1024px */
+@media (min-width: 768px) {
+  .triggerButton {
+    gap: 6px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    min-width: 60px;
+  }
+
+  .flag {
+    font-size: 1.15rem;
+  }
+
+  .code {
+    font-size: 0.75rem;
+    min-width: auto;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    width: auto;
+    max-width: 250px;
+    margin-top: 8px;
+    border-radius: 8px;
+  }
+
+  .menuItem {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .menuItem:hover {
+    padding-left: 16px;
+  }
+
+  .menuFlag {
+    font-size: 1.3rem;
+  }
+}
+
+/* DESKTOP: 1024px+ */
+@media (min-width: 1024px) {
+  .triggerButton {
+    gap: 6px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    min-width: 60px;
+  }
+
+  .flag {
+    font-size: 1.2rem;
+  }
+
+  .code {
+    font-size: 0.75rem;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    width: auto;
+    max-width: 250px;
+    margin-top: 8px;
+    border-radius: 8px;
+    max-height: none;
+  }
+
+  .menuItem {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .menuItem:hover {
+    padding-left: 20px;
+  }
+
+  .menuFlag {
+    font-size: 1.3rem;
+  }
+}

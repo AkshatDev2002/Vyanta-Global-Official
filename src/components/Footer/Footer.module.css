@@ -1,0 +1,416 @@
+/* Footer - Main Container */
+.footer {
+  width: 100%;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+  border-top: 1px solid rgba(0, 255, 156, 0.1);
+  box-shadow: 0 24px 56px rgba(95, 94, 94, 0.553);
+  color: rgb(200, 200, 200);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* Footer Top Section */
+.footerTop {
+  padding: 80px 60px;
+  background: linear-gradient(180deg, rgba(0, 255, 156, 0.03) 0%, transparent 100%);
+}
+
+.footerContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 80px;
+  
+}
+
+
+/* Brand Section */
+.brandSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.logoSubtext {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: rgb(0, 255, 156);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+
+.brandDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgb(150, 150, 150);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: rgb(150, 150, 150);
+}
+
+.contactItem svg {
+  color: rgb(0, 255, 156);
+  font-size: 0.95rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 255, 156, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 255, 156);
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background: rgb(0, 255, 156);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+
+/* Links Grid */
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.columnTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: "Share Tech", sans-serif;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkList li {
+  margin: 0;
+}
+
+.link {
+  font-size: 1.2rem;
+  color: rgb(150, 150, 150);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.link:hover {
+  color: rgb(0, 255, 156);
+  padding-left: 4px;
+}
+
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 255, 156, 0.2),
+    transparent
+  );
+  margin: 0 60px;
+}
+
+/* Footer Bottom Section */
+.footerBottom {
+  padding: 40px 60px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 255, 156, 0.02) 100%);
+}
+
+.footerBottom .footerContainer {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: rgb(120, 120, 120);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.brandName {
+  color: rgb(0, 255, 156);
+  font-weight: 600;
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bottomLink {
+  font-size: 0.85rem;
+  color: rgb(120, 120, 120);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.bottomLink:hover {
+  color: rgb(0, 255, 156);
+}
+
+.separator {
+  color: rgb(80, 80, 80);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+  .footerContainer {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .socialLinks {
+    justify-content: flex-start;
+  }
+}
+
+
+/* Tablet (1024px) */
+@media (max-width: 1024px) {
+  .footerTop {
+    padding: 60px 48px;
+  }
+
+  .footerContainer {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+  }
+
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .divider {
+    margin: 0 48px;
+  }
+
+  .footerBottom {
+    padding: 30px 48px;
+  }
+
+  .socialLinks {
+    gap: 12px;
+  }
+
+  .socialLink {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Medium Tablet (768px) */
+@media (max-width: 768px) {
+  .footerTop {
+    padding: 50px 32px;
+  }
+
+  .footerContainer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .divider {
+    margin: 0 32px;
+  }
+
+  .footerBottom {
+    padding: 30px 32px;
+  }
+
+  .footerBottom .footerContainer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .bottomLinks {
+    justify-content: center;
+  }
+
+  .logoText {
+    font-size: 1.35rem;
+  }
+
+  .brandDescription {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Phones (480px) */
+@media (max-width: 480px) {
+  .footerTop {
+    padding: 40px 20px;
+  }
+
+  .footerContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .linksGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .divider {
+    margin: 0 20px;
+  }
+
+  .footerBottom {
+    padding: 24px 20px;
+  }
+
+  .columnTitle {
+    font-size: 0.85rem;
+  }
+
+  .link {
+    font-size: 0.85rem;
+  }
+
+  .logoText {
+    font-size: 1.25rem;
+  }
+
+  .brandDescription {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+
+  .bottomLink {
+    font-size: 0.8rem;
+  }
+
+  .socialLinks {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .socialLink {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Phones (360px) */
+@media (max-width: 360px) {
+  .footerTop {
+    padding: 30px 16px;
+  }
+
+  .footerContainer {
+    gap: 30px;
+  }
+
+  .linksGrid {
+    gap: 20px;
+  }
+
+  .divider {
+    margin: 0 16px;
+  }
+
+  .footerBottom {
+    padding: 20px 16px;
+  }
+
+  .logoText {
+    font-size: 1.15rem;
+  }
+
+  .columnTitle {
+    font-size: 0.8rem;
+  }
+
+  .link {
+    font-size: 0.8rem;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+  }
+
+  .socialLink {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+}

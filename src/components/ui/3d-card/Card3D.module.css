@@ -1,0 +1,83 @@
+/* Perspective wrapper */
+.perspective {
+  perspective: 1200px;
+  width: 100%;
+  height: 100%;              /* 🔥 REQUIRED */
+}
+
+/* 3D container */
+.container {
+  width: 100%;
+  height: 100%;              /* 🔥 REQUIRED */
+  transform-style: preserve-3d;
+  display: flex;
+  
+}
+
+/* Optional floating animation */
+.autoRotate {
+  animation: floatRotate 6s ease-in-out infinite;
+}
+
+@keyframes floatRotate {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  50% { transform: rotateX(4deg) rotateY(-6deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg); }
+}
+
+/* 🔥 CARD — SINGLE SOURCE OF TRUTH */
+.cardBody {
+  width: 100%;
+  height: 100%;              /* 🔥 matches tallest grid row */
+  min-height: 460px;         /* design baseline */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(16, 159, 97, 0.18);
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3D layers */
+.cardItem {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+/* Footer pinned to bottom */
+.cardFooter {
+  margin-top: auto;
+}
+
+/* Image safety */
+.cardImage {
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .container,
+  .cardItem,
+  .autoRotate {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cardBody {
+    min-height: 420px;
+    padding: 22px;
+  }
+
+  .cardImage {
+    height: 140px;
+  }
+}

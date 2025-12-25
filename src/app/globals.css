@@ -17,13 +17,14 @@
 
 /* Light Theme */
 :root {
-  --background: white;
+  --background: #F2F3F2;
   --foreground: black;
   --primary: black;
   --primary-foreground: white;
   --border: rgba(0, 0, 0, 0.08);
   --muted: rgba(0, 0, 0, 0.55);
 }
+
 
 /* Base Layer */
 @layer base {
@@ -36,11 +37,6 @@
 }
 
 
-/* Vertical text */
-.writing-vertical {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
 
 /* soft grid pattern like the reference */
 .bg-grid {
@@ -59,3 +55,4 @@
 .page-blur-animate {
   animation: pageEnter 0.6s ease-out forwards;
 }
+
