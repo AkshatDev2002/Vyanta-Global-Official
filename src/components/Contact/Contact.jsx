@@ -30,25 +30,56 @@ export default function Contact() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null); // success | error | null
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus(null);
 
     if (!window.grecaptcha) {
-      alert("reCAPTCHA not loaded");
+      setStatus("error");
       return;
     }
 
-    const token = await window.grecaptcha.execute(
-      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
-      { action: "contact" }
-    );
+    setLoading(true);
 
-    const payload = { ...form, token };
-    console.log(payload);
+    try {
+      // 1️⃣ Generate reCAPTCHA token
+      const recaptchaToken = await window.grecaptcha.execute(
+        process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+        { action: "contact" }
+      );
+
+      // 2️⃣ Send data to backend
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...form,
+          recaptchaToken,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Submission failed");
+      }
+
+      // 3️⃣ Success
+      setStatus("success");
+      setForm({ name: "", company: "", email: "", message: "" });
+    } catch (err) {
+      console.error("Contact submit error:", err);
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -63,7 +94,6 @@ export default function Contact() {
           {/* LEFT CONTENT */}
           <motion.div className={styles.left} variants={fadeUp}>
             <h1 className={styles.title}>{t.title}</h1>
-
             <p className={styles.subtitle}>{t.subtitle}</p>
 
             <div className={styles.block}>
@@ -143,9 +173,19 @@ export default function Contact() {
                 />
               </div>
 
-              <button type="submit" className={styles.button}>
-                {t.form.submit}
+              <button type="submit" className={styles.button} disabled={loading}>
+                {loading ? "Sending..." : t.form.submit}
               </button>
+
+              {status === "success" && (
+                <p className={styles.success}>Message sent successfully. Our expert team will get back to you shortly.</p>
+              )}
+
+              {status === "error" && (
+                <p className={styles.error}>
+                  Something went wrong. Please try again.
+                </p>
+              )}
             </form>
           </motion.div>
         </div>
