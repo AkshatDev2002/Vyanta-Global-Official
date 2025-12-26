@@ -29,8 +29,8 @@ export default function Footer() {
       title: "What We Do",
       links: [
         { label: "Big Data Solutions", href: "/services/bigdata" },
-        { label: "Data Integration/ Data Governance", href: "/services/integration" },
-        { label: "Metadata Management", href: "/services/metadata" },
+        { label: "Data Integration/ Data Governance", href: "/services/data" },
+        { label: "Metadata Management", href: "/services/meta" },
         { label: "Custom Development", href: "/services/custom" },
         { label: "Industry 4.0 Solutions", href: "/services/industry" },
       ],

@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto;
   padding: 64px 20px;
-  max-width: fit-content;
+  max-width: 1400px;
 }
 
 /* HERO */
@@ -16,7 +16,7 @@
 .heroTitle {
   font-size: 3.2rem;
   font-weight: 700;
-  color: #0a0e27;
+  color: rgb(90, 150, 90);
   margin-bottom: 16px;
 }
 
@@ -50,7 +50,7 @@
 .sectionTitle {
   font-size: 2.3rem;
   font-weight: 700;
-  color: #0a0e27;
+  color: rgb(90, 150, 90);
   margin-bottom: 48px;
   position: relative;
 }
