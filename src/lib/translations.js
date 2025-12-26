@@ -5,9 +5,9 @@ export const translations = {
       words: ["Advanced", "Smart", "Automated"],
       heading: "Data Integration Platform",
       subheading:
-        "Unlock the full potential of your data through innovation, collaboration, and engineering excellence.",
+        "Unlock the full potential of your data with secure, scalable, and AI-ready data engineering solutions.",
       description:
-        "We deliver comprehensive big data solutions, robust data governance and integration services, advanced metadata management, and custom development tailored to your business needs.",
+        "We deliver big data platforms, data governance and integration, metadata management, and custom development—built with enterprise-grade data security, compliance, and analytics in mind.",
       button: "Know More",
     },
   },
