@@ -1,0 +1,284 @@
+/* =========================
+   BASE CONTAINER
+========================= */
+.container {
+  margin: 0 auto;
+  padding: 72px 24px;
+  max-width: 1200px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  margin-bottom: 96px;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: rgb(90, 150, 90);
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #505050;
+  line-height: 1.75;
+  max-width: 900px;
+}
+
+/* =========================
+   SECTION
+========================= */
+.section,
+.altSection {
+  margin-bottom: 88px;
+}
+
+.sectionTitle {
+  font-size: clamp(1.9rem, 3vw, 2.3rem);
+  font-weight: 700;
+  color: rgb(90, 150, 90);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, #109f61, #25f95e);
+}
+
+/* =========================
+   BENTO GRID
+========================= */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.cardBody {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(16, 159, 97, 0.15);
+  padding: 22px 20px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0a0e27;
+}
+
+.cardText {
+  font-size: 0.95rem;
+  color: #505050;
+  line-height: 1.65;
+}
+
+/* =========================
+   ALTERNATING LAYOUT
+========================= */
+.altGrid,
+.benefitsLayout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.altText {
+  max-width: 560px;
+}
+
+.altImage img {
+  width: 100%;
+  border-radius: 12px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+/* =========================
+   LIST
+========================= */
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+  counter-reset: step;
+}
+
+.list li {
+  position: relative;
+  padding-left: 42px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #505050;
+}
+
+.list li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #109f61, #25f95e);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 520px;
+}
+
+.benefitItem {
+  display: flex;
+  gap: 14px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 18px 22px;
+}
+
+.index {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #109f61;
+}
+
+/* =========================
+   CENTERED EXPERT SECTION
+========================= */
+.centerSection {
+  margin-top: 96px;
+  padding: 88px 24px;
+  text-align: center;
+}
+
+.centerContent {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.centerTitle {
+  font-size: clamp(1.9rem, 3vw, 2.3rem);
+  font-weight: 700;
+  color: rgb(90, 150, 90);
+  margin-bottom: 36px;
+  position: relative;
+}
+
+.centerTitle::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, #109f61, #25f95e);
+}
+
+.centerImage {
+  margin: 0 auto 32px;
+  max-width: 420px;
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.18));
+}
+
+.centerImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.centerText {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #505050;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .centerSection {
+    padding: 72px 20px;
+  }
+
+  .centerImage {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .centerTitle {
+    font-size: 1.75rem;
+  }
+
+  .centerText {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .altGrid,
+  .benefitsLayout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 56px 20px;
+  }
+
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+}
