@@ -1,5 +1,5 @@
-import Meta from "@/components/Services/meta/Meta";
+import MetaWrapper from "@/components/Services/meta/MetaWrapper";
 
-export default function DataServicesPage() {
-  return <Meta />;
+export default function MetaServicesPage() {
+  return <MetaWrapper />;
 }

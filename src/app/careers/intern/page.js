@@ -1,5 +1,5 @@
-import InternWrapper from "@/components/Careers/InternWrapper";
+import InternContact from "@/components/Careers/InternContact";
 
 export default function InternPage() {
-  return <InternWrapper />;
+  return <InternContact />;
 }

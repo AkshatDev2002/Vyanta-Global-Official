@@ -1,5 +1,5 @@
-import Industry from "@/components/Services/industry/Industry";
+import IndustryWrapper from "@/components/Services/industry/IndustryWrapper";
 
-export default function DataServicesPage() {
-  return <Industry />;
+export default function IndustryServicesPage() {
+  return <IndustryWrapper />;
 }

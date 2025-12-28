@@ -1,5 +1,5 @@
-import Custom from "@/components/Services/custom/Custom";
+import CustomWrapper from "@/components/Services/custom/CustomWrapper";
 
-export default function DataServicesPage() {
-  return <Custom />;
+export default function CustomServicesPage() {
+  return <CustomWrapper />;
 }

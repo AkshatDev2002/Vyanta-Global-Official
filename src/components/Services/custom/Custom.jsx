@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-
+import { useLanguage } from "@/context/LanguageContext";
+import { customTranslations } from "@/lib/CustomTranslation";
+import CtaContact from "@/components/ui/CtaContact";
 import { CardContainer } from "@/components/ui/3d-card/CardContainer";
 import CardBody from "@/components/ui/3d-card/CardBody";
 import CardItem from "@/components/ui/3d-card/CardItem";
@@ -19,6 +21,9 @@ const fadeUp = {
 };
 
 export default function Custom() {
+  const { language } = useLanguage();
+  const t = customTranslations[language] || customTranslations.en;
+
   return (
     <motion.div
       className={styles.container}
@@ -29,57 +34,17 @@ export default function Custom() {
       {/* ================= HERO ================= */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>
-            Vyanta's Custom Application Development Services
-          </h1>
-          <p className={styles.subtitle}>
-            Transform your digital vision into scalable, secure, and
-            high-performance applications. Vyanta Global designs, builds, and
-            maintains enterprise-grade applications that align with business
-            goals and scale with demand.
-          </p>
+          <h1 className={styles.title}>{t.hero.title}</h1>
+          <p className={styles.subtitle}>{t.hero.subtitle}</p>
         </div>
       </section>
 
       {/* ================= WHAT WE DELIVER ================= */}
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>
-          Enterprise-Grade Application Development Built to Scale
-        </h2>
+        <h2 className={styles.sectionTitle}>{t.delivery.title}</h2>
 
         <div className={styles.bentoGrid}>
-          {[
-            {
-              title: "Custom Web & Application Development",
-              text:
-                "Design and build tailored web applications using modern frameworks and component-based architectures for performance, flexibility, and long-term scalability.",
-            },
-            {
-              title: "Scalable & Modular Architectures",
-              text:
-                "Clean, modular design patterns that support growth, high availability, and seamless feature expansion.",
-            },
-            {
-              title: "Application Maintenance & Support",
-              text:
-                "Ongoing monitoring, optimization, and enhancements to ensure reliability, performance, and uptime.",
-            },
-            {
-              title: "Security-First Development",
-              text:
-                "Secure coding practices, authentication, authorization, and data protection aligned with enterprise compliance standards.",
-            },
-            {
-              title: "Agile & DevOps-Driven Delivery",
-              text:
-                "Agile methodologies and CI/CD pipelines for faster releases, predictable delivery, and continuous improvement.",
-            },
-            {
-              title: "AI-Ready & Future-Proof Architecture",
-              text:
-                "Ensure applications are built with extensibility in mind—supporting future integrations, analytics, and AI-driven capabilities as business needs evolve.",
-            },
-          ].map((item, i) => (
+          {t.delivery.items.map((item, i) => (
             <CardContainer key={i} className={styles.cardContainer}>
               <CardBody className={styles.cardBody}>
                 <CardItem translateZ={40}>
@@ -98,84 +63,56 @@ export default function Custom() {
       <section className={styles.altSection}>
         <div className={styles.altGrid}>
           <div className={styles.altText}>
-            <h2 className={styles.sectionTitle}>
-              End-to-End Application Lifecycle Management
-            </h2>
+            <h2 className={styles.sectionTitle}>{t.lifecycle.title}</h2>
             <ul className={styles.list}>
-              <li>Consultative discovery & architecture design</li>
-              <li>Agile development with iterative delivery</li>
-              <li>Proactive application maintenance and optimisation</li>
-              <li>Transparent project governance and reporting</li>
-              <li>Security & compliance embedded by design</li>
-              <li>Automation-led innovation with CI/CD pipelines</li>
+              {t.lifecycle.items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
 
           <div className={styles.altImage}>
-            <Image
-              src="/services/a1.jpg"
-              alt="Custom Application Development"
-              width={520}
-              height={420}
-            />
+            <Image src="/services/a1.jpg" alt="" width={520} height={420} />
           </div>
         </div>
       </section>
 
       {/* ================= BUSINESS IMPACT ================= */}
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Business Impact</h2>
+        <h2 className={styles.sectionTitle}>{t.impact.title}</h2>
 
         <div className={styles.benefitsLayout}>
           <div className={styles.benefitsGrid}>
-            {[
-              "Faster application delivery with reduced development risk",
-              "Scalable, high-performance applications built for growth",
-              "Lower maintenance overhead through clean architecture",
-              "Improved security, reliability, and user experience",
-              "Future-ready engineering with long-term sustainability",
-            ].map((benefit, i) => (
+            {t.impact.items.map((item, i) => (
               <div key={i} className={styles.benefitItem}>
                 <span className={styles.index}>{i + 1}</span>
-                <p>{benefit}</p>
+                <p>{item}</p>
               </div>
             ))}
           </div>
 
           <div className={styles.altImage}>
-            <Image
-              src="/services/a2.png"
-              alt="Business Impact"
-              width={480}
-              height={380}
-            />
+            <Image src="/services/a2.png" alt="" width={480} height={380} />
           </div>
         </div>
       </section>
 
       {/* ================= EXPERT COVERAGE ================= */}
-<section className={styles.centerSection}>
-  <div className={styles.centerContent}>
-    <h2 className={styles.centerTitle}>Our Expert Team Covers</h2>
+      <section className={styles.centerSection}>
+        <div className={styles.centerContent}>
+          <h2 className={styles.centerTitle}>{t.coverage.title}</h2>
 
-    <div className={styles.centerImage}>
-      <Image
-        src="/services/a3.png"
-        alt="Vyanta Global Expert Coverage"
-        width={420}
-        height={320}
-        priority
-      />
-    </div>
+          <div className={styles.centerImage}>
+            <Image src="/services/a3.png" alt="" width={420} height={320} />
+          </div>
 
-    <p className={styles.centerText}>
-      Our solutions are fully customised for your needs, considering every
-      possible use case and scenario—ensuring scalability, performance, and
-      long-term business value.
-    </p>
-  </div>
-</section>
-
+          <p className={styles.centerText}>{t.coverage.text}</p>
+        </div>
+      </section>
+      <CtaContact
+              bannerText="Partner with Vyanta to turn your application vision into cutting-edge, scalable software."
+              submitText="Talk to our expert team"
+            />
     </motion.div>
   );
 }

@@ -1,5 +1,5 @@
-import Data from "@/components/Services/data/Data";
+import DataWrapper from "@/components/Services/data/DataWrapper";
 
 export default function DataServicesPage() {
-  return <Data />;
+  return <DataWrapper />;
 }

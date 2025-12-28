@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "./Industry.module.css";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+import { industryTranslations } from "@/lib/Industry4";
+import CtaContact from "@/components/ui/CtaContact";
+import styles from "./Industry.module.css";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -14,6 +17,9 @@ const fadeUp = {
 };
 
 export default function Industry() {
+  const { language } = useLanguage();
+  const t = industryTranslations[language] || industryTranslations.en;
+
   return (
     <motion.div
       className={styles.container}
@@ -24,55 +30,17 @@ export default function Industry() {
       {/* ================= HERO ================= */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>
-            Vyanta's Industry 4.0 Solutions & Smart Manufacturing
-          </h1>
-          <p className={styles.subtitle}>
-            Our Industry 4.0 services help enterprises accelerate
-            digital transformation by integrating Industrial IoT (IIoT), AI/ML,
-            advanced analytics, automation, and digital twins into resilient,
-            data-driven manufacturing operations.
-          </p>
+          <h1 className={styles.title}>{t.hero.title}</h1>
+          <p className={styles.subtitle}>{t.hero.subtitle}</p>
         </div>
       </section>
 
       {/* ================= BENTO GRID ================= */}
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Core Industry 4.0 Capabilities</h2>
+        <h2 className={styles.sectionTitle}>{t.capabilities.title}</h2>
 
         <div className={styles.bentoGrid}>
-          {[
-            {
-              title: "Industrial IoT (IIoT) Connectivity",
-              text:
-                "Enable real-time machine-to-machine communication and sensor-driven telemetry across manufacturing and industrial assets.",
-            },
-            {
-              title: "AI & Advanced Analytics",
-              text:
-                "Apply AI-driven analytics for predictive maintenance, anomaly detection, process optimization, and quality control.",
-            },
-            {
-              title: "Cloud & Edge Integration",
-              text:
-                "Deploy secure cloud-native architectures integrated with edge computing for scalable processing and low-latency analytics.",
-            },
-            {
-              title: "Robotics & Intelligent Automation",
-              text:
-                "Implement advanced automation and robotics to improve throughput, reduce manual intervention, and enhance consistency.",
-            },
-            {
-              title: "Digital Twins & Simulation",
-              text:
-                "Create digital twins of assets and production lines for simulation, performance tuning, and what-if analysis.",
-            },
-            {
-              title: "Supply Chain & Operations Visibility",
-              text:
-                "Integrate production and supply-chain data for demand forecasting, resource optimization, and end-to-end visibility.",
-            },
-          ].map((item, i) => (
+          {t.capabilities.items.map((item, i) => (
             <motion.div
               key={i}
               className={styles.cardBody}
@@ -89,28 +57,18 @@ export default function Industry() {
       <section className={styles.altSection}>
         <div className={styles.altGrid}>
           <div className={styles.altText}>
-            <h2 className={styles.sectionTitle}>
-              Building Smart Factories for the Digital Era
-            </h2>
-            <p className={styles.subtitle}>
-              Vyanta Global delivers Industry 4.0 implementations with a
-              data-first approach, combining edge intelligence, secure cloud
-              analytics, and automation to enable predictive, adaptive, and
-              autonomous operations.
-            </p>
+            <h2 className={styles.sectionTitle}>{t.smartFactory.title}</h2>
+            <p className={styles.subtitle}>{t.smartFactory.subtitle}</p>
 
             <ul className={styles.list}>
-              <li>Reduced downtime through predictive workflows</li>
-              <li>Increased throughput with intelligent automation</li>
-              <li>Unified visibility across production environments</li>
+              {t.smartFactory.points.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
 
           <div className={styles.altImage}>
-            <img
-              src="/services/i1.jpg"
-              alt="Smart Factory Industry 4.0"
-            />
+            <img src="/services/i1.jpg" alt="" />
           </div>
         </div>
       </section>
@@ -119,25 +77,12 @@ export default function Industry() {
       <section className={styles.section}>
         <div className={styles.benefitsLayout}>
           <div>
-            <h2 className={styles.sectionTitle}>
-              Business Benefits of Industry 4.0
-            </h2>
-
-            <p className={styles.subtitle}>
-              Our Industry 4.0 solutions deliver faster ROI, reduced operational
-              risk, and continuous improvement through intelligent,
-              data-driven manufacturing.
-            </p>
+            <h2 className={styles.sectionTitle}>{t.benefits.title}</h2>
+            <p className={styles.subtitle}>{t.benefits.subtitle}</p>
           </div>
 
           <div className={styles.benefitsGrid}>
-            {[
-              "Improved production efficiency and throughput through smart automation",
-              "Reduced unplanned downtime using predictive maintenance",
-              "Higher product quality via continuous monitoring",
-              "Greater agility to adapt to changing market demand",
-              "Sustainable manufacturing powered by analytics and optimization",
-            ].map((text, i) => (
+            {t.benefits.items.map((text, i) => (
               <div key={i} className={styles.benefitItem}>
                 <div className={styles.index}>{i + 1}</div>
                 <p className={styles.cardText}>{text}</p>
@@ -150,27 +95,26 @@ export default function Industry() {
       {/* ================= CENTERED STATEMENT ================= */}
       <section className={styles.centerSection}>
         <div className={styles.centerContent}>
-          <h2 className={styles.centerTitle}>
-            Future-Ready Industrial Operations
-          </h2>
+          <h2 className={styles.centerTitle}>{t.future.title}</h2>
 
           <div className={styles.centerImage}>
-      <Image
-        src="/services/i2.jpg"
-        alt="Industry 4.0"
-        width={420}
-        height={320}
-        priority
-      />
-    </div>
+            <Image
+              src="/services/i2.jpg"
+              alt=""
+              width={420}
+              height={320}
+              priority
+            />
+          </div>
 
-          <p className={styles.centerText}>
-            Vyanta Global helps organizations move beyond automation—toward
-            intelligent, connected, and future-ready industrial operations
-            powered by Industry 4.0.
-          </p>
+          <p className={styles.centerText}>{t.future.text}</p>
         </div>
       </section>
+      <CtaContact
+                    bannerText="Accelerate Industry 4.0 with Vyanta—build intelligent and resilient manufacturing operations.
+"
+                    submitText="Talk to our expert team"
+                  />
     </motion.div>
   );
 }
