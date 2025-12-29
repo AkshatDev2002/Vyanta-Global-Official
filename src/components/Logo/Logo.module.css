@@ -1,34 +1,20 @@
 .logoWrapper {
   display: flex;
   align-items: center;
-  gap: 8px;
-  height: 100%;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
 }
 
-/* Logo image */
 .logoImage {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
+  width: 36px;
+  height: auto;
   display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-/* Globe animation */
-.globe {
-  width: 95px;           /* ⬆️ increase globe size */
-  height: 95px;
-  flex-shrink: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(18px) translateX(-145px);
-}
-
-
-/* Prevent Lottie overflow */
-.globe svg {
-  width: 100% !important;
-  height: 100% !important;
-}
-
+.logoWrapper:hover .logoImage {
+  transform: translateY(-1px);
+filter: drop-shadow(0 6px 14px rgba(4, 131, 78, 0.725));}

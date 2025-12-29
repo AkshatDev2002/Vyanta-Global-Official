@@ -15,7 +15,7 @@
 }
 
 .heroContent {
-  max-width: 800px;
+  max-width: 1200px;
 }
 
 .title {
@@ -29,7 +29,7 @@
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: #505050;
   line-height: 1.75;
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 /* =========================
@@ -58,21 +58,14 @@
   background: linear-gradient(90deg, #109f61, #25f95e);
 }
 
-.paragraph {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #505050;
-  max-width: 900px;
-  margin-bottom: 18px;
-}
-
 /* =========================
-   BENTO GRID (3D CARDS)
+   BENTO GRID
 ========================= */
 .bentoGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  margin-top: 15px;
 }
 
 .cardContainer {
@@ -84,7 +77,7 @@
   border-radius: 14px;
   border: 1px solid rgba(16, 159, 97, 0.15);
   padding: 22px 20px;
-  min-height: 240px;
+  min-height: 190px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -100,7 +93,6 @@
 .cardTitle {
   font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 10px;
   color: #0a0e27;
 }
 
@@ -111,34 +103,24 @@
 }
 
 /* =========================
-   ALTERNATING IMAGE / TEXT
+   ALTERNATING LAYOUT
 ========================= */
-.altGrid,
-.altGridReverse {
+.altGrid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
   gap: 56px;
-}
-
-.altGridReverse {
-  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
 }
 
 .altText {
   max-width: 560px;
 }
 
-.altText p {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #505050;
-}
-
 .altImage img {
   width: 100%;
-  height: auto;
   border-radius: 12px;
+
+  /* Base state */
   filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12));
   transform: translateZ(0);
   transition:
@@ -178,45 +160,38 @@
   list-style: none;
   padding: 0;
   margin-top: 24px;
-  counter-reset: advantage;
+  counter-reset: item;
 }
 
 .list li {
   position: relative;
   padding-left: 42px;
   margin-bottom: 18px;
-
   font-size: 0.95rem;
   line-height: 1.7;
   color: #505050;
-  
-  
 }
 
 .list li::before {
-  counter-increment: advantage;
-  content: counter(advantage);
-
+  counter-increment: item;
+  content: counter(item);
   position: absolute;
   left: 0;
   top: 2px;
-
   width: 26px;
   height: 26px;
   border-radius: 50%;
   background: linear-gradient(90deg, #109f61, #25f95e);
-  color: #ffffff;
-
+  color: #fff;
   font-size: 0.8rem;
   font-weight: 700;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* =========================
-   BUSINESS BENEFITS
+   BENEFITS
 ========================= */
 .benefitsLayout {
   display: grid;
@@ -227,11 +202,10 @@
 
 .benefitsGrid {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 24px;
   max-width: 520px;
-  
 }
+
 
 .benefitItem {
   display: flex;
@@ -261,24 +235,42 @@
     0 18px 36px rgba(0, 0, 0, 0.22);
 }
 
-
 .index {
   font-size: 1.35rem;
   font-weight: 700;
   color: #109f61;
-  line-height: 1;
 }
 
 .benefitItem p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #0a0e27;
   margin: 0;
 }
 
+/* =========================
+   CENTER SECTION
+========================= */
+.centerSection {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 72px;
+}
+
+.centerTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(90, 150, 90);
+  margin-bottom: 20px;
+}
+
+.centerText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #505050;
+}
 
 /* =========================
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE
 ========================= */
 @media (max-width: 1024px) {
   .bentoGrid {
@@ -286,14 +278,9 @@
   }
 
   .altGrid,
-  .altGridReverse,
   .benefitsLayout {
     grid-template-columns: 1fr;
     gap: 48px;
-  }
-
-  .benefitsLottie {
-    margin: 0 auto;
   }
 }
 
@@ -302,21 +289,8 @@
     padding: 56px 20px;
   }
 
-  .hero {
-    margin-bottom: 72px;
-  }
-
   .bentoGrid {
     grid-template-columns: 1fr;
-  }
-
-  .section,
-  .altSection {
-    margin-bottom: 72px;
-  }
-
-  .benefitsGrid {
-    max-width: 100%;
   }
 }
 
@@ -327,13 +301,5 @@
 
   .sectionTitle {
     font-size: 1.75rem;
-  }
-
-  .benefitItem {
-    padding: 16px 18px;
-  }
-
-  .benefitsLottie {
-    max-width: 280px;
   }
 }

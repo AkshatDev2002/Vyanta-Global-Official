@@ -1,7 +1,7 @@
 export const aboutTranslations = {
   en: {
     // Hero Section
-    heroTitle: "Hi, we're Vyanta Global",
+    heroTitle: "We're Vyanta Global",
     heroSubtitle:
       "A specialist data consulting and solutions partner focused on delivering scalable, secure, and future-ready data ecosystems for modern enterprises worldwide.\n\nWe provide end-to-end data services, including big data engineering, enterprise data integration, and data governance to ensure trusted, compliant, and high-quality information across your business.\n\nWith a strategic, value-focused approach, we help organisations modernise their data platforms, reduce operational complexity, and turn data into a long-term competitive advantage.",
     heroImageAlt: "Vyanta Global Team",

@@ -46,7 +46,7 @@ export const industryTranslations = {
     smartFactory: {
       title: "Building Smart Factories for the Digital Era",
       subtitle:
-        "Vyanta Global delivers Industry 4.0 implementations using a data-first approach that enables predictive and autonomous operations.",
+        "Vyanta Global delivers Industry 4.0 implementations with a data-first approach, combining edge intelligence, secure cloud analytics, and automation to drive low-latency decision-making at scale. Our solutions transform traditional plants into smart factories with predictive, adaptive, and autonomous capabilities.",
       points: [
         "Reduced downtime through predictive workflows",
         "Increased throughput with intelligent automation",
@@ -57,20 +57,20 @@ export const industryTranslations = {
     benefits: {
       title: "Business Benefits of Industry 4.0",
       subtitle:
-        "Industry 4.0 delivers measurable ROI through intelligent, data-driven manufacturing.",
+        "Our Industry 4.0 solutions deliver faster ROI, reduced operational risk, and continuous improvement through intelligent, data-driven manufacturing.",
       items: [
-        "Improved production efficiency and throughput",
-        "Reduced unplanned downtime",
-        "Higher product quality through monitoring",
-        "Greater agility to meet market demand",
-        "Sustainable manufacturing optimization",
+        "Improved production efficiency and throughput through smart automation",
+        "Reduced unplanned downtime using predictive maintenance and real-time alerts",
+        "Higher product quality via continuous monitoring and closed-loop feedback",
+        "Greater operational agility to adapt to market and demand changes",
+        "Sustainable manufacturing and energy efficiency powered by analytics and optimization",
       ],
     },
 
     future: {
       title: "Future-Ready Industrial Operations",
       text:
-        "Vyanta Global helps organizations move beyond automation toward intelligent, connected, and future-ready industrial ecosystems.",
+        "Vyanta Global helps organizations move beyond automation—toward intelligent, connected, and future-ready industrial operations powered by Industry 4.0.",
     },
   },
 

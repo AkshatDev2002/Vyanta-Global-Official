@@ -80,6 +80,13 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12));
+  transform: translateZ(0);
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.55s ease,
+    box-shadow 0.55s ease;
+    cursor: pointer;
 }
 
 .cardTitle {
@@ -124,7 +131,34 @@
   width: 100%;
   height: auto;
   border-radius: 12px;
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12));
+  transform: translateZ(0);
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.55s ease,
+    box-shadow 0.55s ease;
+    cursor: pointer;
+}
+
+.altImage img:hover {
+  transform: perspective(900px) translateY(-6px) scale(1.035);
+  
+  filter:
+    drop-shadow(0 20px 40px rgba(0, 0, 0, 0.18))
+    saturate(1.05)
+    contrast(1.05);
+
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 156, 0.22),
+    0 18px 36px rgba(0, 0, 0, 0.22);
+}
+
+/* Touch devices: disable hover lift */
+@media (hover: none) {
+  .altImage img:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 /* =========================
@@ -192,6 +226,26 @@
   background: #f8fafc;
   border-radius: 12px;
   padding: 18px 22px;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12));
+  transform: translateZ(0);
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.55s ease,
+    box-shadow 0.55s ease;
+    cursor: pointer;
+}
+
+.benefitItem:hover {
+  transform: perspective(900px) translateY(-6px) scale(1.035);
+  
+  filter:
+    drop-shadow(0 20px 40px rgba(0, 0, 0, 0.18))
+    saturate(1.05)
+    contrast(1.05);
+
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 156, 0.22),
+    0 18px 36px rgba(0, 0, 0, 0.22);
 }
 
 .index {

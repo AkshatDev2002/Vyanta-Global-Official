@@ -6,6 +6,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { industryTranslations } from "@/lib/Industry4";
 import CtaContact from "@/components/ui/CtaContact";
 import styles from "./Industry.module.css";
+import CardBody from "@/components/ui/3d-card/CardBody";
+import CardItem from "@/components/ui/3d-card/CardItem";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -44,7 +46,7 @@ export default function Industry() {
             <motion.div
               key={i}
               className={styles.cardBody}
-              whileHover={{ y: -6 }}
+              whileHover={{ y: -10 }}
             >
               <h3 className={styles.cardTitle}>{item.title}</h3>
               <p className={styles.cardText}>{item.text}</p>

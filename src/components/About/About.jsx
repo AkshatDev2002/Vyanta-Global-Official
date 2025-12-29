@@ -1,8 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { FaStar, FaHandshake, FaLightbulb, FaShieldAlt, FaSearch, FaArrowRight, FaDatabase, FaClock, FaUsersCog } from "react-icons/fa";
+import Lottie from "lottie-react";
+import hiAnimation from "@/assets/hi.json";
+import {
+  FaStar,
+  FaHandshake,
+  FaLightbulb,
+  FaShieldAlt,
+  FaSearch,
+  FaArrowRight,
+  FaDatabase,
+  FaClock,
+  FaUsersCog,
+} from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import { aboutTranslations } from "@/lib/AboutTranslation";
 import styles from "./About.module.css";
@@ -13,7 +24,10 @@ import CtaContact from "@/components/ui/CtaContact";
 // Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+  },
 };
 
 const itemVariants = {
@@ -24,7 +38,15 @@ const itemVariants = {
 // Hero Section
 function HeroSection({ t }) {
   return (
-    <motion.section className={styles.heroSection} variants={containerVariants} initial="hidden" animate="visible">
+    <motion.section
+      className={styles.heroSection}
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className={styles.lottieContainer} aria-hidden>
+        <Lottie animationData={hiAnimation} loop autoplay />
+      </div>
       <div className={styles.heroContent}>
         <motion.div className={styles.heroText} variants={itemVariants}>
           <motion.h1 className={styles.heroTitle} variants={itemVariants}>
@@ -34,11 +56,6 @@ function HeroSection({ t }) {
             {t.heroSubtitle}
           </motion.p>
         </motion.div>
-        <motion.div className={styles.heroImageWrapper} variants={itemVariants}>
-          <div className={styles.heroImageContainer}>
-            <Image src="/about/about1.jpg" alt={t.heroImageAlt} fill className={styles.heroImage} priority />
-          </div>
-        </motion.div>
       </div>
     </motion.section>
   );
@@ -47,14 +64,24 @@ function HeroSection({ t }) {
 // Story Section
 function StorySection({ t }) {
   return (
-    <motion.section className={styles.storySection} variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+    <motion.section
+      className={styles.storySection}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className={styles.storyContent}>
         <motion.div className={styles.storyHeader} variants={itemVariants}>
           <h2 className={styles.sectionTitle}>{t.storyTitle}</h2>
         </motion.div>
         <motion.div className={styles.storyGrid} variants={containerVariants}>
           {t.stories.map((story, index) => (
-            <motion.div key={index} className={styles.storyCard} variants={itemVariants}>
+            <motion.div
+              key={index}
+              className={styles.storyCard}
+              variants={itemVariants}
+            >
               <h3>{story.title}</h3>
               <p>{story.description}</p>
             </motion.div>
@@ -75,7 +102,13 @@ function ProblemSection({ t }) {
   };
 
   return (
-    <motion.section className={styles.problemSection} variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+    <motion.section
+      className={styles.problemSection}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className={styles.problemContent}>
         <motion.div className={styles.problemHeader} variants={itemVariants}>
           <h2 className={styles.sectionTitle}>{t.problemTitle}</h2>
@@ -83,7 +116,12 @@ function ProblemSection({ t }) {
         </motion.div>
         <motion.div className={styles.problemGrid} variants={containerVariants}>
           {t.problems.map((problem, index) => (
-            <motion.div key={index} className={styles.problemCard} variants={itemVariants} whileHover={{ y: -8 }}>
+            <motion.div
+              key={index}
+              className={styles.problemCard}
+              variants={itemVariants}
+              whileHover={{ y: -8 }}
+            >
               <div className={styles.problemIcon}>{iconMap[index]}</div>
               <h3>{problem.title}</h3>
               <p>{problem.description}</p>
@@ -98,7 +136,13 @@ function ProblemSection({ t }) {
 // Solution Section
 function SolutionSection({ t }) {
   return (
-    <motion.section className={styles.solutionSection} variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+    <motion.section
+      className={styles.solutionSection}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className={styles.solutionContent}>
         <motion.div className={styles.solutionHeader} variants={itemVariants}>
           <h2 className={styles.sectionTitle}>{t.solutionTitle}</h2>
@@ -106,7 +150,12 @@ function SolutionSection({ t }) {
         </motion.div>
         <motion.div className={styles.solutionGrid} variants={containerVariants}>
           {t.solutions.map((solution, index) => (
-            <motion.div key={index} className={styles.solutionCard} variants={itemVariants} whileHover={{ y: -8 }}>
+            <motion.div
+              key={index}
+              className={styles.solutionCard}
+              variants={itemVariants}
+              whileHover={{ y: -8 }}
+            >
               <div className={styles.solutionNumber}>{solution.number}</div>
               <h3>{solution.title}</h3>
               <p>{solution.description}</p>
@@ -150,7 +199,13 @@ function ValuesSection({ t }) {
 // Team Section
 function TeamSection({ t }) {
   return (
-    <motion.section className={styles.teamSection} variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+    <motion.section
+      className={styles.teamSection}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className={styles.teamContent}>
         <motion.div className={styles.teamHeader} variants={itemVariants}>
           <h2 className={styles.sectionTitle}>{t.teamTitle}</h2>
@@ -158,7 +213,11 @@ function TeamSection({ t }) {
         </motion.div>
         <motion.div className={styles.teamStats} variants={containerVariants}>
           {t.teamStats.map((stat, index) => (
-            <motion.div key={index} className={styles.statCard} variants={itemVariants}>
+            <motion.div
+              key={index}
+              className={styles.statCard}
+              variants={itemVariants}
+            >
               <div className={styles.statNumber}>{stat.number}</div>
               <div className={styles.statLabel}>{stat.label}</div>
             </motion.div>
@@ -174,10 +233,12 @@ function TeamSection({ t }) {
 function VisionSection({ t }) {
   return (
     <section className={styles.visionSection}>
-      <h2 className={styles.sectionTitle}>{t.visionTitle}</h2>
-      <p className={styles.sectionDescription}>{t.visionDescription1}</p>
-      <br />
-      <p className={styles.sectionDescription}>{t.visionDescription2}</p>
+      <div className={styles.visionHeaderBlock}>
+        <h2 className={styles.sectionTitle}>{t.visionTitle}</h2>
+        <p className={styles.sectionDescription}>{t.visionDescription1}</p>
+        <br />
+        <p className={styles.sectionDescription}>{t.visionDescription2}</p>
+      </div>
       <div className={styles.visionScrollWrapper}>
         <VisionStickyScroll content={t.visionContent} />
       </div>
