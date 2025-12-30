@@ -72,6 +72,7 @@
 
 .cardBody:hover {
   box-shadow: 0 24px 60px rgba(0, 255, 157, 0.086);
+  cursor: pointer;
 }
 
 

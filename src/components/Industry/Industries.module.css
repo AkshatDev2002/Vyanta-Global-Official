@@ -64,8 +64,26 @@
   flex-grow: 1;
 }
 
+.cardBody {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(16, 159, 97, 0.15);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12));
+  transform: translateZ(0);
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.55s ease,
+    box-shadow 0.55s ease;
+    cursor: pointer;
+}
+
 .cardBody:hover {
   box-shadow: 0 24px 60px rgba(0, 255, 157, 0.086);
+  cursor: pointer;
 }
 
 /* CTA */
