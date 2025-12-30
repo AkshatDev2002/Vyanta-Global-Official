@@ -112,6 +112,10 @@
   align-items: center;
 }
 
+.altGridReverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
 .altText {
   max-width: 560px;
 }
