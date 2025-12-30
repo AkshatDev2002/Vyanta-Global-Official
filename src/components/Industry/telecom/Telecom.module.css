@@ -66,40 +66,67 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   margin-top: 15px;
+
+  /* CRITICAL: enforce equal card height */
+  grid-auto-rows: 1fr;
 }
+
 
 .cardContainer {
   height: 100%;
+  display: flex;
 }
+
 
 .cardBody {
   background: #ffffff;
   border-radius: 14px;
   border: 1px solid rgba(16, 159, 97, 0.15);
   padding: 22px 20px;
-  min-height: 200px;
+
+  /* CRITICAL FIX */
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12));
+  justify-content: flex-start;
+
+  /* REMOVE min-height */
+  min-height: 200px;
+
+  /* SAFE SHADOW */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+
+  /* Performance */
+  will-change: transform;
   transform: translateZ(0);
+
   transition:
-    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.55s ease,
-    box-shadow 0.55s ease;
-    cursor: pointer;
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.45s ease;
+
+  cursor: pointer;
 }
+
 
 .cardTitle {
   font-size: 1.15rem;
   font-weight: 600;
   color: #0a0e27;
+
+  /* Prevent height jumps */
+  line-height: 1.3;
 }
+
 
 .cardText {
   font-size: 0.95rem;
   color: #505050;
   line-height: 1.65;
+
+  /* CRITICAL: clamp text */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* =========================
