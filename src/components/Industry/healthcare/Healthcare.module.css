@@ -1,0 +1,310 @@
+/* =========================
+   BASE CONTAINER
+========================= */
+.container {
+  margin: 0 auto;
+  padding: 72px 24px;
+  max-width: 1200px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  margin-bottom: 96px;
+}
+
+.heroContent {
+  max-width: 900px;
+}
+
+.title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: rgb(90, 150, 90);
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #505050;
+  line-height: 1.75;
+  max-width: 900px;
+}
+
+/* =========================
+   SECTION
+========================= */
+.section,
+.altSection {
+  margin-bottom: 88px;
+}
+
+.sectionTitle {
+  font-size: clamp(1.9rem, 3vw, 2.3rem);
+  font-weight: 700;
+  color: rgb(90, 150, 90);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, #109f61, #25f95e);
+}
+
+/* =========================
+   BENTO GRID
+========================= */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 20px;
+}
+
+.cardContainer {
+  height: 100%;
+}
+
+.cardBody {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(16, 159, 97, 0.15);
+  padding: 22px 20px;
+  min-height: 200px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12));
+  transform: translateZ(0);
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.55s ease,
+    box-shadow 0.55s ease;
+  cursor: pointer;
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0a0e27;
+}
+
+.cardText {
+  font-size: 0.95rem;
+  color: #505050;
+  line-height: 1.65;
+}
+
+/* =========================
+   ALTERNATING LAYOUT
+========================= */
+.altGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.altText {
+  max-width: 560px;
+}
+
+.altImage {
+  display: flex;
+  justify-content: center;
+}
+
+.altImage img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12));
+  transform: translateZ(0);
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.55s ease,
+    box-shadow 0.55s ease;
+  cursor: pointer;
+}
+
+.altImage img:hover {
+  transform: perspective(900px) translateY(-6px) scale(1.035);
+  filter:
+    drop-shadow(0 20px 40px rgba(0, 0, 0, 0.18))
+    saturate(1.05)
+    contrast(1.05);
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 156, 0.22),
+    0 18px 36px rgba(0, 0, 0, 0.22);
+}
+
+@media (hover: none) {
+  .altImage img:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* =========================
+   LISTS
+========================= */
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+  counter-reset: item;
+}
+
+.list li {
+  position: relative;
+  padding-left: 42px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #505050;
+}
+
+.list li::before {
+  counter-increment: item;
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #109f61, #25f95e);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+.benefitsLayout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.benefitsGrid {
+  display: grid;
+  gap: 24px;
+  max-width: 520px;
+}
+
+.benefitItem {
+  display: flex;
+  gap: 14px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 18px 22px;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12));
+  transition: transform 0.4s ease;
+}
+ 
+.index {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #109f61;
+}
+
+.benefitItem p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12));
+  transform: translateZ(0);
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.55s ease,
+    box-shadow 0.55s ease;
+  cursor: pointer;
+}
+
+.benefitItem:hover {
+  transform: perspective(900px) translateY(-6px) scale(1.035);
+  filter:
+    drop-shadow(0 20px 40px rgba(0, 0, 0, 0.18))
+    saturate(1.05)
+    contrast(1.05);
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 156, 0.22),
+    0 18px 36px rgba(0, 0, 0, 0.22);
+}
+ 
+
+
+/* =========================
+   CENTER SECTION
+========================= */
+.centerSection {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 72px;
+}
+
+.centerTitle {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: rgb(90, 150, 90);
+  margin-bottom: 22px;
+}
+
+.centerText {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #505050;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .altGrid,
+  .benefitsLayout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 56px 20px;
+  }
+
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .section,
+  .altSection {
+    margin-bottom: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+}

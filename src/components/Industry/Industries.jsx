@@ -16,25 +16,25 @@ const industriesMeta = [
     key: "telecom",
     title: "Telecom",
     image: "/industry/i1.jpg",
-    href: "/industries/telecom",
+    href: "/industry/telecom",
   },
   {
     key: "bfsi",
     title: "BFSI",
     image: "/industry/i2.jpg",
-    href: "/industries/bfsi",
+    href: "/industry/bfsi",
   },
   {
     key: "healthcare",
     title: "Healthcare",
     image: "/industry/i3.jpg",
-    href: "/industries/health",
+    href: "/industry/health",
   },
   {
     key: "logistics",
     title: "Logistics & Automation",
     image: "/industry/i4.jpg",
-    href: "/industries/logistics",
+    href: "/industry/logistics",
   },
 ];
 

@@ -34,7 +34,7 @@ const navItems = [
     children: [
       { name: "Telecom", link: "/industry/telecom" },
       { name: "BFSI", link: "/industry/bfsi" },
-      { name: "Healthcare", link: "/industry/healthcare" },
+      { name: "Healthcare", link: "/industry/health" },
       { name: "Logistics and Automation", link: "/industry/logistics" },
     ], 
   
