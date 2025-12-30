@@ -34,7 +34,7 @@ const industriesMeta = [
     key: "logistics",
     title: "Logistics & Automation",
     image: "/industry/i4.jpg",
-    href: "/industry/logistics",
+    href: "/industry/logistic",
   },
 ];
 

@@ -35,7 +35,7 @@ const navItems = [
       { name: "Telecom", link: "/industry/telecom" },
       { name: "BFSI", link: "/industry/bfsi" },
       { name: "Healthcare", link: "/industry/health" },
-      { name: "Logistics and Automation", link: "/industry/logistics" },
+      { name: "Logistics and Automation", link: "/industry/logistic" },
     ], 
   
   },

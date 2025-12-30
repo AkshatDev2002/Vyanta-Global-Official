@@ -1,5 +1,5 @@
 import BfsiWrapper from "@/components/Industry/bfsi/BfsiWrapper";
 
-export default function IndustryPage() {
+export default function BFSIPage() {
   return <BfsiWrapper />;
 }
