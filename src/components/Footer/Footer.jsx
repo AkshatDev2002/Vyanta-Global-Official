@@ -48,9 +48,9 @@ export default function Footer() {
       title: "Industries",
       links: [
         { label: "Telecom", href: "/industry/telecom" },
-        { label: "BFSI", href: "/bfsi" },
-        { label: "Healthcare", href: "/healthcare" },
-        { label: "Logistics & Automation", href: "/logistic" },
+        { label: "BFSI", href: "/industry/bfsi" },
+        { label: "Healthcare", href: "/industry/healthcare" },
+        { label: "Logistics & Automation", href: "/industry/logistic" },
       ],
     },
   ];
