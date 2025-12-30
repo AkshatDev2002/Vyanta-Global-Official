@@ -76,7 +76,7 @@
   border-radius: 14px;
   border: 1px solid rgba(16, 159, 97, 0.15);
   padding: 22px 20px;
-  min-height: 240px;
+  min-height: 240px !important;
   display: flex;
   flex-direction: column;
   gap: 10px;

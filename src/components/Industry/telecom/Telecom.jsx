@@ -3,12 +3,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-
 import { CardContainer } from "@/components/ui/3d-card/CardContainer";
 import CardBody from "@/components/ui/3d-card/CardBody";
 import CardItem from "@/components/ui/3d-card/CardItem";
 import CtaContact from "@/components/ui/CtaContact";
-
 import { telecomTranslations } from "@/lib/TelecomTranslation";
 import styles from "./Telecom.module.css";
 
