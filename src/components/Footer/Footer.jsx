@@ -30,6 +30,7 @@ export default function Footer() {
       links: [
         { label: "Big Data Solutions", href: "/services/bigdata" },
         { label: "Data Integration/ Data Governance", href: "/services/data" },
+        { label: "AI & Data Security ", href: "/services/ai" },
         { label: "Metadata Management", href: "/services/meta" },
         { label: "Custom Development", href: "/services/custom" },
         { label: "Industry 4.0 Solutions", href: "/services/industry" },

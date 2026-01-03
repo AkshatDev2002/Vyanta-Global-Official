@@ -7,9 +7,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const SERVICE_IMAGES = {
   0: "/services/bigdata.jpg",
   1: "/services/datagov.jpg",
-  2: "/services/meta.jpg",
-  3: "/services/custom.jpg",
-  4: "/services/industry4.jpg",
+  2: "/services/ai1.jpg",
+  3: "/services/meta.jpg",
+  4: "/services/custom.jpg",
+  5: "/services/industry4.jpg",
 };
 
 export default function ServicesCarousel({ services }) {

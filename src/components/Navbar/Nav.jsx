@@ -23,6 +23,7 @@ const navItems = [
     children: [
       { name: "Big Data", link: "/services/bigdata" },
       { name: "Data Integration/Data Governance", link: "/services/data" },
+      { name: "AI & Data Security ", link: "/services/ai" },
       { name: "Metadata Management", link: "/services/meta" },
       { name: "Custom Development", link: "/services/custom" },
       { name: "Industry 4.0", link: "/services/industry" },

@@ -20,6 +20,13 @@ export const servicesTranslations = {
         linkText: "Read More →",
       },
       {
+        title: "AI & Data Security",
+        description:
+          "Enterprise-grade AI and data security solutions designed to protect sensitive data while enabling advanced analytics and AI innovation.",
+        link: "/services/ai",
+        linkText: "Read More →",
+      },
+      {
         title: "Metadata Management",
         description:
           "Enterprise metadata capture, lineage, and governance for trusted, AI-ready data.",
@@ -62,6 +69,13 @@ export const servicesTranslations = {
         link: "/services/data",
         linkText: "Meer lezen",
       },
+       {
+    title: "AI & Databeveiliging",
+    description:
+      "AI- en databeveiligingsoplossingen op enterprise-niveau die gevoelige gegevens beschermen en tegelijkertijd geavanceerde analytics en AI-innovatie mogelijk maken.",
+    link: "/services/ai",
+    linkText: "Lees meer →",
+  },
       {
         title: "Metadatabeheer",
         description: "Governance en data lineage op enterprise-niveau.",
@@ -102,6 +116,13 @@ export const servicesTranslations = {
         linkText: "Lire plus",
       },
       {
+    title: "IA & Sécurité des Données",
+    description:
+      "Des solutions d’IA et de sécurité des données de niveau entreprise, conçues pour protéger les données sensibles tout en permettant des analyses avancées et l’innovation en IA.",
+    link: "/services/ai",
+    linkText: "En savoir plus →",
+  },
+      {
         title: "Gestion des Métadonnées",
         description: "Traçabilité et gouvernance des données.",
         link: "/services/meta",
@@ -140,6 +161,13 @@ export const servicesTranslations = {
         link: "/services/data",
         linkText: "Mehr lesen",
       },
+      {
+    title: "KI & Datensicherheit",
+    description:
+      "KI- und Datensicherheitslösungen auf Enterprise-Niveau zum Schutz sensibler Daten bei gleichzeitiger Ermöglichung fortschrittlicher Analysen und KI-Innovationen.",
+    link: "/services/ai",
+    linkText: "Mehr erfahren →",
+  },
       {
         title: "Metadatenmanagement",
         description: "Governance und Datenqualität.",
@@ -180,6 +208,13 @@ export const servicesTranslations = {
         linkText: "Leggi di più",
       },
       {
+    title: "AI & Sicurezza dei Dati",
+    description:
+      "Soluzioni di AI e sicurezza dei dati di livello enterprise progettate per proteggere i dati sensibili e abilitare analisi avanzate e innovazione AI.",
+    link: "/services/ai",
+    linkText: "Scopri di più →",
+  },
+      {
         title: "Gestione Metadati",
         description: "Governance enterprise dei dati.",
         link: "/services/meta",
@@ -219,6 +254,13 @@ export const servicesTranslations = {
         linkText: "Читать далее",
       },
       {
+    title: "ИИ и Безопасность Данных",
+    description:
+      "Корпоративные решения в области ИИ и безопасности данных, обеспечивающие защиту конфиденциальной информации и развитие передовой аналитики и ИИ-инноваций.",
+    link: "/services/ai",
+    linkText: "Подробнее →",
+  },
+      {
         title: "Метаданные",
         description: "Управление и прозрачность данных.",
         link: "/services/meta",
@@ -257,6 +299,13 @@ export const servicesTranslations = {
         link: "/services/data",
         linkText: "Leia mais",
       },
+      {
+    title: "IA & Segurança de Dados",
+    description:
+      "Soluções corporativas de IA e segurança de dados projetadas para proteger informações sensíveis e permitir análises avançadas e inovação em IA.",
+    link: "/services/ai",
+    linkText: "Leia mais →",
+  },
       {
         title: "Metadados",
         description: "Governança e confiabilidade.",
