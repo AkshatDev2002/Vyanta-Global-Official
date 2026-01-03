@@ -103,17 +103,17 @@ export default function Footer() {
   <div className={styles.contactBlock}>
     <div className={styles.contactItem}>
       <FaMapMarkerAlt />
-      <span>Bengaluru, India</span>
+      <span>New Delhi, India</span>
     </div>
 
     <div className={styles.contactItem}>
       <FaPhoneAlt />
-      <span>+91 XXXXX XXXXX</span>
+      <span>+91 9716800903</span>
     </div>
 
     <div className={styles.contactItem}>
       <FaEnvelope />
-      <span>contact@vyantaglobal.com</span>
+      <span>info@vyantaglobal.com</span>
     </div>
   </div>
 
