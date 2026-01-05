@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import styles from "./CtaContact.module.css";
 
@@ -9,9 +9,17 @@ export default function CtaContact({
   submitText = "Get in Touch",
 }) {
   const { executeRecaptcha } = useGoogleReCaptcha();
+  const formRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -26,27 +34,17 @@ export default function CtaContact({
 
     try {
       const recaptchaToken = await executeRecaptcha("cta_contact_submit");
-
-      if (!recaptchaToken) {
-        throw new Error("reCAPTCHA token missing");
-      }
+      if (!recaptchaToken) throw new Error("reCAPTCHA token missing");
 
       const formData = Object.fromEntries(new FormData(e.target));
 
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          recaptchaToken,
-        }),
+        body: JSON.stringify({ ...formData, recaptchaToken }),
       });
 
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.message || "Request failed");
-      }
+      if (!res.ok) throw new Error("Request failed");
 
       setStatus("success");
       e.target.reset();
@@ -63,10 +61,19 @@ export default function CtaContact({
       {/* Banner */}
       <div className={styles.ctaBanner}>
         <h2>{bannerText}</h2>
+
+        {/* 🔥 NEW CTA BUTTON */}
+        <button
+          type="button"
+          className={styles.bannerCta}
+          onClick={scrollToForm}
+        >
+          Contact Us ↓
+        </button>
       </div>
 
       {/* Form */}
-      <div className={styles.ctaFormWrapper}>
+      <div className={styles.ctaFormWrapper} ref={formRef}>
         <form className={styles.ctaForm} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
             <label>Name</label>
@@ -98,7 +105,9 @@ export default function CtaContact({
           </button>
 
           {status === "success" && (
-            <p className={styles.success}>Thanks! Message sent successfully. We’ll get back to you shortly.</p>
+            <p className={styles.success}>
+              Thanks! Message sent successfully. We’ll get back to you shortly.
+            </p>
           )}
 
           {status === "error" && (

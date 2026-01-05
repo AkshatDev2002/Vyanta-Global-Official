@@ -86,7 +86,9 @@ export default function Footer() {
 >
   <div className={styles.logo}>
     <div className={styles.logoWrapper}>
+      <a href="/">
       <FooterLogo />
+      </a>
     </div>
 
     <p className={styles.logoSubtext}>

@@ -4,6 +4,12 @@ import { useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import styles from "./JobContact.module.css";
 
+const ALLOWED_TYPES = [
+  "application/pdf",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+];
+
 export default function JobContact({
   bannerText = "Vyanta Global Career Opportunities",
   submitText = "Submit Application",
@@ -12,6 +18,27 @@ export default function JobContact({
 
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
+  const [fileError, setFileError] = useState(null);
+  const [fileName, setFileName] = useState("");
+
+  const handleFileChange = (e) => {
+    const file = e.target.files?.[0];
+    setFileError(null);
+
+    if (!file) {
+      setFileName("");
+      return;
+    }
+
+    if (!ALLOWED_TYPES.includes(file.type)) {
+      setFileError("Only PDF or Word documents (.pdf, .doc, .docx) are allowed.");
+      e.target.value = "";
+      setFileName("");
+      return;
+    }
+
+    setFileName(file.name);
+  };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -19,6 +46,11 @@ export default function JobContact({
 
     if (!executeRecaptcha || loading) {
       setStatus("error");
+      return;
+    }
+
+    if (!fileName) {
+      setFileError("Please upload your resume.");
       return;
     }
 
@@ -32,16 +64,13 @@ export default function JobContact({
 
       const res = await fetch("/api/job", {
         method: "POST",
-        body: formData, // IMPORTANT: no headers
+        body: formData,
       });
 
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.message || "Request failed");
-      }
+      if (!res.ok) throw new Error("Request failed");
 
       setStatus("success");
+      setFileName("");
       e.target.reset();
     } catch (err) {
       console.error("Job application error:", err);
@@ -97,15 +126,34 @@ export default function JobContact({
             <textarea name="skills" rows={4} required />
           </div>
 
-          {/* 🔥 RESUME UPLOAD */}
+          {/* ✅ PROFESSIONAL RESUME UPLOAD */}
           <div className={styles.formGroup}>
-            <label>Upload Resume (PDF/DOC)</label>
+            <label>Resume (PDF / DOC / DOCX)</label>
+
+            {/* Hidden native input */}
             <input
+              id="resumeUpload"
               name="resume"
               type="file"
               accept=".pdf,.doc,.docx"
+              onChange={handleFileChange}
+              className={styles.hiddenFileInput}
               required
             />
+
+            <div className={styles.fileUploadRow}>
+              <label htmlFor="resumeUpload" className={styles.fileButton}>
+                {fileName ? "Choose another file" : "Choose file"}
+              </label>
+
+              <span className={styles.fileName}>
+                {fileName || "No file selected"}
+              </span>
+            </div>
+
+            {fileError && (
+              <span className={styles.fileError}>{fileError}</span>
+            )}
           </div>
 
           <button type="submit" disabled={loading}>

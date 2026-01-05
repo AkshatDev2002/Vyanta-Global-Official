@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Navbar,
   NavBody,
@@ -23,22 +23,21 @@ const navItems = [
     children: [
       { name: "Big Data Solutions", link: "/services/bigdata" },
       { name: "Data Integration/Data Governance Services", link: "/services/data" },
-      { name: "AI & Data Security Services ", link: "/services/ai" },
+      { name: "AI & Data Security Services", link: "/services/ai" },
       { name: "Metadata Management", link: "/services/meta" },
       { name: "Custom Development", link: "/services/custom" },
       { name: "Industry 4.0 Services", link: "/services/industry" },
     ],
   },
-  { 
-    name: "Industries", 
+  {
+    name: "Industries",
     link: "/industry",
     children: [
       { name: "Telecom", link: "/industry/telecom" },
       { name: "BFSI", link: "/industry/bfsi" },
       { name: "Healthcare", link: "/industry/health" },
       { name: "Logistics and Automation", link: "/industry/logistic" },
-    ], 
-  
+    ],
   },
   { name: "Careers", link: "/careers" },
   { name: "Contact", link: "/contact" },
@@ -48,6 +47,25 @@ export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(null);
+
+  const navbarRef = useRef(null);
+
+  // ✅ CLOSE DESKTOP DROPDOWN ON OUTSIDE CLICK
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target)
+      ) {
+        setDesktopDropdownOpen(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
 
   const handleNavItemClick = () => {
     setMobileMenuOpen(false);
@@ -68,92 +86,97 @@ export default function Nav() {
   };
 
   return (
-    <Navbar onClick={() => setDesktopDropdownOpen(null)}>
-      {/* ================= DESKTOP NAV ================= */}
-      <NavBody>
-        <NavbarLogo />
-        <NavItems
-          items={navItems}
-          onItemClick={handleNavItemClick}
-          desktopDropdownOpen={desktopDropdownOpen}
-          onDropdownToggle={toggleDesktopDropdown}
-        />
-        <LanguageSwitcherWrapper />
-      </NavBody>
-
-      {/* ================= MOBILE NAV ================= */}
-      <MobileNav>
-        <MobileNavHeader>
+    <div ref={navbarRef}>
+      <Navbar>
+        {/* ================= DESKTOP NAV ================= */}
+        <NavBody>
           <NavbarLogo />
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <LanguageSwitcherWrapper />
-            <MobileNavToggle
-              isOpen={mobileMenuOpen}
-              onClick={() => setMobileMenuOpen((v) => !v)}
-            />
-          </div>
-        </MobileNavHeader>
 
-        <MobileNavMenu isOpen={mobileMenuOpen}>
-          {navItems.map((item) => (
-            <div key={item.name}>
-              {item.children ? (
-                <>
-                  {/* Parent item */}
-                  <div
-                    className={styles.mobileNavItem}
-                    onClick={() => toggleMobileDropdown(item.name)}
-                  >
-                    <span>{item.name}</span>
-                    <span
-                      className={`${styles.mobileChevron} ${
-                        mobileDropdownOpen === item.name ? styles.rotate : ""
+          <NavItems
+            items={navItems}
+            onItemClick={handleNavItemClick}
+            desktopDropdownOpen={desktopDropdownOpen}
+            onDropdownToggle={toggleDesktopDropdown}
+          />
+
+          <LanguageSwitcherWrapper />
+        </NavBody>
+
+        {/* ================= MOBILE NAV ================= */}
+        <MobileNav>
+          <MobileNavHeader>
+            <NavbarLogo />
+
+            <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+              <LanguageSwitcherWrapper />
+              <MobileNavToggle
+                isOpen={mobileMenuOpen}
+                onClick={() => setMobileMenuOpen((prev) => !prev)}
+              />
+            </div>
+          </MobileNavHeader>
+
+          <MobileNavMenu isOpen={mobileMenuOpen}>
+            {navItems.map((item) => (
+              <div key={item.name}>
+                {item.children ? (
+                  <>
+                    {/* Parent item */}
+                    <div
+                      className={styles.mobileNavItem}
+                      onClick={() => toggleMobileDropdown(item.name)}
+                    >
+                      <span>{item.name}</span>
+                      <span
+                        className={`${styles.mobileChevron} ${
+                          mobileDropdownOpen === item.name ? styles.rotate : ""
+                        }`}
+                      >
+                        ▼
+                      </span>
+                    </div>
+
+                    {/* Children */}
+                    <div
+                      className={`${styles.mobileDropdown} ${
+                        mobileDropdownOpen === item.name ? styles.open : ""
                       }`}
                     >
-                      ▼
-                    </span>
-                  </div>
-
-                  {/* Children (always rendered, CSS controls height) */}
-                  <div
-                    className={`${styles.mobileDropdown} ${
-                      mobileDropdownOpen === item.name ? styles.open : ""
-                    }`}
-                  >
-                    <a
-                      href={item.link}
-                      onClick={handleNavItemClick}
-                      className={styles.mobileDropdownItem}
-                      style={{ fontWeight: 600 }}
-                    >
-                      {item.name}
-                    </a>
-
-                    {item.children.map((child) => (
                       <a
-                        key={child.name}
-                        href={child.link}
+                        href={item.link}
                         onClick={handleNavItemClick}
                         className={styles.mobileDropdownItem}
+                        style={{ fontWeight: 600 }}
                       >
-                        {child.name}
+                        {item.name}
                       </a>
-                    ))}
-                  </div>
-                </>
-              ) : (
-                <a
-                  href={item.link}
-                  onClick={handleNavItemClick}
-                  className={styles.mobileNavItem}
-                >
-                  {item.name}
-                </a>
-              )}
-            </div>
-          ))}
-        </MobileNavMenu>
-      </MobileNav>
-    </Navbar>
+
+                      {item.children.map((child) => (
+                        <a
+                          key={child.name}
+                          href={child.link}
+                          onClick={handleNavItemClick}
+                          className={styles.mobileDropdownItem}
+                        >
+                          {child.name}
+                        </a>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <a
+                    href={item.link}
+                    onClick={handleNavItemClick}
+                    className={styles.mobileNavItem}
+                  >
+                    {item.name}
+                  </a>
+                )}
+              </div>
+            ))}
+          </MobileNavMenu>
+        </MobileNav>
+      </Navbar>
+    </div>
   );
 }
