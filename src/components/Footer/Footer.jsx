@@ -103,7 +103,7 @@ export default function Footer() {
   <div className={styles.contactBlock}>
     <div className={styles.contactItem}>
       <FaMapMarkerAlt />
-      <span>New Delhi, India</span>
+      <span>707C, Jaina Tower-2 Janakpuri, New Delhi</span>
     </div>
 
     <div className={styles.contactItem}>

@@ -52,12 +52,22 @@
   font-weight: 700;
   padding: 2px 6px;
   border-radius: 4px;
-  display: inline-block;
   font-family: "Share Tech", sans-serif;
+
+  /* 🔒 CRITICAL FIX */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Set width based on longest word */
+  min-width: 12ch;   /* adjust if your longest word is bigger */
+  text-align: center;
+
   backdrop-filter: blur(16px);
   background: rgb(70, 70, 70);
   flex-shrink: 0;
 }
+
 
 /* ===== HEADING (MOBILE FIRST) ===== */
 .heading {
