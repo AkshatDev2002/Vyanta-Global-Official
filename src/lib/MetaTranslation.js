@@ -2,7 +2,7 @@ export const metaTranslations = {
   /* ========================= ENGLISH ========================= */
   en: {
     hero: {
-      title: "Vyanta's Metadata Management Solutions",
+      title: "Vyanta's Metadata Management",
       subtitle:
         "Unlock the full value of your data with enterprise-grade metadata management solutions from Vyanta Global. We help organizations improve data discovery, lineage, governance, and operational trust—enabling analytics, AI, and BI initiatives to deliver consistent, reliable outcomes.",
     },

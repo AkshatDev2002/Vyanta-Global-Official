@@ -1,7 +1,7 @@
 export const aiTranslations = {
   en: {
     hero: {
-      title: "AI & Data Security Solutions",
+      title: "AI & Data Security Services",
       subtitle:
         "Vyanta Global delivers enterprise-grade AI and data security solutions designed to protect sensitive data while enabling advanced analytics and AI innovation. As organizations adopt AI at scale, ensuring data privacy, governance, compliance, and security by design is critical.",
     },

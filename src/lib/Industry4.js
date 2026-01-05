@@ -2,7 +2,7 @@ export const industryTranslations = {
   /* ================= ENGLISH ================= */
   en: {
     hero: {
-      title: "Vyanta's Industry 4.0 Solutions & Smart Manufacturing",
+      title: "Vyanta's Industry 4.0 Services",
       subtitle:
         "Our Industry 4.0 services help enterprises accelerate digital transformation by integrating IIoT, AI/ML, advanced analytics, automation, and digital twins into data-driven manufacturing operations.",
     },

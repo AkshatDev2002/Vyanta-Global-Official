@@ -13,14 +13,14 @@ export const servicesTranslations = {
         linkText: "Read More →",
       },
       {
-        title: "Data Integration / Data Governance",
+        title: "Data Integration / Data Governance Services",
         description:
           "High-speed ETL pipelines and governed data flows across enterprise systems.",
         link: "/services/data",
         linkText: "Read More →",
       },
       {
-        title: "AI & Data Security",
+        title: "AI & Data Security Services",
         description:
           "Enterprise-grade AI and data security solutions designed to protect sensitive data while enabling advanced analytics and AI innovation.",
         link: "/services/ai",
@@ -34,14 +34,14 @@ export const servicesTranslations = {
         linkText: "Read More →",
       },
       {
-        title: "Custom Development Services & Support",
+        title: "Custom Development",
         description:
           "End-to-end application development using MERN, Next.js, and modern architectures.",
         link: "/services/custom",
         linkText: "Read More →",
       },
       {
-        title: "Industry 4.0 / Digital Transformation",
+        title: "Industry 4.0 Services",
         description:
           "IoT, automation, and AI-driven modernization with predictive insights.",
         link: "/services/industry",

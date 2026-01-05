@@ -29,11 +29,11 @@ export default function Footer() {
       title: "What We Do",
       links: [
         { label: "Big Data Solutions", href: "/services/bigdata" },
-        { label: "Data Integration/ Data Governance", href: "/services/data" },
-        { label: "AI & Data Security ", href: "/services/ai" },
+        { label: "Data Integration/ Data Governance Services", href: "/services/data" },
+        { label: "AI & Data Security Services ", href: "/services/ai" },
         { label: "Metadata Management", href: "/services/meta" },
         { label: "Custom Development", href: "/services/custom" },
-        { label: "Industry 4.0 Solutions", href: "/services/industry" },
+        { label: "Industry 4.0 Services", href: "/services/industry" },
       ],
     },
     {
@@ -117,7 +117,7 @@ export default function Footer() {
     </div>
   </div>
 
-  {/* SOCIAL */}
+  {/* SOCIAL 
   <div className={styles.socialLinks}>
     <a href="#" className={styles.socialLink} aria-label="LinkedIn">
       <FaLinkedinIn />
@@ -128,7 +128,7 @@ export default function Footer() {
     <a href="#" className={styles.socialLink} aria-label="Facebook">
       <FaFacebookF />
     </a>
-  </div>
+  </div>*/}
 </motion.div>
 
 

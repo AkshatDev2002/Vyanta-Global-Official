@@ -2,7 +2,7 @@ export const customTranslations = {
   /* ================= ENGLISH ================= */
   en: {
     hero: {
-      title: "Vyanta's Custom Application Development Services",
+      title: "Vyanta's Custom Development Services",
       subtitle:
         "Transform your digital vision into scalable, secure, and high-performance applications. Vyanta Global designs, builds, and maintains enterprise-grade applications that align with business goals and scale with demand.",
     },

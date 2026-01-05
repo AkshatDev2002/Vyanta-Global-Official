@@ -8,9 +8,10 @@ export const skillsetTranslations = {
     capabilities: [
       "Big Data Solutions",
       "Data Integration & Data Governance Services",
+      "AI & Data Security Services",
       "Metadata Management",
       "Custom Development",
-      "Industry 4.0 Technologies",
+      "Industry 4.0 Services",
     ],
     skillsets: [
       {
@@ -29,17 +30,22 @@ export const skillsetTranslations = {
           "Our team delivers enterprise Data Governance & Compliance solutions that help organizations establish trusted, secure, and regulation-ready data environments. We design governance frameworks covering data quality, metadata management, access control, and policy enforcement, ensuring compliance with global standards such as GDPR, SOC, and industry-specific regulations. Our data governance services enable clear data ownership, improved regulatory reporting, reduced risk, and confident decision-making across the enterprise.",
       },
       {
+        title: "AI & Data Security Services",
+        description:
+          "Our team delivers delivers AI and data security services through a security-by-design approach, embedding governance, privacy, and compliance across the entire data and AI lifecycle. We build secure data pipelines, enforce role-based access controls, implement metadata-driven governance, and apply AI-powered monitoring to protect sensitive data—ensuring AI systems are trustworthy, compliant, and ready for enterprise-scale adoption.",
+      },
+      {
         title: "Metadata Management",
         description:
           "Vyanta Global provides enterprise Metadata Management solutions that give organizations full visibility, control, and trust in their data assets. We implement centralized metadata repositories, data cataloging, lineage tracking, and business glossaries to ensure discoverability, consistency, and governance across the data lifecycle. Our metadata management services empower teams with accurate context, improve data quality, support regulatory compliance, and accelerate analytics, BI, and AI initiatives.",
       },
       {
-        title: "Custom Data Solutions",
+        title: "Custom Development",
         description:
           "Every organization faces distinct data and application challenges. Vyanta Global's expert developers work closely with clients to design, modernize, and future-proof digital solutions that drive scalability and performance. We deliver custom web and application development, build secure progressive web applications (PWAs), and provide seamless web and mobile application integration services—ensuring connected systems, optimized user experiences, and technology stacks that evolve with your business.",
       },
       {
-        title: "Industry 4.0 Solutions",
+        title: "Industry 4.0 Services",
         description:
           "We enable organizations to accelerate their Industry 4.0 transformation by connecting industrial data, smart systems, and advanced analytics into a unified digital ecosystem. We design solutions that integrate IoT data, real-time monitoring, big data platforms, and intelligent automation to drive operational efficiency, predictive insights, and data-driven decision-making. Our Industry 4.0 services help enterprises modernize manufacturing and industrial operations with scalable, secure, and future-ready digital architectures.",
       },
@@ -55,6 +61,7 @@ export const skillsetTranslations = {
     capabilities: [
       "Big Data-oplossingen",
       "Gegevensintegratiediensten & Datagovernance",
+      "AI- en gegevensbeveiligingsdiensten",
       "Metadatamanagementsystemen",
       "Aangepaste Ontwikkeling",
       "Industrie 4.0-technologieën",
@@ -76,17 +83,23 @@ export const skillsetTranslations = {
           "Ons team levert Data Governance & Compliance-oplossingen voor ondernemingen die organisaties helpen vertrouwde, veilige en regelgevingsrijpe gegevensomgevingen op te zetten. We ontwerpen governance-frameworks die gegevenskwaliteit, metadatabeheer, toegangscontrole en beleidshandhaving omvatten, waarbij we ervoor zorgen dat wereldwijd geldende normen zoals GDPR en SOC, alsmede branchespecifieke regelgeving, worden nageleefd. Onze data governance-services bieden duidelijk gegevensbezit, verbeterde regelgevingsrapportage, risicoreductie en zelfverzekerd besluitnemen in de hele onderneming.",
       },
       {
+  title: "AI & Data Security Services",
+  description:
+    "Ons team levert AI- en databeveiligingsdiensten via een security-by-design-benadering, waarbij governance, privacy en compliance in de volledige data- en AI-levenscyclus worden geïntegreerd. Wij bouwen veilige datapijplijnen, handhaven op rollen gebaseerde toegangscontroles, implementeren metadata-gedreven governance en passen AI-gestuurde monitoring toe om gevoelige gegevens te beschermen—zodat AI-systemen betrouwbaar, compliant en klaar zijn voor enterprise-schaal adoptie.",
+},
+
+      {
         title: "Metadata Management",
         description:
           "Vyanta Global biedt enterprise Metadata Management-oplossingen die organisaties volledige zichtbaarheid, controle en vertrouwen in hun gegevenselementen geven. We implementeren gecentraliseerde metadatarepository's, datacatalogisering, lineage tracking en bedrijfswoordenboeken om detecteerbaarheid, consistentie en governance in de gehele gegevenscyclus te garanderen. Onze metadatabeheerservices geven teams nauwkeurige context, verbeteren gegevenskwaliteit, ondersteunen regelgevingsconformiteit en versnellen analyse-, BI- en AI-initiatieven.",
       },
       {
-        title: "Custom Data Solutions",
+        title: "Custom Development",
         description:
           "Elke organisatie staat voor unieke gegevens- en toepassingsvraagstukken. Vyanta Global's expert developers werken nauw samen met clients aan het ontwerpen, moderniseren en toekomstbestendig maken van digitale oplossingen die schaalbaarheid en prestaties stimuleren. We leveren aangepaste web- en applicatieontwikkeling, bouwen veilige progressive web applications (PWA's), en bieden naadloze web- en mobiele applicatie-integratieservices—waardoor verbonden systemen, geoptimaliseerde gebruikerservaringen en technologiestacks die met uw bedrijf meegroeien.",
       },
       {
-        title: "Industry 4.0 Solutions",
+        title: "Industry 4.0 Services",
         description:
           "We stellen organisaties in staat hun Industry 4.0-transformatie te versnellen door industriële gegevens, slimme systemen en geavanceerde analyses in een unifiek digitaal ecosysteem te integreren. We ontwerpen oplossingen die IoT-gegevens, real-time monitoring, big data-platforms en intelligente automatisering integreren om operationele efficiëntie, voorspellende inzichten en data-driven besluitvorming te stimuleren. Onze Industry 4.0-services helpen ondernemingen manufacturing- en industriële operaties te moderniseren met schaalbare, veilige en toekomstrijpe digitale architecturen.",
       },
@@ -101,6 +114,7 @@ export const skillsetTranslations = {
     capabilities: [
       "Solutions Big Data",
       "Services d'intégration et de gouvernance des données",
+      "Services d'IA et de sécurité des données",
       "Gestion des métadonnées",
       "Développement personnalisé",
       "Technologies Industrie 4.0",
@@ -122,17 +136,22 @@ export const skillsetTranslations = {
           "Notre équipe fournit des solutions de gouvernance et de conformité des données d'entreprise qui aident les organisations à établir des environnements de données de confiance, sécurisés et conformes à la réglementation. Nous concevons des cadres de gouvernance couvrant la qualité des données, la gestion des métadonnées, le contrôle d'accès et l'application des politiques, en veillant à la conformité avec les normes mondiales telles que le RGPD et SOC, ainsi que les réglementations spécifiques à l'industrie. Nos services de gouvernance des données permettent une propriété claire des données, des rapports réglementaires améliorés, une réduction des risques et une prise de décision confiante dans toute l'entreprise.",
       },
       {
+  title: "AI & Data Security Services",
+  description:
+    "Notre équipe fournit des services de sécurité des données et de l’IA selon une approche de sécurité dès la conception, intégrant la gouvernance, la confidentialité et la conformité tout au long du cycle de vie des données et de l’IA. Nous concevons des pipelines de données sécurisés, appliquons des contrôles d’accès basés sur les rôles, mettons en œuvre une gouvernance pilotée par les métadonnées et utilisons une surveillance basée sur l’IA pour protéger les données sensibles—garantissant ainsi des systèmes d’IA fiables, conformes et prêts pour une adoption à l’échelle de l’entreprise.",
+},
+      {
         title: "Metadata Management",
         description:
           "Vyanta Global fournit des solutions de gestion des métadonnées d'entreprise qui donnent aux organisations une visibilité, un contrôle et une confiance totals dans leurs actifs de données. Nous implémentons des référentiels de métadonnées centralisés, des catalogages de données, un suivi de la lignée et des glossaires métier pour assurer la découvrabilité, la cohérence et la gouvernance tout au long du cycle de vie des données. Nos services de gestion des métadonnées dotent les équipes d'un contexte précis, améliorent la qualité des données, soutiennent la conformité réglementaire et accélèrent les initiatives d'analyse, de BI et d'IA.",
       },
       {
-        title: "Custom Data Solutions",
+        title: "Custom Development",
         description:
           "Chaque organisation fait face à des défis uniques en matière de données et d'applications. Les développeurs experts de Vyanta Global travaillent en étroite collaboration avec les clients pour concevoir, moderniser et sécuriser les solutions numériques qui favorisent l'évolutivité et les performances. Nous fournissons un développement Web et d'applications personnalisé, construisons des applications Web progressives sécurisées (PWA), et fournissons des services d'intégration Web et d'applications mobiles transparents—assurant des systèmes connectés, des expériences utilisateur optimisées et des piles technologiques qui évoluent avec votre entreprise.",
       },
       {
-        title: "Industry 4.0 Solutions",
+        title: "Industry 4.0 Services",
         description:
           "Nous permettons aux organisations d'accélérer leur transformation Industrie 4.0 en connectant les données industrielles, les systèmes intelligents et l'analyse avancée dans un écosystème numérique unifié. Nous concevons des solutions qui intègrent les données IoT, la surveillance en temps réel, les plates-formes de big data et l'automatisation intelligente pour stimuler l'efficacité opérationnelle, les insights prédictifs et la prise de décision basée sur les données. Nos services Industrie 4.0 aident les entreprises à moderniser les opérations de fabrication et industrielles avec des architectures numériques scalables, sécurisées et prêtes pour l'avenir.",
       },
@@ -147,6 +166,7 @@ export const skillsetTranslations = {
     capabilities: [
       "Big-Data-Lösungen",
       "Datenintegrations- und Governance-Services",
+      "KI- und Datensicherheitsdienste",
       "Metadatenverwaltung",
       "Benutzerdefinierte Entwicklung",
       "Industrie 4.0 Technologien",
@@ -168,17 +188,22 @@ export const skillsetTranslations = {
           "Unser Team bietet Datengovernance- und Compliance-Lösungen auf Unternehmensebene, die Organisationen dabei helfen, vertrauenswürdige, sichere und regulierungsgerechte Datenumgebungen zu schaffen. Wir entwerfen Governance-Frameworks, die Datenqualität, Metadatenverwaltung, Zugriffskontrolle und Richtliniendurchsetzung abdecken und die Einhaltung globaler Standards wie GDPR, SOC und branchenspezifischer Vorschriften gewährleisten. Unsere Datengovernance-Services ermöglichen klare Dateneigentümerschaft, verbesserte behördliche Meldungen, Risikominderung und selbstbewusste Entscheidungsfindung im gesamten Unternehmen.",
       },
       {
+  title: "AI & Data Security Services",
+  description:
+    "Unser Team erbringt KI- und Datensicherheitsdienste nach einem Security-by-Design-Ansatz und integriert Governance, Datenschutz und Compliance über den gesamten Daten- und KI-Lebenszyklus hinweg. Wir entwickeln sichere Datenpipelines, setzen rollenbasierte Zugriffskontrollen durch, implementieren metadatengetriebene Governance und nutzen KI-gestützte Überwachung zum Schutz sensibler Daten—damit KI-Systeme vertrauenswürdig, regelkonform und für den Einsatz im Enterprise-Maßstab bereit sind.",
+},
+      {
         title: "Metadata Management",
         description:
           "Vyanta Global bietet Metadatenverwaltungslösungen auf Unternehmensebene, die Organisationen vollständige Sichtbarkeit, Kontrolle und Vertrauen in ihre Datenbestände geben. Wir implementieren zentralisierte Metadaten-Repositorys, Datenkatalogisierung, Lineage-Verfolgung und Business-Glossare, um Auffindbarkeit, Konsistenz und Governance über den gesamten Datenlebenszyklus hinweg zu gewährleisten. Unsere Metadatenverwaltungsdienste befähigen Teams mit präzisem Kontext, verbessern die Datenqualität, unterstützen regulatorische Compliance und beschleunigen Analytics-, BI- und AI-Initiativen.",
       },
       {
-        title: "Custom Data Solutions",
+        title: "Custom Development",
         description:
           "Jede Organisation sieht sich einzigartigen Daten- und Anwendungsherausforderungen gegenüber. Vyanta Globals erfahrene Entwickler arbeiten eng mit Clients zusammen, um digitale Lösungen zu entwerfen, zu modernisieren und zukunftsfähig zu machen, die Skalierbarkeit und Leistung vorantreiben. Wir bieten benutzerdefinierte Web- und Anwendungsentwicklung, entwickeln sichere Progressive Web Applications (PWAs) und bieten nahtlose Web- und Mobile-Application-Integrationsdienste—um verbundene Systeme, optimierte Benutzererfahrungen und Technologiestapel, die mit Ihrem Unternehmen mitwachsen.",
       },
       {
-        title: "Industry 4.0 Solutions",
+        title: "Industry 4.0 Services",
         description:
           "Wir ermöglichen es Organisationen, ihre Industrie 4.0-Transformation zu beschleunigen, indem Industriedaten, intelligente Systeme und erweiterte Analysen in einem einheitlichen digitalen Ökosystem verbunden werden. Wir entwerfen Lösungen, die IoT-Daten, Echtzeitüberwachung, Big-Data-Plattformen und intelligente Automatisierung integrieren, um operative Effizienz, prädiktive Erkenntnisse und datengesteuerte Entscheidungsfindung zu fördern. Unsere Industrie 4.0-Services helfen Unternehmen, Fertigungs- und Industriebetriebe mit skalierbaren, sicheren und zukunftsgerichteten digitalen Architekturen zu modernisieren.",
       },
@@ -193,6 +218,7 @@ export const skillsetTranslations = {
     capabilities: [
       "Soluzioni Big Data",
       "Servizi di integrazione e governance dei dati",
+      "Servizi di intelligenza artificiale e sicurezza dei dati",
       "Gestione dei metadati",
       "Sviluppo personalizzato",
       "Tecnologie Industria 4.0",
@@ -214,17 +240,22 @@ export const skillsetTranslations = {
           "Il nostro team fornisce soluzioni di governance e conformità dei dati di classe enterprise che aiutano le organizzazioni a stabilire ambienti di dati affidabili, sicuri e conformi alle normative. Progettiamo framework di governance che coprono qualità dei dati, gestione dei metadati, controllo degli accessi ed enforcement delle policy, garantendo la conformità agli standard globali come GDPR, SOC e alle normative specifiche del settore. I nostri servizi di governance dei dati abilitano una chiara proprietà dei dati, reporting normativo migliorato, riduzione dei rischi e un processo decisionale fiducioso in tutta l'azienda.",
       },
       {
+  title: "AI & Data Security Services",
+  description:
+   "Il nostro team fornisce servizi di sicurezza dei dati e dell’AI attraverso un approccio security-by-design, integrando governance, privacy e conformità lungo l’intero ciclo di vita dei dati e dell’AI. Progettiamo pipeline di dati sicure, applichiamo controlli di accesso basati sui ruoli, implementiamo una governance guidata dai metadati e utilizziamo il monitoraggio basato sull’AI per proteggere i dati sensibili—garantendo che i sistemi di AI siano affidabili, conformi e pronti per un’adozione su scala enterprise.",
+},
+      {
         title: "Metadata Management",
         description:
           "Vyanta Global fornisce soluzioni di gestione dei metadati di classe enterprise che conferiscono alle organizzazioni visibilità completa, controllo e fiducia nei loro asset di dati. Implementiamo repository centrali di metadati, catalogazione dei dati, tracciamento della lineage e glossari aziendali per garantire reperibilità, coerenza e governance in tutto il ciclo di vita dei dati. I nostri servizi di gestione dei metadati forniscono ai team un contesto preciso, migliorano la qualità dei dati, supportano la conformità normativa e accelerano iniziative di analisi, BI e IA.",
       },
       {
-        title: "Custom Data Solutions",
+        title: "Custom Development",
         description:
           "Ogni organizzazione affronta sfide uniche di dati e applicazioni. Gli sviluppatori esperti di Vyanta Global lavorano a stretto contatto con i client per progettare, modernizzare e rendere a prova di futuro soluzioni digitali che guidano la scalabilità e le prestazioni. Forniamo sviluppo web e applicazioni personalizzate, costruiamo progressive web application (PWA) sicure e forniamo servizi di integrazione web e applicazioni mobili senza soluzione di continuità—garantendo sistemi connessi, esperienze utente ottimizzate e stack tecnologici che si evolvono con la tua azienda.",
       },
       {
-        title: "Industry 4.0 Solutions",
+        title: "Industry 4.0 Services",
         description:
           "Consentiamo alle organizzazioni di accelerare la loro trasformazione Industria 4.0 collegando dati industriali, sistemi intelligenti e analisi avanzate in un ecosistema digitale unificato. Progettiamo soluzioni che integrano dati IoT, monitoraggio in tempo reale, piattaforme big data e automazione intelligente per guidare l'efficienza operativa, insight predittivi e decision-making basato sui dati. I nostri servizi Industria 4.0 aiutano le aziende a modernizzare le operazioni di produzione e industriali con architetture digitali scalabili, sicure e pronte per il futuro.",
       },
@@ -239,6 +270,7 @@ export const skillsetTranslations = {
     capabilities: [
       "Решения для больших данных",
       "Услуги интеграции и управления данными",
+      "Услуги искусственного интеллекта и безопасности данных",
       "Управление метаданными",
       "Пользовательская разработка",
       "Технологии Industrie 4.0",
@@ -260,17 +292,22 @@ export const skillsetTranslations = {
           "Наша команда предоставляет решения управления и соответствия данных корпоративного уровня, которые помогают организациям создавать надежные, безопасные и соответствующие нормативным требованиям среды данных. Мы разрабатываем структуры управления, охватывающие качество данных, управление метаданными, контроль доступа и принудительное применение политик, обеспечивая соответствие глобальным стандартам, таким как GDPR, SOC и отраслевым нормативным требованиям. Наши услуги управления данными обеспечивают четкое владение данными, улучшенную нормативную отчетность, снижение рисков и уверенное принятие решений во всей организации.",
       },
       {
+  title: "AI & Data Security Services",
+  description:
+    "Наша команда предоставляет сервисы безопасности данных и ИИ на основе подхода security-by-design, внедряя управление, конфиденциальность и соответствие требованиям на всех этапах жизненного цикла данных и ИИ. Мы создаём защищённые конвейеры данных, применяем ролевые модели контроля доступа, реализуем управление на основе метаданных и используем мониторинг на базе ИИ для защиты чувствительных данных—обеспечивая надёжность, соответствие требованиям и готовность ИИ-систем к использованию на уровне предприятия.",
+},
+      {
         title: "Metadata Management",
         description:
           "Vyanta Global предоставляет решения управления метаданными корпоративного уровня, которые обеспечивают организациям полную видимость, контроль и доверие к своим активам данных. Мы внедряем централизованные хранилища метаданных, каталогизацию данных, отслеживание происхождения и бизнес-глоссарии для обеспечения обнаруживаемости, согласованности и управления на протяжении всего жизненного цикла данных. Наши услуги управления метаданными предоставляют командам точный контекст, улучшают качество данных, поддерживают соответствие нормативным требованиям и ускоряют инициативы аналитики, BI и AI.",
       },
       {
-        title: "Custom Data Solutions",
+        title: "Custom Development",
         description:
           "Каждая организация сталкивается с уникальными проблемами данных и приложений. Опытные разработчики Vyanta Global тесно сотрудничают с клиентами для проектирования, модернизации и защиты цифровых решений от будущего, которые способствуют масштабируемости и производительности. Мы предоставляем пользовательскую разработку веб-приложений и приложений, создаем безопасные прогрессивные веб-приложения (PWA) и предоставляем безнадёжные услуги интеграции веб-приложений и мобильных приложений—обеспечивая связанные системы, оптимизированные пользовательские впечатления и технологические стеки, которые развиваются вместе с вашим бизнесом.",
       },
       {
-        title: "Industry 4.0 Solutions",
+        title: "Industry 4.0 Services",
         description:
           "Мы позволяем организациям ускорить свою трансформацию Industry 4.0, подключая промышленные данные, интеллектуальные системы и передовую аналитику в единую цифровую экосистему. Мы разрабатываем решения, которые интегрируют данные IoT, мониторинг в реальном времени, платформы больших данных и интеллектуальную автоматизацию для повышения операционной эффективности, прогнозной аналитики и принятия решений на основе данных. Наши услуги Industry 4.0 помогают предприятиям модернизировать производство и промышленные операции с помощью масштабируемых, безопасных и готовых к будущему цифровых архитектур.",
       },
@@ -285,6 +322,7 @@ export const skillsetTranslations = {
     capabilities: [
       "Soluções de Big Data",
       "Serviços de integração e governança de dados",
+      "Serviços de IA e segurança de dados",
       "Gerenciamento de metadados",
       "Desenvolvimento personalizado",
       "Tecnologias Indústria 4.0",
@@ -306,17 +344,22 @@ export const skillsetTranslations = {
           "Nossa equipe fornece soluções de governança e conformidade de dados de nível corporativo que ajudam as organizações a estabelecer ambientes de dados confiáveis, seguros e em conformidade com regulamentações. Projetamos frameworks de governança abrangendo qualidade de dados, gerenciamento de metadados, controle de acesso e aplicação de políticas, garantindo conformidade com padrões globais como GDPR, SOC e regulamentações específicas da indústria. Nossos serviços de governança de dados permitem propriedade clara de dados, relatórios regulatórios aprimorados, redução de risco e tomada de decisão confiante em toda a empresa.",
       },
       {
+  title: "AI & Data Security Services",
+  description:
+   "Nossa equipe oferece serviços de segurança de dados e IA por meio de uma abordagem security-by-design, incorporando governança, privacidade e conformidade em todo o ciclo de vida dos dados e da IA. Construímos pipelines de dados seguros, aplicamos controles de acesso baseados em funções, implementamos governança orientada por metadados e utilizamos monitoramento baseado em IA para proteger dados sensíveis—garantindo que os sistemas de IA sejam confiáveis, compatíveis e prontos para adoção em escala corporativa.",
+},
+      {
         title: "Metadata Management",
         description:
           "Vyanta Global fornece soluções de gerenciamento de metadados de nível corporativo que conferem às organizações visibilidade completa, controle e confiança em seus ativos de dados. Implementamos repositórios de metadados centralizados, catalogação de dados, rastreamento de linhagem e glossários comerciais para garantir descoberta, consistência e governança ao longo do ciclo de vida dos dados. Nossos serviços de gerenciamento de metadados equipam equipes com contexto preciso, melhoram a qualidade dos dados, suportam conformidade regulatória e aceleram iniciativas de análise, BI e IA.",
       },
       {
-        title: "Custom Data Solutions",
+        title: "Custom Development",
         description:
           "Cada organização enfrenta desafios únicos de dados e aplicações. Os desenvolvedores experientes de Vyanta Global trabalham em estreita colaboração com clientes para projetar, modernizar e à prova de futuro soluções digitais que impulsionam escalabilidade e desempenho. Fornecemos desenvolvimento web e de aplicações personalizado, construímos aplicações web progressivas (PWA) seguras e fornecemos serviços de integração web e de aplicações móveis perfeitos—garantindo sistemas conectados, experiências de usuário otimizadas e pilhas de tecnologia que evoluem com seu negócio.",
       },
       {
-        title: "Industry 4.0 Solutions",
+        title: "Industry 4.0 Services",
         description:
           "Capacitamos as organizações a acelerar sua transformação Industry 4.0 conectando dados industriais, sistemas inteligentes e análise avançada em um ecossistema digital unificado. Projetamos soluções que integram dados de IoT, monitoramento em tempo real, plataformas de big data e automação inteligente para impulsionar eficiência operacional, insights preditivos e tomada de decisão baseada em dados. Nossos serviços Industry 4.0 ajudam as empresas a modernizar operações de manufatura e industriais com arquiteturas digitais escaláveis, seguras e preparadas para o futuro.",
             },

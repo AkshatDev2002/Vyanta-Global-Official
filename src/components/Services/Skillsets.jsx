@@ -9,6 +9,7 @@ import styles from "./Skillsets.module.css";
 import bigData from "@/assets/big.json";
 import customIntegration from "@/assets/custom.json";
 import dataInt from "@/assets/data.json";
+import aiData from "@/assets/ai.json";
 import govCompliance from "@/assets/gov.json";
 import industry4 from "@/assets/ind4.json";
 import metadata from "@/assets/meta.json";
@@ -17,9 +18,10 @@ const animationMap = {
   "Big Data Solutions": bigData,
   "Data Integration Services": dataInt,
   "Data Governance & Compliance": govCompliance,
+  "AI & Data Security Services": aiData,
   "Metadata Management": metadata,
-  "Custom Data Solutions": customIntegration,
-  "Industry 4.0 Solutions": industry4,
+  "Custom Development": customIntegration,
+  "Industry 4.0 Services": industry4,
 };
 
 const containerVariants = {

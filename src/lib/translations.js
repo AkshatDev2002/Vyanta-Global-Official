@@ -3,11 +3,11 @@ export const translations = {
     hero: {
       badge: "Vyanta Global Is The World's Most",
       words: ["Advanced", "Smart", "Automated"],
-      heading: "Data Integration Platform",
+      heading: "Data Services Company",
       subheading:
         "Unlock the full potential of your data with secure, scalable, and AI-ready data engineering solutions.",
       description:
-        "We deliver big data platforms, data governance and integration, metadata management, and custom development—built with enterprise-grade data security, compliance, and analytics in mind.",
+        "We deliver big data solutions, data governance and integration, ai and data security services, metadata management, and custom development—built with enterprise-grade data security, compliance, and analytics in mind.",
       button: "Know More",
     },
   },
@@ -17,7 +17,7 @@ export const translations = {
     hero: {
       badge: "Vyanta Global Is De Meest",
       words: ["Geavanceerde", "Slimme", "Volledig Geautomatiseerde"],
-      heading: "Data Integratieplatform",
+      heading: "Dataservicebedrijf",
       subheading:
         "Ontgrendel het volledige potentieel van uw data door innovatie en engineering excellence.",
       description:
@@ -30,7 +30,7 @@ export const translations = {
     hero: {
       badge: "Vyanta Global Est Le Plus",
       words: ["Avancé", "Intelligent", "Entièrement Automatisé"],
-      heading: "Plateforme d'Intégration de Données",
+      heading: "Société de services de données",
       subheading:
         "Libérez tout le potentiel de vos données grâce à l'innovation et à l'excellence en ingénierie.",
       description:
@@ -43,7 +43,7 @@ export const translations = {
     hero: {
       badge: "Vyanta Global Ist Das",
       words: ["Fortschrittlichste", "Intelligenteste", "Automatisierteste"],
-      heading: "Datenintegrationsplattform",
+      heading: "Datendienstleistungsunternehmen",
       subheading:
         "Erschließen Sie das volle Potenzial Ihrer Daten durch Innovation und Engineering-Exzellenz.",
       description:
@@ -56,7 +56,7 @@ export const translations = {
     hero: {
       badge: "Vyanta Global È Il Più",
       words: ["Avanzato", "Intelligente", "Automatizzato"],
-      heading: "Piattaforma di Integrazione Dati",
+      heading: "Società di servizi dati",
       subheading:
         "Sblocca il pieno potenziale dei dati con innovazione ed eccellenza ingegneristica.",
       description:
@@ -69,7 +69,7 @@ export const translations = {
     hero: {
       badge: "Vyanta Global — Самая",
       words: ["Продвинутая", "Умная", "Автоматизированная"],
-      heading: "Платформа интеграции данных",
+      heading: "Компания по предоставлению услуг передачи данных",
       subheading:
         "Раскройте потенциал данных с помощью инноваций и инженерного мастерства.",
       description:
@@ -82,7 +82,7 @@ export const translations = {
     hero: {
       badge: "Vyanta Global É A Mais",
       words: ["Avançada", "Inteligente", "Automatizada"],
-      heading: "Plataforma de Integração de Dados",
+      heading: "Empresa de serviços de dados",
       subheading:
         "Desbloqueie todo o potencial dos dados com inovação e excelência em engenharia.",
       description:

@@ -1,7 +1,7 @@
 export const bigDataTranslations = {
   en: {
     hero: {
-      title: "Vyanta's Big Data Services",
+      title: "Vyanta's Big Data Solutions",
       subtitle:
         "Vyanta Global is a data engineering and analytics services partner with deep expertise across modern data platforms, including Ab Initio, Snowflake, dbt Labs, and enterprise-scale architectures. Backed by extensive industry experience, we help organizations design and execute robust data strategies, operating models, and long-term transformation roadmaps that deliver measurable business impact.\n\nWe leverage proven frameworks, intelligent automation, and best-in-class data engineering practices to accelerate data platform modernization and cloud transformation initiatives. Our governance-first approach ensures data security, performance, and scalability—enabling organizations to unlock actionable insights, support advanced analytics and AI, and realize measurable business value with agility and confidence.",
     },
@@ -38,7 +38,7 @@ export const bigDataTranslations = {
 
   nl: {
     hero: {
-      title: "Big Data Diensten van Vyanta",
+      title: "Vyanta's Big Data-oplossingen",
       subtitle:
         "Vyanta Global is een partner voor data engineering en analytics met diepgaande expertise in moderne dataplatformen, waaronder Ab Initio, Snowflake, dbt Labs en enterprise-architecturen. Met uitgebreide ervaring helpen wij organisaties robuuste datastrategieën, operating models en langetermijntransformatieroadmaps te ontwerpen en uit te voeren met meetbare zakelijke impact.\n\nWij maken gebruik van bewezen frameworks, intelligente automatisering en toonaangevende data-engineeringpraktijken om dataplatformmodernisering en cloudtransformatie te versnellen. Onze governance-first aanpak waarborgt veiligheid, prestaties en schaalbaarheid.",
     },
@@ -75,7 +75,7 @@ export const bigDataTranslations = {
 
   fr: {
     hero: {
-      title: "Services Big Data de Vyanta",
+      title: "Les solutions Big Data de Vyanta",
       subtitle:
         "Vyanta Global est un partenaire en ingénierie des données et analytique, disposant d’une expertise approfondie sur les plateformes modernes telles qu’Ab Initio, Snowflake et dbt Labs. Nous aidons les organisations à concevoir et exécuter des stratégies data robustes générant un impact mesurable.\n\nNotre approche axée sur la gouvernance garantit sécurité, performance et évolutivité pour soutenir l’analytique avancée et l’IA.",
     },
@@ -112,7 +112,7 @@ export const bigDataTranslations = {
 
   de: {
     hero: {
-      title: "Big-Data-Services von Vyanta",
+      title: "Vyantas Big-Data-Lösungen",
       subtitle:
         "Vyanta Global ist ein Partner für Data Engineering und Analytics mit umfassender Expertise in modernen Datenplattformen. Wir unterstützen Unternehmen bei der Entwicklung skalierbarer Datenstrategien mit messbarem Geschäftswert.",
     },
@@ -149,7 +149,7 @@ export const bigDataTranslations = {
 
   it: {
     hero: {
-      title: "Servizi Big Data di Vyanta",
+      title: "Le soluzioni Big Data di Vyanta",
       subtitle:
         "Vyanta Global è un partner di data engineering e analytics con competenze approfondite nelle moderne piattaforme dati. Aiutiamo le aziende a realizzare strategie dati scalabili e sicure.",
     },
@@ -186,7 +186,7 @@ export const bigDataTranslations = {
 
   ru: {
     hero: {
-      title: "Big Data-сервисы Vyanta",
+      title: "Решения Vyanta для больших данных",
       subtitle:
         "Vyanta Global — партнер по data engineering и аналитике с глубокой экспертизой в современных платформах данных. Мы помогаем компаниям создавать масштабируемые и безопасные data-стратегии.",
     },
@@ -223,7 +223,7 @@ export const bigDataTranslations = {
 
   pt: {
     hero: {
-      title: "Serviços de Big Data da Vyanta",
+      title: "Soluções de Big Data da Vyanta",
       subtitle:
         "A Vyanta Global é uma parceira em engenharia de dados e analytics com forte expertise em plataformas modernas. Ajudamos organizações a construir estratégias de dados escaláveis e seguras.",
     },
