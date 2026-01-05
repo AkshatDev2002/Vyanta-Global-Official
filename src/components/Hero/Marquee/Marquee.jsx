@@ -17,7 +17,7 @@ export default function Marquee() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 700);
+    const timer = setTimeout(() => setVisible(true), 600);
     return () => clearTimeout(timer);
   }, []);
 
