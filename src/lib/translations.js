@@ -2,7 +2,7 @@ export const translations = {
   en: {
     hero: {
       badge: "Vyanta Global Is The World's Most",
-      words: ["Advanced", "Smart", "Automated"],
+      words: ["Advanced", "Futuristic", "Automated"],
       heading: "Data Services Company",
       subheading:
         "Unlock the full potential of your data with secure, scalable, and AI-ready data engineering solutions.",
