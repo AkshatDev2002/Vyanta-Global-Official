@@ -17,6 +17,7 @@ const techImages = {
   snowflake: "/snowflake.png",
   databricks: "/databricks.png",
   gcp: "/gcp.png",
+  azure:"/azure.png"
 };
 
 export default function Technologies() {

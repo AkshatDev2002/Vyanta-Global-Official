@@ -14,6 +14,7 @@ export const technologiesTranslations = {
       { id: "snowflake", desc: "Snowflake delivers modern cloud data warehousing with elasticity, performance, and built-in security." },
       { id: "databricks", desc: "Databricks enables lakehouse architectures that unify data engineering, analytics, and machine learning." },
       { id: "gcp", desc: "Google Cloud Platform enables advanced data engineering, analytics, and AI-ready cloud solutions." },
+      { id: "azure", desc: "We leverage Microsoft Azure to build secure, scalable, and enterprise-ready cloud solutions that power modern data platforms, analytics, and AI workloads." },
     ],
   },
 
@@ -33,6 +34,7 @@ export const technologiesTranslations = {
       { id: "snowflake", desc: "Snowflake levert moderne cloud data warehousing." },
       { id: "databricks", desc: "Databricks verenigt data engineering en machine learning." },
       { id: "gcp", desc: "GCP ondersteunt geavanceerde data- en AI-oplossingen." },
+      { id: "azure", desc: "We maken gebruik van Microsoft Azure om veilige, schaalbare en ondernemingsklare cloudoplossingen te bouwen die moderne dataplatforms, analyses en AI-workloads ondersteunen." },
     ],
   },
 
@@ -51,6 +53,7 @@ export const technologiesTranslations = {
       { id: "snowflake", desc: "Snowflake offre un entrepôt de données cloud moderne et sécurisé." },
       { id: "databricks", desc: "Databricks unifie l’ingénierie des données et le machine learning." },
       { id: "gcp", desc: "Google Cloud permet des solutions data et IA avancées." },
+      { id: "azure", desc: "Nous exploitons Microsoft Azure pour créer des solutions cloud sécurisées, évolutives et adaptées aux entreprises qui alimentent les plateformes de données, les analyses et les charges de travail d'IA modernes." },
     ],
   },
 
@@ -69,6 +72,7 @@ export const technologiesTranslations = {
       { id: "snowflake", desc: "Snowflake liefert modernes Cloud Data Warehousing." },
       { id: "databricks", desc: "Databricks vereint Data Engineering und Machine Learning." },
       { id: "gcp", desc: "GCP ermöglicht fortschrittliche Daten- und KI-Lösungen." },
+      { id: "azure", desc: "Wir nutzen Microsoft Azure, um sichere, skalierbare und unternehmenstaugliche Cloud-Lösungen zu entwickeln, die moderne Datenplattformen, Analysen und KI-Workloads unterstützen." },
     ],
   },
 
@@ -87,6 +91,7 @@ export const technologiesTranslations = {
       { id: "snowflake", desc: "Snowflake offre data warehousing cloud moderno." },
       { id: "databricks", desc: "Databricks unifica data engineering e machine learning." },
       { id: "gcp", desc: "GCP abilita soluzioni dati e AI avanzate." },
+      { id: "azure", desc: "Sfruttiamo Microsoft Azure per creare soluzioni cloud sicure, scalabili e pronte per l'azienda che alimentano moderne piattaforme dati, analisi e carichi di lavoro IA." },
     ],
   },
 
@@ -105,6 +110,7 @@ export const technologiesTranslations = {
       { id: "snowflake", desc: "Snowflake предлагает современное облачное хранилище данных." },
       { id: "databricks", desc: "Databricks объединяет data engineering и машинное обучение." },
       { id: "gcp", desc: "GCP поддерживает передовые аналитические и AI-решения." },
+      { id: "azure", desc: "Мы используем Microsoft Azure для создания безопасных, масштабируемых и готовых к использованию облачных решений, которые поддерживают современные платформы данных, аналитику и рабочие нагрузки искусственного интеллекта." },
     ],
   },
 
@@ -123,6 +129,7 @@ export const technologiesTranslations = {
       { id: "snowflake", desc: "Snowflake oferece data warehousing moderno em nuvem." },
       { id: "databricks", desc: "Databricks unifica engenharia de dados e machine learning." },
       { id: "gcp", desc: "GCP suporta soluções avançadas de dados e IA." },
+      { id: "azure", desc: "Aproveitamos o Microsoft Azure para criar soluções em nuvem seguras, escaláveis ​​e prontas para empresas que potencializam plataformas de dados modernas, análises e cargas de trabalho de IA." },
     ],
   },
 };
