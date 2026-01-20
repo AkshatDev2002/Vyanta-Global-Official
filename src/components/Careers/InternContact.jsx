@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaArrowRight, FaStar, FaBriefcase, FaAward } from "react-icons/fa";
+import { FaStar, FaBriefcase, FaAward } from "react-icons/fa";
 import styles from "./InternContact.module.css";
 
 const containerVariants = {
@@ -126,7 +126,7 @@ export default function InternContact() {
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSdcYBBRvOoPx1JwLzLAfm0EC8vRtgOvgKg5qIr9GmU8wgoDDA/viewform?embedded=true"
           title="Vyanta Internship Application Form"
-          loading="lazy"
+         
           frameBorder="0"
           marginHeight="0"
           marginWidth="0"
