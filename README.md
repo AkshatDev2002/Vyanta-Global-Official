@@ -16,13 +16,30 @@ A modern, enterprise-grade corporate website built with Next.js, designed to sho
 
 ---
 
-## 🛠️ **Tech Stack**
-- **Next.js 14**
-- **React**
-- **Tailwind CSS**
-- **Framer Motion**
-- **Lucide Icons**
-- **Inter Font (next/font)**
+## 🖥 Tech Stack
+
+**Frontend**  
+- Next.js (App Router)  
+- React  
+- TailwindCSS  
+- Shadcn/UI  
+- Flowbite  
+- Material UI  
+- Three.js, Spline  
+
+**Backend & Database**  
+- Node.js  
+- Express.js  
+- MongoDB (Local + Cloud-ready)  
+- PostgreSQL (optional integration)  
+
+**Tools & Deployment**  
+- Git / GitHub  
+- Vercel  
+- Figma / Photoshop / Blender (for design & 3D assets)  
+
+---
+
 
 ---
 
@@ -39,6 +56,22 @@ Animation-focused interaction design
 Enterprise-grade layout systems
 
 Modern frontend engineering skills
+
+🤝 Contributing
+
+Contributions are welcome!
+Feel free to fork this repo and submit PRs for improvements.
+
+
+📜 License
+
+This project is licensed under the MIT License – free to use, modify, and distribute.
+
+👨‍💻 Author
+
+Akshat Dev
+
+💼 Data Engineer (Ab-Initio) | MERN Stack Developer
 
 
 
