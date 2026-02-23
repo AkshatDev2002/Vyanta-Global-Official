@@ -40,9 +40,6 @@ A modern, enterprise-grade corporate website built with Next.js, designed to sho
 
 ---
 
-
----
-
 🎯 Purpose
 
 This project showcases:
