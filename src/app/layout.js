@@ -49,6 +49,12 @@ export const metadata = {
     "scalable data solutions",
   ],
 
+  icons: {
+    icon: "/favicon.ico", // main favicon
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+
   robots: {
     index: true,
     follow: true,
