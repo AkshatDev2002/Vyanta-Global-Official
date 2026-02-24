@@ -11,7 +11,7 @@ const ALLOWED_TYPES = [
 ];
 
 export default function JobContact({
-  bannerText = "Vyanta Global Career Opportunities",
+  bannerText = "Full-Time Career Opportunities",
   submitText = "Submit Application",
 }) {
   const { executeRecaptcha } = useGoogleReCaptcha();
