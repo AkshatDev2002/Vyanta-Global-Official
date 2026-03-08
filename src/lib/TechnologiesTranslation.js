@@ -3,9 +3,9 @@ export const technologiesTranslations = {
   en: {
     title: "Technologies We Use",
     description: {
-      p1: "Vyanta harnesses cutting-edge data engineering, cloud, and data governance technologies to deliver scalable, future-ready solutions that empower enterprises to make data-driven decisions with confidence.",
-      p2: "We partner with global technology leaders — including Ab Initio, dbt Labs, AWS, Snowflake, Databricks, and Google Cloud Platform — to architect seamless, secure, and efficient solutions that unlock the full potential of enterprise data.",
-      p3: "From building end-to-end data pipelines and enterprise data warehouses to enabling real-time analytics, AI/ML integration, and cloud modernization, every implementation is optimized for performance, scalability, and long-term business value.",
+      p1: "Vyanta harnesses cutting-edge technologies across data, cloud, AI, cybersecurity, and modern software engineering to deliver scalable, secure, and future-ready digital solutions.",
+      p2: "We collaborate with global technology leaders — including Ab Initio, dbt Labs, AWS, Snowflake, Databricks, and Google Cloud Platform — while leveraging modern development frameworks such as MERN (MongoDB, Express.js, React, Node.js) and React Native to design and implement seamless, high-performance digital platforms.",
+      p3: "Our goal is to help enterprises innovate faster, streamline operations, and make intelligent business decisions with confidence.",
     },
     techs: [
       { id: "ab-initio", desc: "Ab Initio enables us to design and operate high-performance, enterprise-grade ETL and data integration pipelines for complex, large-scale environments." },
@@ -15,6 +15,8 @@ export const technologiesTranslations = {
       { id: "databricks", desc: "Databricks enables lakehouse architectures that unify data engineering, analytics, and machine learning." },
       { id: "gcp", desc: "Google Cloud Platform enables advanced data engineering, analytics, and AI-ready cloud solutions." },
       { id: "azure", desc: "We leverage Microsoft Azure to build secure, scalable, and enterprise-ready cloud solutions that power modern data platforms, analytics, and AI workloads." },
+      { id: "mern", desc: "We leverage the MERN stack to build scalable, high-performance web app with modern architectures & seamless APIs." },
+      { id: "react_native", desc: "We leverage React Native to build cross-platform mobile applications with modern UI/UX design and seamless integration with backend services." },
     ],
   },
 
@@ -35,6 +37,14 @@ export const technologiesTranslations = {
       { id: "databricks", desc: "Databricks verenigt data engineering en machine learning." },
       { id: "gcp", desc: "GCP ondersteunt geavanceerde data- en AI-oplossingen." },
       { id: "azure", desc: "We maken gebruik van Microsoft Azure om veilige, schaalbare en ondernemingsklare cloudoplossingen te bouwen die moderne dataplatforms, analyses en AI-workloads ondersteunen." },
+      { 
+  id: "mern",
+  desc: "We gebruiken de MERN-stack om schaalbare, krachtige webapplicaties te bouwen met moderne architecturen en naadloze API-integraties."
+},
+{ 
+  id: "react_native",
+  desc: "We gebruiken React Native om cross-platform mobiele applicaties te bouwen met moderne UI/UX en naadloze integratie met backendservices."
+}
     ],
   },
 
@@ -54,6 +64,14 @@ export const technologiesTranslations = {
       { id: "databricks", desc: "Databricks unifie l’ingénierie des données et le machine learning." },
       { id: "gcp", desc: "Google Cloud permet des solutions data et IA avancées." },
       { id: "azure", desc: "Nous exploitons Microsoft Azure pour créer des solutions cloud sécurisées, évolutives et adaptées aux entreprises qui alimentent les plateformes de données, les analyses et les charges de travail d'IA modernes." },
+      { 
+  id: "mern",
+  desc: "Nous utilisons la stack MERN pour créer des applications web évolutives et performantes avec des architectures modernes et des API fluides."
+},
+{ 
+  id: "react_native",
+  desc: "Nous utilisons React Native pour créer des applications mobiles multiplateformes avec un design UI/UX moderne et une intégration backend fluide."
+}
     ],
   },
 
@@ -73,6 +91,14 @@ export const technologiesTranslations = {
       { id: "databricks", desc: "Databricks vereint Data Engineering und Machine Learning." },
       { id: "gcp", desc: "GCP ermöglicht fortschrittliche Daten- und KI-Lösungen." },
       { id: "azure", desc: "Wir nutzen Microsoft Azure, um sichere, skalierbare und unternehmenstaugliche Cloud-Lösungen zu entwickeln, die moderne Datenplattformen, Analysen und KI-Workloads unterstützen." },
+      { 
+  id: "mern",
+  desc: "Wir nutzen den MERN-Stack, um skalierbare und leistungsstarke Webanwendungen mit modernen Architekturen und nahtlosen APIs zu entwickeln."
+},
+{ 
+  id: "react_native",
+  desc: "Wir nutzen React Native, um plattformübergreifende mobile Anwendungen mit modernem UI/UX und nahtloser Backend-Integration zu entwickeln."
+}
     ],
   },
 
@@ -92,6 +118,14 @@ export const technologiesTranslations = {
       { id: "databricks", desc: "Databricks unifica data engineering e machine learning." },
       { id: "gcp", desc: "GCP abilita soluzioni dati e AI avanzate." },
       { id: "azure", desc: "Sfruttiamo Microsoft Azure per creare soluzioni cloud sicure, scalabili e pronte per l'azienda che alimentano moderne piattaforme dati, analisi e carichi di lavoro IA." },
+      { 
+  id: "mern",
+  desc: "Utilizziamo lo stack MERN per sviluppare applicazioni web scalabili e ad alte prestazioni con architetture moderne e API integrate."
+},
+{ 
+  id: "react_native",
+  desc: "Utilizziamo React Native per creare applicazioni mobili multipiattaforma con UI/UX moderno e integrazione fluida con i servizi backend."
+}
     ],
   },
 
@@ -111,6 +145,14 @@ export const technologiesTranslations = {
       { id: "databricks", desc: "Databricks объединяет data engineering и машинное обучение." },
       { id: "gcp", desc: "GCP поддерживает передовые аналитические и AI-решения." },
       { id: "azure", desc: "Мы используем Microsoft Azure для создания безопасных, масштабируемых и готовых к использованию облачных решений, которые поддерживают современные платформы данных, аналитику и рабочие нагрузки искусственного интеллекта." },
+      { 
+  id: "mern",
+  desc: "Мы используем стек MERN для создания масштабируемых и высокопроизводительных веб-приложений с современной архитектурой и удобными API."
+},
+{ 
+  id: "react_native",
+  desc: "Мы используем React Native для разработки кроссплатформенных мобильных приложений с современным UI/UX и интеграцией с backend-сервисами."
+}
     ],
   },
 
@@ -130,6 +172,14 @@ export const technologiesTranslations = {
       { id: "databricks", desc: "Databricks unifica engenharia de dados e machine learning." },
       { id: "gcp", desc: "GCP suporta soluções avançadas de dados e IA." },
       { id: "azure", desc: "Aproveitamos o Microsoft Azure para criar soluções em nuvem seguras, escaláveis ​​e prontas para empresas que potencializam plataformas de dados modernas, análises e cargas de trabalho de IA." },
+      { 
+  id: "mern",
+  desc: "Utilizamos a stack MERN para desenvolver aplicações web escaláveis e de alto desempenho com arquiteturas modernas e APIs integradas."
+},
+{ 
+  id: "react_native",
+  desc: "Utilizamos React Native para criar aplicativos móveis multiplataforma com design UI/UX moderno e integração com serviços backend."
+}
     ],
   },
 };

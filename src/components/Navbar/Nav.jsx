@@ -16,26 +16,29 @@ import styles from "./Navbar.module.css";
 
 const navItems = [
   { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
+  { name: "Who We Are", link: "/about" },
   {
-    name: "Services",
+    name: "What We Do",
     link: "/services",
     children: [
       { name: "Big Data Solutions", link: "/services/bigdata" },
+      { name: "Mobile Application Development", link: "/services/mobile" },
       { name: "Data Integration/Data Governance Services", link: "/services/data" },
-      { name: "AI & Data Security Services", link: "/services/ai" },
-      { name: "Metadata Management", link: "/services/meta" },
-      { name: "Custom Development", link: "/services/custom" },
-      { name: "Industry 4.0 Services", link: "/services/industry" },
+      { name: "Custom Development ", link: "/services/custom" },
+      { name: "Cyber Security Solutions", link: "/services/cyber" },
+      { name: "Supply Chain & Logistics Solutions", link: "/services/supply" },
+      { name: "AI Solutions", link: "/services/ai" },
+      { name: "Digital Marketing", link: "/services/digital" },
+
     ],
   },
   {
-    name: "Industries",
+    name: "Industries Covered",
     link: "/industry",
     children: [
       { name: "Telecom", link: "/industry/telecom" },
       { name: "BFSI", link: "/industry/bfsi" },
-      { name: "Healthcare", link: "/industry/health" },
+      { name: "Healthcare & Life Sciences", link: "/industry/health" },
       { name: "Logistics and Automation", link: "/industry/logistic" },
     ],
   },
@@ -80,6 +83,11 @@ export default function Nav() {
   };
 
   const toggleDesktopDropdown = (itemName) => {
+    // "__close__" is a sentinel sent by hover-leave to close without toggling
+    if (itemName === "__close__") {
+      setDesktopDropdownOpen(null);
+      return;
+    }
     setDesktopDropdownOpen((prev) =>
       prev === itemName ? null : itemName
     );

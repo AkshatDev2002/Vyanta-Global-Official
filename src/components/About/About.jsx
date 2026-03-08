@@ -196,38 +196,38 @@ function ValuesSection({ t }) {
   );
 }
 
-// Team Section
-function TeamSection({ t }) {
-  return (
-    <motion.section
-      className={styles.teamSection}
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-    >
-      <div className={styles.teamContent}>
-        <motion.div className={styles.teamHeader} variants={itemVariants}>
-          <h2 className={styles.sectionTitle}>{t.teamTitle}</h2>
-          <p className={styles.sectionDescription}>{t.teamDescription}</p>
-        </motion.div>
-        <motion.div className={styles.teamStats} variants={containerVariants}>
-          {t.teamStats.map((stat, index) => (
-            <motion.div
-              key={index}
-              className={styles.statCard}
-              variants={itemVariants}
-            >
-              <div className={styles.statNumber}>{stat.number}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-        <TeamCarousel />
-      </div>
-    </motion.section>
-  );
-}
+// // Team Section
+// function TeamSection({ t }) {
+//   return (
+//     <motion.section
+//       className={styles.teamSection}
+//       variants={containerVariants}
+//       initial="hidden"
+//       whileInView="visible"
+//       viewport={{ once: true, amount: 0.3 }}
+//     >
+//       <div className={styles.teamContent}>
+//         <motion.div className={styles.teamHeader} variants={itemVariants}>
+//           <h2 className={styles.sectionTitle}>{t.teamTitle}</h2>
+//           <p className={styles.sectionDescription}>{t.teamDescription}</p>
+//         </motion.div>
+//         <motion.div className={styles.teamStats} variants={containerVariants}>
+//           {t.teamStats.map((stat, index) => (
+//             <motion.div
+//               key={index}
+//               className={styles.statCard}
+//               variants={itemVariants}
+//             >
+//               <div className={styles.statNumber}>{stat.number}</div>
+//               <div className={styles.statLabel}>{stat.label}</div>
+//             </motion.div>
+//           ))}
+//         </motion.div>
+//         <TeamCarousel />
+//       </div>
+//     </motion.section>
+//   );
+// }
 
 // Vision Section
 function VisionSection({ t }) {
@@ -258,7 +258,7 @@ export default function About() {
       <ProblemSection t={t} />
       <SolutionSection t={t} />
       <ValuesSection t={t} />
-      <TeamSection t={t} />
+      {/* <TeamSection t={t} /> */}
       <VisionSection t={t} />
       <CtaContact
         bannerText="Unlock greater business value from your data with Vyanta's deep expertise"

@@ -1,13 +1,13 @@
 export const translations = {
   en: {
     hero: {
-      badge: "Vyanta Global Is The World's Most",
-      words: ["Advanced", "Futuristic", "Automated"],
-      heading: "Data Services Company",
+      badge: "Vyanta Global Is Your Most",
+      words: ["Advanced", "Strategic", "Trusted"],
+      heading: "Partner For Tailored IT Solutions.",
       subheading:
-        "Unlock the full potential of your data with secure, scalable, and AI-ready data engineering solutions.",
+        "Transforming complex challenges into opportunities with innovative and scalable technology.",
       description:
-        "We deliver big data solutions, data governance and integration, ai and data security services, metadata management, and custom development—built with enterprise-grade data security, compliance, and analytics in mind.",
+        "We engineer secure, scalable, and intelligent technology solutions that drive business transformation. From advanced data engineering and AI to cybersecurity and digital marketing, we provide the end-to-end expertise you need to innovate and grow.",
       button: "Know More",
     },
   },

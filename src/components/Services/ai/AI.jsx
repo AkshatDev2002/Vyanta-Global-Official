@@ -1,15 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { aiTranslations } from "@/lib/AITranslation";
-
-import { CardContainer } from "@/components/ui/3d-card/CardContainer";
-import CardBody from "@/components/ui/3d-card/CardBody";
-import CardItem from "@/components/ui/3d-card/CardItem";
 import CtaContact from "@/components/ui/CtaContact";
-
+import {
+  BrainCircuit,
+  FlaskConical,
+  Bot,
+  Lightbulb,
+  FileSearch,
+  MessageSquare,
+  ScanFace,
+  CheckCircle2,
+  Layers,
+  TrendingUp,
+  Users,
+  Wrench,
+  ArrowRight,
+  Sparkles,
+} from "lucide-react";
 import styles from "./AI.module.css";
 
 const fadeUp = {
@@ -17,11 +27,34 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
-export default function AI() {
+/* Team role icons */
+const teamIcons = [
+  <BrainCircuit size={26} />,
+  <FlaskConical size={26} />,
+  <Layers size={26} />,
+  <Lightbulb size={26} />,
+];
+
+/* Offering header icons */
+const offeringIcons = [
+  <FileSearch size={28} />,
+  <MessageSquare size={28} />,
+  <ScanFace size={28} />,
+];
+
+/* Advantage icons */
+const advantageIcons = [
+  <Users size={26} />,
+  <Sparkles size={26} />,
+  <TrendingUp size={26} />,
+  <Wrench size={26} />,
+];
+
+export default function AIPage() {
   const { language } = useLanguage();
   const t = aiTranslations[language] || aiTranslations.en;
 
@@ -32,118 +65,153 @@ export default function AI() {
       animate="visible"
       variants={fadeUp}
     >
-      {/* ================= HERO ================= */}
+      {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>{t.hero.title}</h1>
-          <p className={styles.subtitle}>{t.hero.subtitle}</p>
+          <h1 className={styles.heroTitle}>{t.hero.title}</h1>
+          <p className={styles.heroSubtitle}>
+            {t.hero.subtitle.split("\n\n").map((p, i) => (
+              <span key={i}>
+                {p}
+                <br />
+                <br />
+              </span>
+            ))}
+          </p>
+        </div>
+
+        <div className={styles.heroImage}>
+          <img
+            src="/services/ai1.jpg"
+            alt="AI Solutions"
+            loading="lazy"
+          />
         </div>
       </section>
 
-      {/* ================= OVERVIEW ================= */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>{t.overview.title}</h2>
-        <p className={styles.subtitle}>{t.overview.subtitle}</p>
+      {/* ── AI TEAM ── */}
+      <motion.section className={styles.section} variants={fadeUp}>
+        <h2 className={styles.sectionTitle}>{t.sections.team}</h2>
+        <p className={styles.sectionIntro}>{t.sections.teamIntro}</p>
 
-        <div className={styles.bentoGrid}>
-          {t.overview.cards.map((item, i) => (
-            <CardContainer key={i} className={styles.cardContainer}>
-              <CardBody className={styles.cardBody}>
-                <CardItem translateZ={40}>
-                  <h3 className={styles.cardTitle}>{item.title}</h3>
-                </CardItem>
-                <CardItem translateZ={30}>
-                  <p className={styles.cardText}>{item.text}</p>
-                </CardItem>
-              </CardBody>
-            </CardContainer>
+        <div className={styles.cardGrid}>
+          {t.team.map((member, i) => (
+            <div key={i} className={styles.infoCard}>
+              <div className={styles.cardIcon}>{teamIcons[i]}</div>
+              <h3>{member.role}</h3>
+              <p>{member.description}</p>
+            </div>
           ))}
         </div>
-      </section>
 
-      {/* ================= SECURE AI ================= */}
-      <section className={styles.altSection}>
-        <div className={styles.altGrid}>
-          <div className={styles.altText}>
-            <h2 className={styles.sectionTitle}>{t.secureAI.title}</h2>
-            <ul className={styles.list}>
-              {t.secureAI.points.map((p, i) => (
-                <li key={i}>{p}</li>
-              ))}
-            </ul>
-          </div>
+        <p className={styles.teamOutro}>{t.teamOutro}</p>
+      </motion.section>
 
-          <div className={styles.altImage}>
-            <Image
-              src="/services/ai1.jpg"
-              alt="Secure AI Enablement"
-              width={520}
-              height={420}
-            />
-          </div>
-        </div>
-      </section>
+      {/* ── CORE OFFERINGS ── */}
+      <motion.section className={styles.section} variants={fadeUp}>
+        <h2 className={styles.sectionTitle}>{t.sections.offerings}</h2>
+        <p className={styles.sectionIntro}>{t.sections.offeringsIntro}</p>
 
-      {/* ================= DATA SECURITY ================= */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>{t.dataSecurity.title}</h2>
+        <div className={styles.offeringsGrid}>
+          {t.offerings.map((offering, oi) => (
+            <div key={oi} className={styles.offeringCard}>
 
-        <div className={styles.benefitsLayout}>
-          <div className={styles.benefitsGrid}>
-            {t.dataSecurity.points.map((p, i) => (
-              <div key={i} className={styles.benefitItem}>
-                <span className={styles.index}>{i + 1}</span>
-                <p>{p}</p>
+              {/* Offering header */}
+              <div className={styles.offeringHeader}>
+                <span className={styles.offeringNumber}>{offering.number}</span>
+                <div className={styles.offeringIcon}>{offeringIcons[oi]}</div>
+                <div>
+                  <h3 className={styles.offeringTitle}>{offering.title}</h3>
+                  <p className={styles.offeringTagline}>{offering.tagline}</p>
+                </div>
               </div>
-            ))}
-          </div>
 
-          <div className={styles.altImage}>
-            <Image
-              src="/services/ai2.jpg"
-              alt="Enterprise Data Security"
-              width={480}
-              height={380}
-            />
-          </div>
-        </div>
-      </section>
+              <p className={styles.offeringDescription}>{offering.description}</p>
 
-      {/* ================= COMPLIANCE ================= */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>{t.compliance.title}</h2>
+              {/* How it works (OCR only) */}
+              {offering.howItWorks && (
+                <div className={styles.howItWorks}>
+                  <h4 className={styles.subHeading}>How it works:</h4>
+                  <ol className={styles.stepList}>
+                    {offering.howItWorks.map((step, si) => (
+                      <li key={si} className={styles.stepItem}>
+                        <span className={styles.stepNumber}>{si + 1}</span>
+                        <div>
+                          <strong className={styles.stepName}>{step.step}:</strong>
+                          <span className={styles.stepDetail}> {step.detail}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
 
-        <div className={styles.benefitsLayout}>
-          <div className={styles.benefitsGrid}>
-            {t.compliance.points.map((p, i) => (
-              <div key={i} className={styles.benefitItem}>
-                <span className={styles.index}>{i + 1}</span>
-                <p>{p}</p>
+              {/* Key features (Chatbot + Facial Recognition) */}
+              {offering.features && (
+                <div className={styles.featuresBlock}>
+                  <h4 className={styles.subHeading}>Key Features:</h4>
+                  <ul className={styles.featureList}>
+                    {offering.features.map((feat, fi) => (
+                      <li key={fi} className={styles.featureItem}>
+                        <CheckCircle2 size={16} className={styles.featureIcon} />
+                        <div>
+                          <strong className={styles.featureName}>{feat.name}:</strong>
+                          <span className={styles.featureDetail}> {feat.detail}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Use cases */}
+              <div className={styles.useCasesBlock}>
+                <h4 className={styles.subHeading}>Use Cases:</h4>
+                <ul className={styles.useCaseList}>
+                  {offering.useCases.map((uc, ui) => (
+                    <li key={ui} className={styles.useCaseItem}>
+                      <ArrowRight size={14} className={styles.useCaseArrow} />
+                      <span>{uc}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
-
-          <div className={styles.altImage}>
-            <Image
-              src="/services/ai3.jpg"
-              alt="AI Compliance & Privacy"
-              width={460}
-              height={360}
-            />
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </motion.section>
 
-      {/* ================= WHY VYANTA ================= */}
-      <section className={styles.centerSection}>
-        <h2 className={styles.centerTitle}>{t.why.title}</h2>
-        <p className={styles.centerText}>{t.why.text}</p>
-      </section>
+      {/* ── ADVANTAGES ── */}
+      <motion.section className={styles.section} variants={fadeUp}>
+        <h2 className={styles.sectionTitle}>{t.sections.advantage}</h2>
+        <div className={styles.cardGrid}>
+          {t.advantages.map((adv, i) => (
+            <div key={i} className={styles.capabilityCard}>
+              <div className={styles.cardIcon}>{advantageIcons[i]}</div>
+              <h3>{adv.title}</h3>
+              <p>{adv.text}</p>
+            </div>
+          ))}
+        </div>
+      </motion.section>
 
-      {/* ================= CTA (NOT TRANSLATED) ================= */}
+      {/* ── FAQ ── */}
+      <motion.section className={styles.section} variants={fadeUp}>
+        <h2 className={styles.sectionTitle}>{t.sections.faq}</h2>
+        <div className={styles.faqList}>
+          {t.faq.map((item, i) => (
+            <div key={i} className={styles.faqItem}>
+              <h3 className={styles.faqQuestion}>{item.q}</h3>
+              <p className={styles.faqAnswer}>{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* ── CTA ── */}
       <CtaContact
-        bannerText="Secure your AI initiatives with trusted, governed, and enterprise-grade data foundations."
-        submitText="Talk to our expert team"
+        bannerText="Ready to Build Something Intelligent?"
+        submitText="Let's explore AI for your business"
       />
     </motion.div>
   );

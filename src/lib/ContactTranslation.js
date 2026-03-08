@@ -3,19 +3,19 @@ export const contactTranslations = {
   en: {
     title: "Schedule a Consultation With Our Expert Team",
     subtitle:
-      "This session is designed to understand your data landscape, identify key challenges, and outline a clear, actionable path forward — technically and commercially.",
+      "This session is designed to understand your technology landscape, identify key challenges, and outline a clear, actionable path forward — technically and commercially.",
 
     agendaTitle: "Typical Agenda",
     agenda: [
       { label: "Introductions & objectives alignment", time: "5 minutes" },
-      { label: "Discussion of your current data challenges and goals", time: "5 minutes" },
+      { label: "Discussion of your current technical challenges and goals", time: "5 minutes" },
       { label: "Our approach, engagement models & pricing overview", time: "5 minutes" },
       { label: "Detailed solution walkthrough, live demo & interactive Q&A", time: "40 minutes" },
     ],
 
     gainTitle: "What You’ll Gain",
     gains: [
-      "An in-depth technical demonstration tailored to your data environment",
+      "An in-depth technical demonstration tailored to your technology environment",
       "Clear next steps, including pricing details and a customized proposal aligned to your business needs",
     ],
 

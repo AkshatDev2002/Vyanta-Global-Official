@@ -1,162 +1,162 @@
 export const aboutTranslations = {
-  en: {
-    // Hero Section
-    heroTitle: "We're Vyanta Global",
-    heroSubtitle:
-      "A specialist data consulting and solutions partner focused on delivering scalable, secure, and future-ready data ecosystems for modern enterprises worldwide.\n\nWe provide end-to-end data services, including big data engineering, enterprise data integration, and data governance to ensure trusted, compliant, and high-quality information across your business.\n\nWith a strategic, value-focused approach, we help organisations modernise their data platforms, reduce operational complexity, and turn data into a long-term competitive advantage.",
-    heroImageAlt: "Vyanta Global Team",
+en: {
+  // Hero Section
+  heroTitle: "We're Vyanta Global",
+  heroSubtitle:
+    "Vyanta Global is a technology consulting and digital solutions partner helping organizations build modern, scalable, and future-ready platforms.\n\nWe deliver end-to-end technology services across digital transformation, application development, cloud solutions, cybersecurity, and intelligent automation to support business growth and innovation.\n\nWith a strategic and value-driven approach, we help organisations modernise their technology landscape, improve operational efficiency, and build resilient digital foundations for long-term success.",
+  heroImageAlt: "Vyanta Global Team",
 
-    // Story Section
-    storyTitle: "Our Story",
-    stories: [
-      {
-        title: "A Vision Born",
-        description:
-          "In the era of digital transformation, data became the most valuable asset for enterprises. Yet, most organizations face massive, fragmented data across disparate systems. Integrating growing data volumes from legacy and cloud platforms—while ensuring governance, security, and consistency—remains a challenge, slowing analytics, AI initiatives, and timely decision-making.",
-      },
-      {
-        title: "The Opportunity",
-        description:
-          "We saw an opportunity to bridge this gap. With deep expertise in data engineering, analytics, and a unified data architecture that integrates diverse sources, enforcing strong governance and security, and ensuring consistent, high-quality data. With scalable pipelines, modern cloud platforms, and automated data management, we can enable faster analytics, accelerate AI initiatives, and make confident, real-time decisions.",
-      },
-      {
-        title: "Our Purpose",
-        description:
-          "Vyanta Global was founded with a singular mission: to empower enterprises with intelligent, scalable, and secure data solutions that turn complex, fragmented data into actionable insights. By combining deep data engineering expertise, modern cloud platforms, and strong governance frameworks, we help organizations build future-ready data foundations that accelerate analytics, enable AI-driven innovation, and deliver measurable, long-term business value.",
-      },
-    ],
+  // Story Section
+  storyTitle: "Our Story",
+  stories: [
+    {
+      title: "A Vision Born",
+      description:
+        "As digital transformation accelerated across industries, organizations began facing increasing complexity in technology, operations, and innovation. Businesses needed reliable partners capable of navigating modern technologies while ensuring scalability, security, and efficiency.",
+    },
+    {
+      title: "The Opportunity",
+      description:
+        "We saw an opportunity to help organizations bridge the gap between technology potential and real-world business impact. By combining modern platforms, intelligent automation, and strong technical expertise, we enable organizations to adopt new technologies with confidence and clarity.",
+    },
+    {
+      title: "Our Purpose",
+      description:
+        "Vyanta Global was founded with a simple mission: to help organizations innovate, scale, and succeed through technology. By combining strong engineering practices, modern platforms, and strategic thinking, we empower businesses to build resilient digital systems that drive long-term value.",
+    },
+  ],
 
-    // Problem Section
-    problemTitle: "The Data Dilemma Enterprises Face",
-    problemDescription:
-      "In today's digital landscape, data is everywhere—but so are the challenges. Organizations worldwide grapple with similar obstacles:",
-    problems: [
-      {
-        title: "Data Silos",
-        description:
-          "Organizations struggle with disconnected data sources and fragmented systems that prevent unified insights.",
-      },
-      {
-        title: "Speed to Insight",
-        description:
-          "Complex data landscapes make it difficult to extract actionable insights in real-time.",
-      },
-      {
-        title: "Compliance Burden",
-        description:
-          "Managing data governance and regulatory compliance across the enterprise is complex and resource-intensive.",
-      },
-      {
-        title: "Skill Gaps",
-        description:
-          "Talent shortages in data engineering and analytics limit organizations' ability to scale.",
-      },
-    ],
+  // Problem Section
+  problemTitle: "The Challenges Modern Enterprises Face",
+  problemDescription:
+    "In today's digital economy, organizations across industries face common operational and technology challenges:",
+  problems: [
+    {
+      title: "Fragmented Systems",
+      description:
+        "Organizations often rely on disconnected systems and tools that limit collaboration and operational efficiency.",
+    },
+    {
+      title: "Speed of Innovation",
+      description:
+        "Rapid technological change makes it difficult for businesses to adopt new solutions quickly and effectively.",
+    },
+    {
+      title: "Security & Compliance",
+      description:
+        "Maintaining strong security standards and regulatory compliance while scaling operations can be complex.",
+    },
+    {
+      title: "Technology Skill Gaps",
+      description:
+        "A shortage of specialized technical talent can slow down innovation and digital transformation initiatives.",
+    },
+  ],
 
-    // Solution Section
-    solutionTitle: "Our Approach",
-    solutionDescription:
-      "Vyanta Global combines deep technical expertise, industry best practices, and proven methodologies to deliver transformative data solutions.",
-    solutions: [
-      {
-        number: "01",
-        title: "Strategic Data Assessment",
-        description:
-          "We perform a comprehensive evaluation of your data architecture, pipelines, and governance to identify gaps, optimize performance, and uncover high-impact opportunities for enterprise analytics and AI readiness.",
-      },
-      {
-        number: "02",
-        title: "Tailored Data Strategy",
-        description:
-          "We craft a business-aligned data strategy using modern cloud and data engineering best practices, ensuring scalability, security, and measurable outcomes across analytics and machine learning initiatives.",
-      },
-      {
-        number: "03",
-        title: "Scalable Data Implementation",
-        description:
-          "We design and deploy secure, cloud-native data platforms and pipelines that scale with your business, enabling reliable data integration, real-time processing, and high-performance analytics.",
-      },
-      {
-        number: "04",
-        title: "Continuous Optimization & Support",
-        description:
-          "We provide ongoing monitoring, optimization, and support to ensure data reliability, performance, and governance as your business, workloads, and technology stack evolve.",
-      },
-    ],
+  // Solution Section
+  solutionTitle: "Our Approach",
+  solutionDescription:
+    "Vyanta Global combines deep technical expertise, industry best practices, and proven methodologies to deliver impactful digital solutions.",
+  solutions: [
+    {
+      number: "01",
+      title: "Strategic Technology Assessment",
+      description:
+        "We evaluate your current technology landscape to identify opportunities for improvement, innovation, and operational efficiency.",
+    },
+    {
+      number: "02",
+      title: "Tailored Digital Strategy",
+      description:
+        "We design technology strategies aligned with your business goals, ensuring scalable solutions and measurable outcomes.",
+    },
+    {
+      number: "03",
+      title: "Scalable Technology Implementation",
+      description:
+        "We design and implement modern digital platforms, applications, and systems that grow with your organization.",
+    },
+    {
+      number: "04",
+      title: "Continuous Optimization & Support",
+      description:
+        "We provide ongoing monitoring, support, and optimization to ensure your technology ecosystem continues to perform at its best.",
+    },
+  ],
 
-    // Values Section
-    valuesTitle: "Our Core Values",
-    values: [
-      {
-        title: "Excellence — Delivered Without Compromise",
-        description:
-          "We consistently push beyond standards to deliver high-quality, reliable solutions that create real, measurable impact for our clients.",
-      },
-      {
-        title: "Partnership — Built for Long-Term Success",
-        description:
-          "We work as trusted partners, collaborating closely with our clients to align technology, strategy, and outcomes for shared and sustainable growth.",
-      },
-      {
-        title: "Innovation — Driven by Proactive Thinking",
-        description:
-          "We embrace modern technologies and creative problem-solving to design smarter data solutions that keep our clients ahead in a rapidly evolving digital landscape.",
-      },
-      {
-        title: "Trust & Security — Embedded by Design",
-        description:
-          "We protect data with robust governance, security, and compliance practices, ensuring confidence, integrity, and reliability across every solution we deliver.",
-      },
-      {
-        title: "Transparency — Clear, Open, Accountable",
-        description:
-          "We believe in honest communication and full visibility, fostering trust through clarity, accountability, and alignment at every stage of engagement.",
-      },
-      {
-        title: "Agility — Adapt Fast, Deliver Faster",
-        description:
-          "We respond quickly to changing business needs and technologies, delivering flexible, scalable solutions without compromising quality or outcomes.",
-      },
-    ],
+  // Values Section
+  valuesTitle: "Our Core Values",
+  values: [
+    {
+      title: "Excellence — Delivered Without Compromise",
+      description:
+        "We consistently push beyond expectations to deliver high-quality solutions that create real value for our clients.",
+    },
+    {
+      title: "Partnership — Built for Long-Term Success",
+      description:
+        "We work closely with our clients as trusted partners to align technology, strategy, and business outcomes.",
+    },
+    {
+      title: "Innovation — Driven by Forward Thinking",
+      description:
+        "We embrace modern technologies and creative thinking to help organizations stay ahead in a rapidly evolving digital world.",
+    },
+    {
+      title: "Trust & Security — Embedded by Design",
+      description:
+        "Security, reliability, and responsible technology practices are fundamental to every solution we deliver.",
+    },
+    {
+      title: "Transparency — Clear, Open, Accountable",
+      description:
+        "We believe in honest communication and accountability, ensuring clarity and alignment at every stage of engagement.",
+    },
+    {
+      title: "Agility — Adapt Fast, Deliver Faster",
+      description:
+        "We move quickly and adapt to changing business needs while maintaining high standards of quality and performance.",
+    },
+  ],
 
-    // Team Section
-    teamTitle: "Our People",
-    teamDescription:
-      "Our diverse team of data engineers, architects, and consultants brings decades of combined experience in enterprise data solutions and cloud technologies.",
-    teamStats: [
-      { number: "50+", label: "Data Experts" },
-      { number: "100+", label: "Projects Delivered" },
-      { number: "15+", label: "Industries Served" },
-      { number: "99.9%", label: "Client Satisfaction" },
-    ],
+  // Team Section
+  teamTitle: "Our People",
+  teamDescription:
+    "Our diverse team of engineers, designers, consultants, and technology specialists brings years of experience in building modern digital solutions across industries.",
+  teamStats: [
+    { number: "50+", label: "Technology Experts" },
+    { number: "100+", label: "Projects Delivered" },
+    { number: "15+", label: "Industries Served" },
+    { number: "99.9%", label: "Client Satisfaction" },
+  ],
 
-    // Vision Section
-    visionTitle: "Our Vision for Tomorrow",
-    visionDescription1:
-      "At Vyanta Global, our vision is to become a trusted global leader in data engineering and analytics—enabling enterprises to operate with intelligence, confidence, and speed in a data-driven world. We envision a future where data is no longer fragmented or reactive, but a strategic, real-time asset that powers decision-making, innovation, and sustainable growth.",
-    visionDescription2:
-      "We aim to build future-ready data ecosystems that seamlessly unify legacy and cloud platforms, embed governance and security by design, and scale effortlessly with evolving business needs. By continuously adopting modern cloud architectures, advanced analytics, and AI-driven capabilities, Vyanta Global strives to help organizations unlock deeper insights, accelerate digital transformation, and stay ahead of change.",
-    visionContent: [
-      {
-        title: "Data as a Strategic Business Asset",
-        description:
-          "We envision a future where data is treated as a critical enterprise asset, not a byproduct of systems. Through robust data engineering, advanced analytics, and AI-driven insights, we help organizations transform raw data into actionable intelligence that fuels innovation, strengthens competitive positioning, and supports sustainable, long-term growth.",
-        image: "/about/v1.jpg",
-      },
-      {
-        title: "Democratized Data & AI Intelligence",
-        description:
-          "We believe powerful analytics and AI should not be limited by complexity or scale. By simplifying data infrastructure and delivering scalable, cloud-native platforms, we make insights accessible to teams across the organization—enabling faster decisions, improved efficiency, and broader adoption of data-driven practices.",
-        image: "/about/v2.jpg",
-      },
-      {
-        title: "Responsible, Secure & Compliant Innovation",
-        description:
-          "Innovation must be built on trust. We design data solutions with security, governance, and compliance embedded by design, ensuring ethical data usage, privacy protection, and adherence to global regulations. This approach enables organizations to innovate confidently while maintaining resilience, accountability, and long-term reliability.",
-        image: "/about/v3.jpg",
-      },
-    ],
-  },
+  // Vision Section
+  visionTitle: "Our Vision for Tomorrow",
+  visionDescription1:
+    "At Vyanta Global, our vision is to become a trusted global technology partner that helps organizations innovate, adapt, and thrive in an increasingly digital world. We believe technology should empower businesses to operate smarter, respond faster, and create lasting value.",
+  visionDescription2:
+    "By embracing modern platforms, emerging technologies, and forward-thinking strategies, we aim to help organizations build resilient digital ecosystems that support growth, efficiency, and innovation for years to come.",
+  visionContent: [
+    {
+      title: "Technology as a Strategic Advantage",
+      description:
+        "We believe technology should serve as a powerful business enabler. By designing scalable platforms and intelligent digital solutions, we help organizations unlock new opportunities and maintain a competitive edge.",
+      image: "/about/v1.jpg",
+    },
+    {
+      title: "Accessible Innovation for Every Organization",
+      description:
+        "Innovation should not be limited by complexity or scale. We focus on building solutions that are practical, scalable, and accessible to teams across the organization.",
+      image: "/about/v2.jpg",
+    },
+    {
+      title: "Responsible and Secure Technology",
+      description:
+        "Trust is the foundation of every successful digital system. We design solutions with security, reliability, and responsible innovation at their core.",
+      image: "/about/v3.jpg",
+    },
+  ],
+},
 
   nl: {
     // Hero Section

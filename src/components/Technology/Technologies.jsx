@@ -17,7 +17,9 @@ const techImages = {
   snowflake: "/snowflake.png",
   databricks: "/databricks.png",
   gcp: "/gcp.png",
-  azure:"/azure.png"
+  azure:"/azure.png",
+  mern: "/mern.png",
+  react_native: "/react_native.png",
 };
 
 export default function Technologies() {

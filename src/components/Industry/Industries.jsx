@@ -26,7 +26,7 @@ const industriesMeta = [
   },
   {
     key: "healthcare",
-    title: "Healthcare",
+    title: "Healthcare & Life Sciences",
     image: "/industry/i3.jpg",
     href: "/industry/health",
   },

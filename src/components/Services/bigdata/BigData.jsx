@@ -69,7 +69,7 @@ export default function BigDataPage() {
 
         <div className={styles.heroImage}>
           <img
-            src="/services/b1.jpg"
+            src="/services/bigdata.jpg"
             alt="Big Data Architecture"
             loading="lazy"
           />

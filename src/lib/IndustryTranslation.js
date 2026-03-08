@@ -2,22 +2,22 @@ export const industryTranslations = {
   en: {
     title: "Industries We Serve",
     subtitle:
-      "We partner with organizations across data-intensive industries to solve complex data challenges and enable intelligent, scalable, and secure data-driven operations. Our industry-focused expertise allows us to design tailored data engineering, analytics, and cloud solutions that address unique regulatory, operational, and performance demands.",
+      "We partner with organizations across diverse industries to solve complex technology challenges and enable intelligent, scalable, and secure digital operations. Our industry-focused expertise allows us to design tailored solutions across data, cloud, AI, cybersecurity, application development, and digital platforms to meet unique regulatory, operational, and performance requirements.",
 
     readMore: "Read more →",
 
     industries: {
       telecom:
-        "At Vyanta Global, we help telecom organizations modernize their data platforms with scalable, cloud-native data engineering and advanced analytics solutions.",
+"At Vyanta Global, we help telecom organizations modernize their technology platforms with scalable, cloud-native solutions and advanced digital capabilities.",
 
-      bfsi:
-        "At Vyanta Global, we help BFSI organizations build secure, compliant, and scalable data platforms that unify transactional, customer, and market data across on-premise and cloud environments.",
+bfsi:
+"At Vyanta Global, we help BFSI organizations build secure, compliant, and scalable technology platforms that unify customer, operational, and financial systems across on-premise and cloud environments.",
 
-      healthcare:
-        "At Vyanta Global, we help healthcare organizations build secure, interoperable, and scalable data platforms that unify clinical, operational, and financial data.",
+healthcare:
+"At Vyanta Global, we help healthcare organizations build secure, interoperable, and scalable technology platforms that unify clinical, operational, and digital systems.",
 
-      logistics:
-        "At Vyanta Global, we design scalable, cloud-native data platforms that unify operational, IoT, and transactional data across logistics and automation ecosystems.",
+logistics:
+"At Vyanta Global, we design scalable, cloud-native technology platforms that unify operational, automation, and digital systems across logistics and supply chain ecosystems.",
     },
   },
 

@@ -1,17 +1,18 @@
+/*
+  Animation translates by exactly --set-width px (set from JS).
+  This guarantees the snap-back is pixel-perfect:
+  when set 1 exits, set 2 is in exactly the same position set 1 started — seamless.
+*/
 @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--set-width, 50%))); }
 }
 
 .footer {
   position: absolute;
   left: 0;
   width: 100vw;
-  height: 90px;
+  height: 100px;
   border-radius: 5rem 5rem 0 0;
   box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -42,74 +43,91 @@
   margin: 0;
 }
 
+/* Soft fade edges */
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+.container::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(248, 248, 248), transparent);
+}
+.container::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(245, 245, 245), transparent);
+}
+
+/* The outer track — animates as one unit */
 .marqueeTrack {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 48px;
-  padding: 0;
-  animation: marquee 30s linear infinite;
-  white-space: nowrap;
-  will-change: transform;
-  width: 200%;
+  width: max-content;
   height: 100%;
-  min-width: fit-content;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+/* Each set is a flex row of logo cells — two sets sit side by side */
+.logoSet {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+/* Fixed-size cell — every logo occupies identical space */
+.logoCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 100%;
+  padding: 0 20px;
+  flex-shrink: 0;
 }
 
 .logo {
-  margin: 0;
-  height: 50px;
-  width: auto;
+  display: block;
+  width: 100%;
+  height: 64px;
   object-fit: contain;
-  opacity: 0.75;
-  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
-  flex-shrink: 0;
-  min-width: fit-content;
+  object-position: center;
+  opacity: 0.72;
+  transition: opacity 300ms ease, transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-.logo:hover {
+.logoCell:hover .logo {
   opacity: 1;
   transform: scale(1.1);
   cursor: pointer;
 }
 
 @media (pointer: coarse) {
-  .logo {
-    transform: scale(1);
-  }
-
-  .logo:active {
-    transform: scale(1);
-  }
+  .logoCell:active .logo { transform: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marqueeTrack {
-    animation: none;
-  }
-
-  .logo {
-    transform: none !important;
-  }
+  .marqueeTrack { animation: none; }
+  .logo         { transform: none !important; }
 }
 
 @media (max-width: 768px) {
-  .marqueeTrack {
-    gap: 24px;
-    padding: 0 30px;
-  }
-
-  .logo {
-    height: 32px;
-  }
+  .footer   { height: 80px; }
+  .logoCell { width: 120px; padding: 0 14px; }
+  .logo     { height: 44px; }
 }
 
 @media (max-width: 480px) {
-  .marqueeTrack {
-    gap: 16px;
-    padding: 0 20px;
-  }
-
-  .logo {
-    height: 28px;
-  }
+  .footer   { height: 70px; }
+  .logoCell { width: 100px; padding: 0 10px; }
+  .logo     { height: 36px; }
 }

@@ -3,77 +3,77 @@ export const bfsiTranslations = {
      ENGLISH
   ========================= */
   en: {
-    hero: {
-      title: "BFSI Data, Analytics & Compliance Solutions",
-      subtitle:
-        "Secure. Compliant. Intelligence-Driven. Vyanta Global helps banks, financial institutions, and insurers modernize their data ecosystems while meeting the highest standards of security, governance, and regulatory compliance.",
-    },
-
-    challenges: {
-      title: "Solving Core BFSI Data Challenges",
-      description:
-        "Financial institutions operate in one of the most regulated and data-intensive environments. Vyanta Global delivers governance-first architectures that transform complex, high-risk data into trusted, real-time intelligence.",
-      items: [
-        {
-          title: "Eliminate Data Silos",
-          text:
-            "Unify data across core banking, risk, finance, and compliance systems to create a single, trusted enterprise data foundation.",
-        },
-        {
-          title: "BCBS 239-Aligned Reporting",
-          text:
-            "Ensure accurate, timely, and traceable risk data aggregation and reporting aligned with BCBS 239 principles.",
-        },
-        {
-          title: "Regulatory & Compliance Readiness",
-          text:
-            "Strengthen AML, KYC, Basel, and regulatory reporting with built-in governance and auditability.",
-        },
-        {
-          title: "Enterprise Data Security",
-          text:
-            "Protect sensitive financial data with enterprise-grade access controls, privacy safeguards, and security frameworks.",
-        },
-        {
-          title: "Real-Time Risk & Fraud Insights",
-          text:
-            "Enable real-time intelligence for fraud detection, risk monitoring, and customer analytics.",
-        },
-        {
-          title: "Data Quality & Lineage",
-          text:
-            "Improve data accuracy, lineage, and transparency to support confident decision-making and regulatory audits.",
-        },
-      ],
-    },
-
-    capabilities: {
-      title: "BFSI Data, Analytics & AI Capabilities",
-      items: [
-        "Enterprise data platforms unifying transactional, customer, market, and risk data",
-        "Risk and regulatory intelligence with full traceability and governance",
-        "AI-driven fraud detection, anomaly identification, and predictive risk modeling",
-        "End-to-end metadata, lineage, and automated data quality controls",
-        "Modern payment and financial data hubs aligned with SWIFT and ISO standards",
-      ],
-    },
-
-    compliance: {
-      title: "Compliance-First by Design",
-      items: [
-        "BCBS 239 risk data aggregation and reporting",
-        "AML & KYC workflows embedded by design",
-        "Regulatory reporting and audit readiness",
-        "Secure access controls and enterprise data protection",
-      ],
-    },
-
-    why: {
-      title: "Why BFSI Leaders Choose Vyanta Global",
-      text:
-        "With deep BFSI domain expertise and proven data engineering and governance frameworks, Vyanta Global enables financial institutions to move faster, smarter, and more securely—without compromising trust or regulatory obligations.",
-    },
+  hero: {
+    title: "BFSI Technology & Digital Transformation Solutions",
+    subtitle:
+      "Secure. Compliant. Innovation-Driven. Vyanta Global helps banks, financial institutions, and insurers modernize their digital ecosystems while maintaining the highest standards of security, governance, and regulatory compliance.",
   },
+
+  challenges: {
+    title: "Solving Core BFSI Technology Challenges",
+    description:
+      "Financial institutions operate in one of the most regulated and technology-driven environments. Vyanta Global delivers scalable digital solutions that transform complex operations into efficient, secure, and intelligent business systems.",
+    items: [
+      {
+        title: "Eliminate Operational Silos",
+        text:
+          "Connect platforms, systems, and workflows across departments to create a unified and efficient digital ecosystem.",
+      },
+      {
+        title: "Intelligent Reporting & Insights",
+        text:
+          "Enable reliable reporting and business intelligence that supports better strategic and operational decision-making.",
+      },
+      {
+        title: "Regulatory & Compliance Readiness",
+        text:
+          "Support financial institutions with technology frameworks designed to simplify compliance and regulatory processes.",
+      },
+      {
+        title: "Enterprise-Grade Security",
+        text:
+          "Protect critical systems and sensitive information with strong security frameworks and access management.",
+      },
+      {
+        title: "Real-Time Business Visibility",
+        text:
+          "Provide organizations with timely insights to monitor operations, detect anomalies, and improve customer experiences.",
+      },
+      {
+        title: "Operational Transparency",
+        text:
+          "Enhance traceability, monitoring, and system visibility to support governance and confident decision-making.",
+      },
+    ],
+  },
+
+  capabilities: {
+    title: "BFSI Technology, AI & Digital Capabilities",
+    items: [
+      "Enterprise digital platforms integrating customer, operational, and financial systems",
+      "Intelligent automation and analytics to enhance operational efficiency",
+      "AI-driven insights for risk monitoring, fraud detection, and customer experience",
+      "Integrated governance, monitoring, and quality controls across digital systems",
+      "Modern financial technology solutions supporting payments, services, and digital banking",
+    ],
+  },
+
+  compliance: {
+    title: "Compliance-First by Design",
+    items: [
+      "Regulatory-ready technology architecture",
+      "Integrated compliance and governance frameworks",
+      "Audit-friendly operational monitoring and reporting",
+      "Secure access management and enterprise-grade protection",
+    ],
+  },
+
+  why: {
+    title: "Why BFSI Leaders Choose Vyanta Global",
+    text:
+      "With strong industry expertise and proven technology frameworks, Vyanta Global enables financial institutions to innovate faster, improve operational efficiency, and strengthen security—while maintaining trust and regulatory alignment.",
+  },
+},
 
   /* =========================
      DUTCH

@@ -1,47 +1,48 @@
-/* Footer - Main Container */
+/* ══════════════════════════════════════
+   FOOTER — Main shell
+══════════════════════════════════════ */
 .footer {
   width: 100%;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
   border-top: 1px solid rgba(0, 255, 156, 0.1);
-  box-shadow: 0 24px 56px rgba(95, 94, 94, 0.553);
   color: rgb(200, 200, 200);
   font-family: "Nunito Sans", sans-serif;
 }
 
-/* Footer Top Section */
+/* ══════════════════════════════════════
+   TOP BAND
+══════════════════════════════════════ */
 .footerTop {
-  padding: 80px 60px;
+  padding: 72px 60px;
   background: linear-gradient(180deg, rgba(0, 255, 156, 0.03) 0%, transparent 100%);
 }
 
+/* Desktop: 3 columns — brand | quick links | map */
 .footerContainer {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 2fr;
-  gap: 80px;
-  
+  grid-template-columns: 1.4fr 0.8fr 1.4fr;
+  gap: 56px;
+  align-items: start;
 }
 
-
-/* Brand Section */
+/* ══════════════════════════════════════
+   LEFT — Brand + Contact
+══════════════════════════════════════ */
 .brandSection {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
-.logoText {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0;
-  font-family: "Share Tech", sans-serif;
-  letter-spacing: -0.01em;
+.logoWrapper {
+  display: inline-block;
+  line-height: 0;
 }
 
 .logoSubtext {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.15em;
   color: rgb(0, 255, 156);
@@ -50,78 +51,46 @@
 }
 
 
-.brandDescription {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgb(150, 150, 150);
-  margin: 0;
-  letter-spacing: 0.3px;
-}
 
 .contactBlock {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 10px;
+  margin-top: 4px;
 }
 
 .contactItem {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.9rem;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.87rem;
   color: rgb(150, 150, 150);
+  line-height: 1.5;
 }
 
 .contactItem svg {
   color: rgb(0, 255, 156);
-  font-size: 0.95rem;
+  flex-shrink: 0;
+  margin-top: 3px;
 }
 
-.socialLinks {
-  display: flex;
-  gap: 14px;
-  margin-top: 16px;
-}
-
-.socialLink {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 255, 156, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(0, 255, 156);
-  transition: all 0.3s ease;
-}
-
-.socialLink:hover {
-  background: rgb(0, 255, 156);
-  color: #000;
-  transform: translateY(-2px);
-}
-
-
-/* Links Grid */
-.linksGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.linkColumn {
+/* ══════════════════════════════════════
+   CENTER — Quick Links
+══════════════════════════════════════ */
+.quickLinks {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
+  align-self: start;
+  justify-self: center;
 }
 
 .columnTitle {
   font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
-  margin: 0;
-  letter-spacing: 0.05em;
+  margin: 0 0 4px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-family: "Share Tech", sans-serif;
 }
@@ -132,48 +101,110 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.linkList li {
-  margin: 0;
+  gap: 10px;
 }
 
 .link {
   font-size: 1.2rem;
   color: rgb(150, 150, 150);
   text-decoration: none;
-  transition: all 0.3s ease;
-  letter-spacing: 0.3px;
+  transition: color 0.22s ease, padding-left 0.22s ease;
+  display: inline-block;
 }
 
 .link:hover {
   color: rgb(0, 255, 156);
-  padding-left: 4px;
+  padding-left: 5px;
 }
 
+/* ══════════════════════════════════════
+   RIGHT — Map
+══════════════════════════════════════ */
+.mapSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-/* Divider */
+.mapLink {
+  display: block;
+  text-decoration: none;
+}
+
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 156, 0.15);
+}
+
+.mapWrapper iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(60%) invert(10%);
+  transition: filter 0.3s ease;
+}
+
+.mapOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: rgb(0, 255, 156);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.mapOverlayIcon {
+  font-size: 1.3rem;
+}
+
+.mapLink:hover .mapOverlay {
+  opacity: 1;
+}
+
+.mapLink:hover .mapWrapper iframe {
+  filter: grayscale(20%) invert(5%);
+}
+
+.mapAddress {
+  font-size: 0.8rem;
+  color: rgb(120, 120, 120);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ══════════════════════════════════════
+   DIVIDER
+══════════════════════════════════════ */
 .divider {
   height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(0, 255, 156, 0.2),
-    transparent
-  );
+  background: linear-gradient(to right, transparent, rgba(0, 255, 156, 0.2), transparent);
   margin: 0 60px;
 }
 
-/* Footer Bottom Section */
+/* ══════════════════════════════════════
+   BOTTOM BAR
+══════════════════════════════════════ */
 .footerBottom {
-  padding: 40px 60px;
-  background: linear-gradient(180deg, transparent 0%, rgba(0, 255, 156, 0.02) 100%);
+  padding: 28px 60px;
 }
 
-.footerBottom .footerContainer {
-  grid-template-columns: 1fr;
-  gap: 20px;
+.footerBottomInner {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -181,10 +212,9 @@
 }
 
 .copyright {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: rgb(120, 120, 120);
   margin: 0;
-  letter-spacing: 0.3px;
 }
 
 .brandName {
@@ -195,15 +225,14 @@
 .bottomLinks {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .bottomLink {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: rgb(120, 120, 120);
   text-decoration: none;
-  transition: color 0.3s ease;
-  letter-spacing: 0.3px;
+  transition: color 0.22s ease;
 }
 
 .bottomLink:hover {
@@ -211,37 +240,20 @@
 }
 
 .separator {
-  color: rgb(80, 80, 80);
+  color: rgb(70, 70, 70);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-
-@media (max-width: 768px) {
-  .footerContainer {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .socialLinks {
-    justify-content: flex-start;
-  }
-}
-
-
-/* Tablet (1024px) */
-@media (max-width: 1024px) {
+/* ══════════════════════════════════════
+   RESPONSIVE — Tablet landscape (≤1200px)
+══════════════════════════════════════ */
+@media (max-width: 1200px) {
   .footerTop {
     padding: 60px 48px;
   }
 
   .footerContainer {
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
-  }
-
-  .linksGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: 1.2fr 0.8fr 1.2fr;
+    gap: 40px;
   }
 
   .divider {
@@ -249,139 +261,133 @@
   }
 
   .footerBottom {
-    padding: 30px 48px;
-  }
-
-  .socialLinks {
-    gap: 12px;
-  }
-
-  .socialLink {
-    width: 40px;
-    height: 40px;
+    padding: 24px 48px;
   }
 }
 
-/* Medium Tablet (768px) */
+/* ══════════════════════════════════════
+   RESPONSIVE — Tablet portrait (≤1024px)
+   Layout: brand | links (row 1) — map full width (row 2)
+══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .footerTop {
+    padding: 56px 40px;
+  }
+
+  .footerContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .mapSection {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
+
+  .mapWrapper {
+    height: 220px;
+  }
+
+  .divider {
+    margin: 0 40px;
+  }
+
+  .footerBottom {
+    padding: 24px 40px;
+  }
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE — Mobile (≤768px)
+   Layout: all sections stack, centred
+══════════════════════════════════════ */
 @media (max-width: 768px) {
   .footerTop {
-    padding: 50px 32px;
+    padding: 48px 24px;
   }
 
   .footerContainer {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 36px;
   }
 
-  .linksGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .divider {
-    margin: 0 32px;
-  }
-
-  .footerBottom {
-    padding: 30px 32px;
-  }
-
-  .footerBottom .footerContainer {
-    flex-direction: column;
-    gap: 16px;
+  /* All three sections centred on mobile */
+  .brandSection,
+  .quickLinks,
+  .mapSection {
+    justify-self: stretch;
+    align-self: auto;
     text-align: center;
   }
 
-  .copyright {
+  /* Contact items stay left-aligned inside the centred block */
+  .contactItem {
+    justify-content: center;
+  }
+
+  /* Quick links centred */
+  .linkList {
+    align-items: center;
+  }
+
+  .link:hover {
+    padding-left: 0;
+  }
+
+  .mapSection {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .mapWrapper {
+    height: 200px;
+  }
+
+  .mapAddress {
+    text-align: center;
+  }
+
+  .divider {
+    margin: 0 24px;
+  }
+
+  .footerBottom {
+    padding: 20px 24px;
+  }
+
+  .footerBottomInner {
+    flex-direction: column;
+    gap: 10px;
     text-align: center;
   }
 
   .bottomLinks {
     justify-content: center;
   }
+}
 
-  .logoText {
-    font-size: 1.35rem;
+/* ══════════════════════════════════════
+   RESPONSIVE — Small phones (≤480px)
+══════════════════════════════════════ */
+@media (max-width: 480px) {
+  .footerTop {
+    padding: 40px 16px;
   }
 
   .brandDescription {
-    font-size: 0.9rem;
-  }
-}
-
-/* Small Phones (480px) */
-@media (max-width: 480px) {
-  .footerTop {
-    padding: 40px 20px;
+    font-size: 0.87rem;
   }
 
-  .footerContainer {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .linksGrid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .divider {
-    margin: 0 20px;
-  }
-
-  .footerBottom {
-    padding: 24px 20px;
-  }
-
-  .columnTitle {
-    font-size: 0.85rem;
+  .contactItem {
+    font-size: 0.83rem;
   }
 
   .link {
-    font-size: 0.85rem;
+    font-size: 0.87rem;
   }
 
-  .logoText {
-    font-size: 1.25rem;
-  }
-
-  .brandDescription {
-    font-size: 0.85rem;
-    line-height: 1.5;
-  }
-
-  .copyright {
-    font-size: 0.8rem;
-  }
-
-  .bottomLink {
-    font-size: 0.8rem;
-  }
-
-  .socialLinks {
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .socialLink {
-    width: 38px;
-    height: 38px;
-    font-size: 1rem;
-  }
-}
-
-/* Extra Small Phones (360px) */
-@media (max-width: 360px) {
-  .footerTop {
-    padding: 30px 16px;
-  }
-
-  .footerContainer {
-    gap: 30px;
-  }
-
-  .linksGrid {
-    gap: 20px;
+  .mapWrapper {
+    height: 180px;
   }
 
   .divider {
@@ -389,28 +395,11 @@
   }
 
   .footerBottom {
-    padding: 20px 16px;
+    padding: 18px 16px;
   }
 
-  .logoText {
-    font-size: 1.15rem;
-  }
-
-  .columnTitle {
-    font-size: 0.8rem;
-  }
-
-  .link {
-    font-size: 0.8rem;
-  }
-
-  .copyright {
-    font-size: 0.75rem;
-  }
-
-  .socialLink {
-    width: 36px;
-    height: 36px;
-    font-size: 0.9rem;
+  .copyright,
+  .bottomLink {
+    font-size: 0.78rem;
   }
 }

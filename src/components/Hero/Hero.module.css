@@ -71,7 +71,7 @@
 
 /* ===== HEADING (MOBILE FIRST) ===== */
 .heading {
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -109,7 +109,7 @@
 /* ===== BUTTON (MOBILE FIRST) ===== */
 .button {
   align-self: center;
-  padding: 10px 24px;
+  padding: 14px 24px;
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -312,7 +312,7 @@
   }
 
   .heading {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.15;
   }
@@ -361,7 +361,7 @@
   }
 
   .heading {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 600;
     line-height: 1.1;
   }
@@ -380,7 +380,7 @@
   .button {
     padding: 14px 48px;
     font-size: 1rem;
-    margin-top: 4px;
+    margin-top: 12px;
   }
 }
 

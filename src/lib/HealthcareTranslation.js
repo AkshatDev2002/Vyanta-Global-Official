@@ -2,87 +2,91 @@ export const healthcareTranslations = {
   /* =========================
      ENGLISH
   ========================= */
-  en: {
-    hero: {
-      title: "Advancing Healthcare Through Trusted Data and AI Intelligence",
-      subtitle:
-        "Vyanta Global helps healthcare organizations transform how data is managed, governed, and applied across the care ecosystem. We work with payers, providers, life sciences organizations, and healthtech innovators to unlock secure, AI-ready healthcare data that improves outcomes, efficiency, and compliance.",
-    },
-    overview: {
-      title: "Solving Healthcare Data Fragmentation & Compliance Complexity",
-      description:
-        "By combining advanced data engineering, AI-driven analytics, and healthcare-grade governance, Vyanta Global enables organizations to unify fragmented data, automate compliance, and deliver trusted insights across clinical, operational, and financial workflows.",
-      cards: [
-        {
-          title: "Unified Healthcare Data Platforms",
-          text:
-            "Create a single analytics-ready foundation across EMRs, claims, pharmacy systems, and connected medical devices.",
-        },
-        {
-          title: "Interoperability & Data Exchange",
-          text:
-            "Enable FHIR-based interoperability and secure data sharing across healthcare ecosystems.",
-        },
-        {
-          title: "Healthcare-Grade Governance",
-          text:
-            "Ensure HIPAA-aligned data governance, metadata management, and lineage by design.",
-        },
-        {
-          title: "Data Quality & Validation",
-          text:
-            "Improve profiling, validation, and consistency across clinical and operational datasets.",
-        },
-        {
-          title: "Real-Time Analytics",
-          text:
-            "Deliver real-time KPI dashboards and clinical cost analytics for informed decision-making.",
-        },
-        {
-          title: "Fraud & Risk Detection",
-          text:
-            "Strengthen fraud detection using predictive and behavioral analytics.",
-        },
-      ],
-    },
-    integration: {
-      title: "Healthcare Data Integration & Interoperability Solutions",
-      items: [
-        "Integrate EMRs, claims, pharmacy, and IoT medical data for unified analytics",
-        "Enable FHIR-based interoperability and secure data exchange",
-        "Ensure HIPAA-grade data governance, metadata management, and lineage",
-        "Improve data quality, profiling, and validation across clinical systems",
-        "Support CMS interoperability rules and healthcare data sharing standards",
-        "Deliver real-time KPI dashboards and clinical cost analytics",
-        "Strengthen fraud detection using predictive and behavioral analytics",
-      ],
-    },
-    ai: {
-      title: "Data, AI & Machine Learning Solutions for Healthcare",
-      items: [
-        "Secure, scalable cloud platforms for unified patient and clinical visibility",
-        "AI/ML models for disease prediction, risk stratification, and forecasting",
-        "Modernization of legacy healthcare systems using scalable data pipelines",
-        "Automated governance, metadata lineage, and audit workflows",
-        "Seamless integration of claims, benefits, and clinical operations data",
-      ],
-    },
-    governance: {
-      title: "Governance, Security & Compliance by Design",
-      items: [
-        "HIPAA and healthcare data privacy requirements",
-        "Secure access controls and sensitive data protection",
-        "End-to-end data lineage and audit readiness",
-        "Trusted data sharing and healthcare data products",
-      ],
-    },
-    why: {
-      title: "Why Healthcare Organizations Choose Vyanta Global",
-      text:
-        "Healthcare providers and innovators partner with Vyanta Global for our deep expertise in healthcare data engineering, AI/ML systems, interoperability, and compliance-first architectures. We deliver secure, scalable, and interoperable healthcare data platforms that enable faster insights, reduced compliance risk, and future-ready foundations for AI-driven healthcare innovation.",
-    },
+ en: {
+  hero: {
+    title: "Healthcare & Life Sciences Technology Solutions",
+    subtitle:
+      "Vyanta Global helps healthcare providers, life sciences companies, and health innovators modernize digital operations across care, research, and patient engagement. We deliver secure, scalable technology solutions that improve operational efficiency, enable innovation, and support regulatory compliance across the healthcare ecosystem.",
   },
 
+  overview: {
+    title: "Solving Healthcare & Life Sciences Operational Complexity",
+    description:
+      "By combining modern digital platforms, intelligent automation, and secure technology frameworks, Vyanta Global helps organizations streamline operations, enhance collaboration, and enable better decision-making across healthcare delivery, research, and life sciences operations.",
+    cards: [
+      {
+        title: "Unified Digital Platforms",
+        text:
+          "Connect healthcare, research, and operational systems into a unified digital environment for better collaboration and efficiency.",
+      },
+      {
+        title: "Interoperability & System Connectivity",
+        text:
+          "Enable seamless communication between healthcare systems, platforms, and external partners across the care ecosystem.",
+      },
+      {
+        title: "Secure Governance Frameworks",
+        text:
+          "Implement governance frameworks that ensure operational transparency, accountability, and compliance with healthcare regulations.",
+      },
+      {
+        title: "Operational Accuracy & Validation",
+        text:
+          "Improve reliability and consistency across healthcare and life sciences workflows and operational systems.",
+      },
+      {
+        title: "Real-Time Operational Insights",
+        text:
+          "Enable leadership teams with real-time dashboards and performance visibility for informed decision-making.",
+      },
+      {
+        title: "Risk Monitoring & Prevention",
+        text:
+          "Strengthen operational oversight with intelligent monitoring systems designed to identify risks early.",
+      },
+    ],
+  },
+
+  integration: {
+    title: "Healthcare & Life Sciences System Integration Solutions",
+    items: [
+      "Integrate clinical, operational, and research systems into a connected digital ecosystem",
+      "Enable secure data exchange and interoperability across healthcare platforms",
+      "Establish governance frameworks to support compliance and operational transparency",
+      "Improve system reliability and validation across healthcare operations",
+      "Support regulatory reporting and healthcare information exchange standards",
+      "Deliver operational dashboards and performance monitoring tools",
+      "Strengthen risk monitoring and compliance oversight",
+    ],
+  },
+
+  ai: {
+    title: "AI & Digital Innovation for Healthcare and Life Sciences",
+    items: [
+      "Secure, scalable digital platforms supporting patient services and research innovation",
+      "AI-driven insights for healthcare operations, research, and predictive decision support",
+      "Modernization of legacy healthcare and life sciences systems",
+      "Automated governance, monitoring, and operational workflows",
+      "Seamless integration of clinical, research, and business systems",
+    ],
+  },
+
+  governance: {
+    title: "Governance, Security & Compliance by Design",
+    items: [
+      "Healthcare and life sciences regulatory compliance support",
+      "Secure access management and protection of sensitive information",
+      "Operational transparency and audit-ready monitoring frameworks",
+      "Trusted collaboration and secure information exchange",
+    ],
+  },
+
+  why: {
+    title: "Why Healthcare & Life Sciences Organizations Choose Vyanta Global",
+    text:
+      "Healthcare providers, research institutions, and life sciences innovators partner with Vyanta Global for our ability to deliver secure, scalable technology solutions that streamline operations, enable innovation, and support regulatory compliance. Our approach focuses on building resilient digital foundations that support better patient experiences, research outcomes, and organizational efficiency.",
+  },
+},
   /* =========================
      DUTCH
   ========================= */
