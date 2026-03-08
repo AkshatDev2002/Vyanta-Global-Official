@@ -79,18 +79,16 @@
 }
 
 /*
-  Desktop left column:
-  DOM order is  [iconCircle] [serviceLabel]
-  row-reverse renders as: label ←← icon  (icon on right, label on left)
-  justify-content: flex-end pushes the pair to the right edge
+  Desktop left:  DOM = [label][icon]  → justify flex-end pushes pair to the right
+  Desktop right: DOM = [icon][label]  → justify flex-start keeps pair on the left
+  Both use flex-direction: row — no reversal tricks needed.
 */
 .left {
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: flex-end;
   text-align: right;
 }
 
-/* Desktop right column: icon left, label right — natural DOM order */
 .right {
   flex-direction: row;
   justify-content: flex-start;
@@ -214,7 +212,6 @@
 
 /* ============================================================
    RESPONSIVE — Grid (Tablet ≤1024px)
-   Slideshow full width top, two columns below
    ============================================================ */
 @media (max-width: 1024px) {
   .servicesGrid {
@@ -234,9 +231,10 @@
 
 /* ============================================================
    RESPONSIVE — Mobile (≤640px)
-   Single column stack, ALL items: icon LEFT, label RIGHT
-   Since DOM order is always [iconCircle][serviceLabel],
-   row + flex-start gives icon-left on both columns naturally.
+   Single column, ALL items: icon LEFT, label RIGHT.
+
+   Left column DOM = [label][icon]
+   We use CSS order to flip them: icon gets order:-1 to appear first.
    ============================================================ */
 @media (max-width: 640px) {
   .servicesGrid {
@@ -249,23 +247,20 @@
   .leftColumn         { grid-column: 1; grid-row: 2; }
   .rightColumn        { grid-column: 1; grid-row: 3; }
 
-  /* Override row-reverse — icon always on the left */
+  /* Both columns: left-aligned */
   .left,
   .right {
-    flex-direction: row !important;
-    justify-content: flex-start !important;
-    text-align: left !important;
-  }
-
-  .serviceLabel {
-    max-width: none;
+    justify-content: flex-start;
     text-align: left;
   }
 
-  .iconCircle {
-    width: 48px;
-    height: 48px;
-  }
+  /* Left items: icon comes after label in DOM,
+     pull it to the front with order */
+  .left .iconCircle  { order: -1; }
+  .left .serviceLabel { order: 1; }
+
+  .serviceLabel { max-width: none; }
+  .iconCircle   { width: 48px; height: 48px; }
 
   .slideshowContainer { width: 180px; }
   .slideshowStage     { width: 160px; height: 160px; }

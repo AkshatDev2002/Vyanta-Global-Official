@@ -143,16 +143,16 @@ const DigitalMarketingIcon = () => (
 );
 
 const leftServices = [
-  { label: "Big Data Solutions",                            href: "/services/bigdata", Icon: BigDataIcon          },
-  { label: "Data Integration / Data Governance Solutions",  href: "/services/data",    Icon: DataIntegrationIcon  },
-  { label: "Cyber Security Solutions",                      href: "/services/cyber",   Icon: CyberIcon            },
-  { label: "Artificial Intelligence Solutions",             href: "/services/ai",      Icon: AiIcon               },
+  { label: "Big Data Solutions",                           href: "/services/bigdata", Icon: BigDataIcon         },
+  { label: "Data Integration / Data Governance Solutions", href: "/services/data",    Icon: DataIntegrationIcon },
+  { label: "Cyber Security Solutions",                     href: "/services/cyber",   Icon: CyberIcon           },
+  { label: "Artificial Intelligence Solutions",            href: "/services/ai",      Icon: AiIcon              },
 ];
 const rightServices = [
-  { label: "Mobile Application Development",        href: "/services/mobile",  Icon: MobileIcon           },
-  { label: "Custom Development",                    href: "/services/custom",  Icon: WebIcon              },
-  { label: "Supply Chain and Logistics Solutions",  href: "/services/supply",  Icon: SupplyChainIcon      },
-  { label: "Digital Marketing",                     href: "/services/digital", Icon: DigitalMarketingIcon },
+  { label: "Mobile Application Development",       href: "/services/mobile",  Icon: MobileIcon           },
+  { label: "Custom Development",                   href: "/services/custom",  Icon: WebIcon              },
+  { label: "Supply Chain and Logistics Solutions", href: "/services/supply",  Icon: SupplyChainIcon      },
+  { label: "Digital Marketing",                    href: "/services/digital", Icon: DigitalMarketingIcon },
 ];
 
 const containerVariants = {
@@ -163,17 +163,26 @@ const itemVariantsLeft  = { hidden: { opacity: 0, x: -24 }, visible: { opacity: 
 const itemVariantsRight = { hidden: { opacity: 0, x:  24 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } } };
 
 /*
-  IMPORTANT — DOM order is always: <iconCircle> then <serviceLabel>
-  Desktop left  (.left):  flex-direction: row-reverse  → visually: label … icon
-  Desktop right (.right): flex-direction: row          → visually: icon … label
-  Mobile both:            flex-direction: row          → visually: icon … label  ✓
+  DOM order is CONDITIONAL based on align:
+  - align="left"  desktop: label first, then icon  → text … icon  (mirrored layout)
+  - align="right" desktop: icon first, then label  → icon … text  (normal layout)
+  On mobile both are overridden to icon-left via CSS order property.
 */
 function ServiceItem({ label, href, Icon, align }) {
   return (
     <motion.div variants={align === "left" ? itemVariantsLeft : itemVariantsRight} whileHover={{ scale: 1.04 }}>
       <Link href={href} className={`${styles.serviceItem} ${styles[align]}`}>
-        <span className={styles.iconCircle}><Icon /></span>
-        <span className={styles.serviceLabel}>{label}</span>
+        {align === "left" ? (
+          <>
+            <span className={styles.serviceLabel}>{label}</span>
+            <span className={styles.iconCircle}><Icon /></span>
+          </>
+        ) : (
+          <>
+            <span className={styles.iconCircle}><Icon /></span>
+            <span className={styles.serviceLabel}>{label}</span>
+          </>
+        )}
       </Link>
     </motion.div>
   );
@@ -215,12 +224,10 @@ export default function Services() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        {/* Left column */}
         <motion.div className={styles.leftColumn} variants={containerVariants} initial="hidden" animate="visible">
           {leftServices.map((svc) => <ServiceItem key={svc.href} {...svc} align="left" />)}
         </motion.div>
 
-        {/* Center — Lottie Slideshow */}
         <motion.div
           className={styles.centerIllustration}
           initial={{ opacity: 0, scale: 0.85 }}
@@ -230,7 +237,6 @@ export default function Services() {
           <LottieSlideshow />
         </motion.div>
 
-        {/* Right column */}
         <motion.div className={styles.rightColumn} variants={containerVariants} initial="hidden" animate="visible">
           {rightServices.map((svc) => <ServiceItem key={svc.href} {...svc} align="right" />)}
         </motion.div>
