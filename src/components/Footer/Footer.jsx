@@ -7,23 +7,33 @@ import styles from "./Footer.module.css";
 import FooterLogo from "./FooterLogo";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
-const OFFICE_ADDRESS = "707C, Jaina Tower-2 Janakpuri, New Delhi";
 const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=707C+Jaina+Tower+2+Janakpuri+New+Delhi";
 
+const OFFICES = [
+  {
+    country: "India",
+    address: "707C, Jaina Tower-2, Janakpuri, New Delhi",
+  },
+  {
+    country: "Bahrain",
+    address:
+      "Office 22, Entrance 266, Road 1204, Block 712 Ramli, Block 721, Kingdom of Bahrain",
+  },
+];
+
 const quickLinks = [
-  { label: "Who We Are",        href: "/about" },
-  { label: "What We Do",        href: "/services" },
+  { label: "Who We Are",         href: "/about"    },
+  { label: "What We Do",         href: "/services" },
   { label: "Industries Covered", href: "/industry" },
-  { label: "Careers",           href: "/careers" },
-  { label: "Contact",           href: "/contact" },
+  { label: "Careers",            href: "/careers"  },
+  { label: "Contact",            href: "/contact"  },
 ];
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden:  { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
-
 
 export default function Footer() {
   const [mounted, setMounted] = useState(false);
@@ -50,15 +60,31 @@ export default function Footer() {
               <FooterLogo />
             </a>
             <p className={styles.logoSubtext}>
-              Transforming complex challenges into opportunities
+              Transforming Data Into Competitive Advantage
             </p>
-            
+            <p className={styles.brandDescription}>
+              Enterprise data solutions that empower organizations to unlock
+              insights, accelerate growth, and drive digital transformation.
+            </p>
 
             <div className={styles.contactBlock}>
-              <div className={styles.contactItem}>
-                <FaMapMarkerAlt />
-                <span>{OFFICE_ADDRESS}</span>
-              </div>
+
+              {/* Office Addresses */}
+              <p className={styles.officeTitle}>Office Addresses</p>
+              {OFFICES.map((office) => (
+                <div key={office.country} className={styles.contactItem}>
+                  <FaMapMarkerAlt />
+                  <span>
+                    <span className={styles.officeCountry}>{office.country}</span>
+                    <br />
+                    {office.address}
+                  </span>
+                </div>
+              ))}
+
+              {/* Divider between addresses and contact info */}
+              <div className={styles.contactDivider} />
+
               <div className={styles.contactItem}>
                 <FaPhoneAlt />
                 <span>+91 9716800903</span>
@@ -90,7 +116,7 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* RIGHT — Embedded Map */}
+          {/* RIGHT — Embedded Map (Delhi office only) */}
           <motion.div
             className={styles.mapSection}
             variants={itemVariants}
@@ -108,7 +134,7 @@ export default function Footer() {
             >
               <div className={styles.mapWrapper}>
                 <iframe
-                  title="Vyanta Global Office"
+                  title="Vyanta Global Office — New Delhi"
                   src="https://maps.google.com/maps?q=707C+Jaina+Tower+2+Janakpuri+New+Delhi&output=embed&z=15"
                   width="100%"
                   height="100%"
@@ -123,7 +149,7 @@ export default function Footer() {
                 </div>
               </div>
             </a>
-            <p className={styles.mapAddress}>{OFFICE_ADDRESS}</p>
+            <p className={styles.mapAddress}>707C, Jaina Tower-2, Janakpuri, New Delhi</p>
           </motion.div>
 
         </div>
@@ -147,11 +173,11 @@ export default function Footer() {
             Reserved.
           </p>
           <div className={styles.bottomLinks}>
-            <a href="/legal/terms" className={styles.bottomLink}>Terms</a>
+            <a href="/legal/terms"    className={styles.bottomLink}>Terms</a>
             <span className={styles.separator}>•</span>
-            <a href="/legal/privacy" className={styles.bottomLink}>Privacy</a>
+            <a href="/legal/privacy"  className={styles.bottomLink}>Privacy</a>
             <span className={styles.separator}>•</span>
-            <a href="/legal/cookies" className={styles.bottomLink}>Cookies</a>
+            <a href="/legal/cookies"  className={styles.bottomLink}>Cookies</a>
           </div>
         </div>
       </motion.div>
