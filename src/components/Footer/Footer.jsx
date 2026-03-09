@@ -59,12 +59,9 @@ export default function Footer() {
             <a href="/" className={styles.logoWrapper}>
               <FooterLogo />
             </a>
-            <p className={styles.logoSubtext}>
-              Transforming Data Into Competitive Advantage
-            </p>
+          
             <p className={styles.brandDescription}>
-              Enterprise data solutions that empower organizations to unlock
-              insights, accelerate growth, and drive digital transformation.
+              Transforming complex challenges into opportunities.
             </p>
 
             <div className={styles.contactBlock}>
