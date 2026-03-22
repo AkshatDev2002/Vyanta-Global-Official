@@ -251,7 +251,7 @@
 /* ── Scroll hint ── */
 .scrollHint {
   position: absolute;
-  bottom: 36px;
+  bottom: 10px;
   left: 72px;
   z-index: 20;
   display: flex;
