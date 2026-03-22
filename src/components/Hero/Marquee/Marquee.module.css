@@ -1,17 +1,22 @@
 /*
   Animation translates by exactly --set-width px (set from JS).
-  This guarantees the snap-back is pixel-perfect:
-  when set 1 exits, set 2 is in exactly the same position set 1 started — seamless.
+  Guarantees pixel-perfect snap-back: when set 1 exits, set 2 is
+  in exactly the same position set 1 started — seamless.
 */
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(calc(-1 * var(--set-width, 50%))); }
 }
 
+/* ── Marquee band ──
+   Two usage contexts:
+   1. Hero page  — .heroContext modifier keeps the old absolute/negative-margin trick
+   2. Standalone (above Footer) — default is normal flow, no gap
+*/
 .footer {
-  position: absolute;
+  position: relative;        /* in-flow: sits flush above whatever is below it */
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100px;
   border-radius: 5rem 5rem 0 0;
   box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.08);
@@ -23,8 +28,8 @@
   transition: all 1000ms cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 700ms;
   margin: 0;
-  margin-top: 525px;
   padding: 0;
+  display: block;            /* ensures no inline gap below */
 }
 
 .footer.footerVisible {
@@ -32,6 +37,16 @@
   transform: translateY(0);
 }
 
+/* ── Hero-specific override ──
+   Add className={`${styles.footer} ${styles.heroContext}`} on the Hero page
+   to restore the old pull-up behaviour there without affecting the footer. */
+.heroContext {
+  position: absolute;
+  margin-top: -95px;
+  width: 100vw;
+}
+
+/* ── Inner container ── */
 .container {
   position: relative;
   display: flex;
@@ -63,7 +78,7 @@
   background: linear-gradient(to left, rgb(245, 245, 245), transparent);
 }
 
-/* The outer track — animates as one unit */
+/* ── Scrolling track ── */
 .marqueeTrack {
   display: flex;
   flex-direction: row;
@@ -74,7 +89,7 @@
   will-change: transform;
 }
 
-/* Each set is a flex row of logo cells — two sets sit side by side */
+/* Two identical logo sets sit side-by-side */
 .logoSet {
   display: flex;
   flex-direction: row;
@@ -111,6 +126,7 @@
   cursor: pointer;
 }
 
+/* ── Accessibility ── */
 @media (pointer: coarse) {
   .logoCell:active .logo { transform: none; }
 }
@@ -120,14 +136,15 @@
   .logo         { transform: none !important; }
 }
 
+/* ── Responsive ── */
 @media (max-width: 768px) {
-  .footer   { height: 80px; }
+  .footer   { height: 80px; border-radius: 2.5rem 2.5rem 0 0; }
   .logoCell { width: 120px; padding: 0 14px; }
   .logo     { height: 44px; }
 }
 
 @media (max-width: 480px) {
-  .footer   { height: 70px; }
+  .footer   { height: 70px; border-radius: 1.5rem 1.5rem 0 0; }
   .logoCell { width: 100px; padding: 0 10px; }
   .logo     { height: 36px; }
 }

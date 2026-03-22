@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import styles from "./Footer.module.css";
 import FooterLogo from "./FooterLogo";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import Marquee from "@/components/Hero/Marquee/Marquee";
 
 const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=707C+Jaina+Tower+2+Janakpuri+New+Delhi";
@@ -43,7 +44,9 @@ export default function Footer() {
   if (!mounted) return null;
 
   return (
-    <footer className={styles.footer}>
+    <>
+      <Marquee />
+      <footer className={styles.footer}>
       {/* ── TOP ── */}
       <div className={styles.footerTop}>
         <div className={styles.footerContainer}>
@@ -59,9 +62,12 @@ export default function Footer() {
             <a href="/" className={styles.logoWrapper}>
               <FooterLogo />
             </a>
-          
+            <p className={styles.logoSubtext}>
+              Transforming Data Into Competitive Advantage
+            </p>
             <p className={styles.brandDescription}>
-              Transforming complex challenges into opportunities.
+              Enterprise data solutions that empower organizations to unlock
+              insights, accelerate growth, and drive digital transformation.
             </p>
 
             <div className={styles.contactBlock}>
@@ -179,5 +185,6 @@ export default function Footer() {
         </div>
       </motion.div>
     </footer>
+    </>
   );
 }

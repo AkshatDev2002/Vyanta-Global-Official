@@ -1,429 +1,341 @@
-/* ===== HERO CONTAINER (MOBILE FIRST) ===== */
-.heroContainer {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  
-  /* Proper spacing: navbar (60px) + buffer (20px) */
-  padding-top: 40px;
-  padding-bottom: 20px;
+/* ============================================================
+   Hero.module.css — Full-viewport premium carousel
+   ============================================================ */
+
+/* ── Section shell ──
+   Full-bleed breakout: escapes any parent padding/max-width.
+   Uses 100vw + negative margins to guarantee edge-to-edge coverage.
+── */
+.hero {
+  position: relative;
+  /* Break out of parent container constraints */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  height: 100vh;
+  min-height: 560px;
+  overflow: hidden;
+  background: #080808;
+  cursor: pointer;
 }
 
-/* ===== CONTENT (MOBILE FIRST - CENTERED) ===== */
-.content {
+/* ── Each slide — fills the shell ── */
+.slide {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 100%;
-  padding: 0 16px;
-  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;        /* text anchored to bottom-left */
+  outline: none;
+}
+
+/* ── Banner image wrapper ── */
+.imageWrap {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+/* next/image fill child */
+.image {
+  object-fit: cover;
+  object-position: center;
+  /* Subtle Ken Burns on the image itself */
+  animation: kenBurns 8s ease-out forwards;
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1.00); }
+}
+
+/* ── Dark overlays ── */
+/* Base: bottom-heavy gradient for text legibility */
+.overlayBase {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.82) 0%,
+    rgba(0,0,0,0.45) 40%,
+    rgba(0,0,0,0.10) 70%,
+    rgba(0,0,0,0.05) 100%
+  );
+  pointer-events: none;
+}
+
+/* Vignette: darkens edges for cinematic feel */
+.overlayVignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 40%,
+    rgba(0,0,0,0.5) 100%
+  );
+  pointer-events: none;
+}
+
+/* ── Text block ── */
+.textBlock {
+  position: relative;
+  z-index: 10;
+  padding: 0 72px 96px;
+  max-width: 780px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin: 0 auto;
-  margin-top: -150px;
-  align-items: center;
-  justify-content: center;
+  gap: 14px;
 }
 
-/* ===== BADGE (MOBILE FIRST - SINGLE LINE) ===== */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  font-family: "Share Tech", sans-serif;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-}
-
-.badgeText {
-  color: rgb(70, 70, 70);
-}
-
-.animatedWordBadge {
-  color: rgb(0, 255, 156);
+/* Small tag above headline */
+.slideTag {
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 2px 6px;
-  border-radius: 4px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgb(0, 255, 156);
   font-family: "Share Tech", sans-serif;
+}
 
-  /* 🔒 CRITICAL FIX */
+.slideHeadline {
+  font-size: clamp(1.9rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Share Tech", sans-serif;
+  letter-spacing: -0.02em;
+  /* Soft text shadow for readability on any image */
+  text-shadow: 0 2px 24px rgba(0,0,0,0.4);
+}
+
+.slideSub {
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  font-weight: 400;
+  color: rgba(255,255,255,0.72);
+  margin: 0;
+  line-height: 1.55;
+  font-family: "Nunito Sans", sans-serif;
+  max-width: 520px;
+}
+
+/* CTA pill */
+.slideCta {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-
-  /* Set width based on longest word */
-  min-width: 12ch;   /* adjust if your longest word is bigger */
-  text-align: center;
-
-  backdrop-filter: blur(16px);
-  background: rgb(70, 70, 70);
-  flex-shrink: 0;
-}
-
-
-/* ===== HEADING (MOBILE FIRST) ===== */
-.heading {
-  font-size: 1.25rem;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  color: rgb(70, 70, 70);
-  margin: 0;
-  max-width: 100%;
-  font-family: "Share Tech", sans-serif;
-  word-wrap: break-word;
-}
-
-/* ===== SUBHEADING (MOBILE FIRST) ===== */
-.subheading {
-  font-size: 1rem;
-  font-weight: 500;
-  color: rgb(100, 100, 100);
-  margin: 8px 0 0 0;
-  line-height: 1.4;
-  max-width: 100%;
-  font-family: "Nunito Sans", sans-serif;
-}
-
-/* ===== DESCRIPTION (MOBILE FIRST) ===== */
-.description {
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: rgb(120, 120, 120);
-  margin: 8px 0 0 0;
-  line-height: 1.5;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "Nunito Sans", sans-serif;
-}
-
-/* ===== BUTTON (MOBILE FIRST) ===== */
-.button {
-  align-self: center;
-  padding: 14px 24px;
-  font-size: 0.875rem;
+  gap: 8px;
+  margin-top: 6px;
+  padding: 10px 22px;
+  border: 1.5px solid rgba(0, 255, 156, 0.7);
+  border-radius: 4px;
+  color: rgb(0, 255, 156);
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  border: 2px solid rgb(0, 255, 156);
-  background:transparent;
-  color: rgb(100, 100, 100);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   font-family: "Share Tech", sans-serif;
+  width: fit-content;
+  background: rgba(0, 255, 156, 0.06);
+  backdrop-filter: blur(8px);
+  transition: background 280ms ease, color 280ms ease, border-color 280ms ease;
+  cursor: pointer;
 }
 
-.button:hover {
-  background-color: rgb(0, 255, 156);
-  color: rgb(20, 20, 20);
-  box-shadow: 0 8px 32px rgba(0, 255, 156, 0.4);
+.slideCta:hover,
+.slide:hover .slideCta {
+  background: rgba(0, 255, 156, 0.18);
+  border-color: rgb(0, 255, 156);
 }
 
-
-
-/* ===== WORD CYCLE CONTAINER (HIDDEN) ===== */
-.wordCycleContainer {
+/* ── Arrow buttons ── */
+.arrow {
   position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  color: rgba(255,255,255,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 220ms ease, border-color 220ms ease, transform 220ms ease;
 }
 
-.cycleWord {
-  display: none;
+.arrow:hover {
+  background: rgba(0, 255, 156, 0.2);
+  border-color: rgba(0, 255, 156, 0.6);
+  color: rgb(0, 255, 156);
+  transform: translateY(-50%) scale(1.08);
 }
 
-/* =========================================================
-   SMALL MOBILE (320px - 480px)
-========================================================= */
-@media (min-width: 320px) and (max-width: 480px) {
-  .heroContainer {
-    min-height: calc(100vh - 60px);
-    padding-top: 60px;
-    padding-bottom: 32px;
-  }
+.arrowLeft  { left: 28px;  }
+.arrowRight { right: 28px; }
 
-  .content {
-    padding: 0 12px;
-    gap: 14px;
-  }
-
-  .badge {
-    font-size: 0.8rem;
-    gap: 6px;
-  }
-
-  .animatedWordBadge {
-    padding: 2px 5px;
-  }
-
-  .heading {
-    font-size: 1.35rem;
-    font-weight: 600;
-    line-height: 1.15;
-  }
-
-  .subheading {
-    font-size: 0.9rem;
-    margin-top: 6px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-    margin-top: 6px;
-    line-height: 1.4;
-  }
-
-  .button {
-    padding: 9px 20px;
-    font-size: 0.8rem;
-    margin-top: 4px;
-  }
+/* ── Bottom controls bar ── */
+.controls {
+  position: absolute;
+  bottom: 36px;
+  right: 72px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-/* =========================================================
-   MOBILE (481px - 640px)
-========================================================= */
-@media (min-width: 481px) and (max-width: 640px) {
-  .heroContainer {
-    min-height: calc(100vh - 60px);
-    padding-top: 70px;
-    padding-bottom: 36px;
-  }
-
-  .content {
-    padding: 0 16px;
-    gap: 15px;
-  }
-
-  .badge {
-    font-size: 0.9rem;
-    gap: 8px;
-  }
-
-  .animatedWordBadge {
-    padding: 2px 6px;
-  }
-
-  .heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  .subheading {
-    font-size: 0.95rem;
-    margin-top: 8px;
-  }
-
-  .description {
-    font-size: 0.875rem;
-    margin-top: 8px;
-    line-height: 1.5;
-  }
-
-  .button {
-    padding: 10px 24px;
-    font-size: 0.875rem;
-    margin-top: 4px;
-  }
+/* Slide counter */
+.counter {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Share Tech", sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 1;
 }
 
-/* =========================================================
-   TABLET (641px - 1024px)
-========================================================= */
-@media (min-width: 641px) and (max-width: 1024px) {
-  .heroContainer {
-    min-height: 100vh;
-    padding-top: 100px;
-    padding-bottom: 48px;
+.counterTotal {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.4);
+  margin-left: 4px;
+}
+
+/* Thin progress bar */
+.progressBar {
+  width: 80px;
+  height: 2px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: rgb(0, 255, 156);
+  border-radius: 2px;
+  transition: width 80ms linear;
+}
+
+/* Dot indicators */
+.dots {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.28);
+  cursor: pointer;
+  padding: 0;
+  transition: background 280ms ease, transform 280ms ease, width 280ms ease;
+}
+
+.dotActive {
+  background: rgb(0, 255, 156);
+  transform: scale(1.35);
+  width: 18px;
+  border-radius: 3px;
+}
+
+/* ── Scroll hint ── */
+.scrollHint {
+  position: absolute;
+  bottom: 6px;
+  left: 72px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 220ms ease;
+}
+
+.scrollHint:hover { opacity: 1; }
+
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.15); }
+}
+
+.scrollHint span {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  font-family: "Share Tech", sans-serif;
+  writing-mode: vertical-lr;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .textBlock {
+    padding: 0 48px 80px;
+    max-width: 680px;
   }
 
-  .content {
-    padding: 0 32px;
-    gap: 20px;
-  }
+  .controls  { right: 48px; bottom: 28px; }
+  .scrollHint { left: 48px; bottom: 28px; }
+  .arrowLeft  { left: 18px; }
+  .arrowRight { right: 18px; }
+}
 
-  .badge {
-    font-size: 1.2rem;
+/* Large mobile */
+@media (max-width: 768px) {
+  .hero { min-height: 500px; }
+
+  .textBlock {
+    padding: 0 24px 72px;
+    max-width: 100%;
     gap: 10px;
   }
 
-  .animatedWordBadge {
-    padding: 2px 8px;
-  }
+  .slideHeadline { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+  .slideSub      { font-size: 0.9rem; max-width: 100%; }
+  .slideCta      { font-size: 0.75rem; padding: 9px 18px; }
 
-  .heading {
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 1.15;
-  }
+  /* Hide arrows on touch — use swipe */
+  .arrow { display: none; }
 
-  .subheading {
-    font-size: 1.1rem;
-    margin-top: 12px;
-  }
-
-  .description {
-    font-size: 1rem;
-    margin-top: 12px;
-    line-height: 1.6;
-  }
-
-  .button {
-    padding: 12px 36px;
-    font-size: 0.95rem;
-    margin-top: 8px;
-  }
+  .controls   { right: 24px; bottom: 20px; gap: 14px; }
+  .scrollHint { left: 24px;  bottom: 20px; }
+  .progressBar { width: 56px; }
 }
 
-/* =========================================================
-   DESKTOP (1025px - 1399px)
-========================================================= */
-@media (min-width: 1025px) and (max-width: 1399px) {
-  .heroContainer {
-    min-height: 100vh;
-    padding-top: 120px;
-    padding-bottom: 60px;
-    margin-top: -100px;
-  }
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero { min-height: 460px; }
 
-  .content {
-    padding: 0 48px;
-    gap: 24px;
-  }
+  .textBlock  { padding: 0 18px 64px; }
+  .slideTag   { font-size: 0.65rem; letter-spacing: 0.18em; }
+  .slideSub   { display: none; }  /* clean up clutter on small screens */
+  .scrollHint { display: none; }
 
-  .badge {
-    font-size: 1.3rem;
-    gap: 12px;
-  }
-
-  .animatedWordBadge {
-    padding: 2px 8px;
-  }
-
-  .heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.15;
-  }
-
-  .subheading {
-    font-size: 1.2rem;
-    margin-top: 16px;
-  }
-
-  .description {
-    font-size: 1.1rem;
-    margin-top: 16px;
-    line-height: 1.6;
-  }
-
-  .button {
-    padding: 12px 40px;
-    font-size: 1rem;
-    margin-top: 8px;
-  }
+  .controls   { right: 18px; bottom: 16px; gap: 10px; }
+  .counter    { font-size: 0.9rem; }
+  .progressBar { width: 40px; }
 }
 
-/* =========================================================
-   LARGE DESKTOP (1400px and above)
-========================================================= */
-@media (min-width: 1400px) {
-  .heroContainer {
-    min-height: 100vh;
-    padding-top: 120px;
-    padding-bottom: 60px;
-    margin-top: -100px;
-  }
-
-  .content {
-    padding: 0 60px;
-    gap: 24px;
-  }
-
-  .badge {
-    font-size: 1.5rem;
-    gap: 12px;
-  }
-
-  .animatedWordBadge {
-    padding: 2px 8px;
-  }
-
-  .heading {
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 1.1;
-  }
-
-  .subheading {
-    font-size: 1.2rem;
-    margin-top: 24px;
-  }
-
-  .description {
-    font-size: 1.125rem;
-    margin-top: 16px;
-    line-height: 1.6;
-  }
-
-  .button {
-    padding: 14px 48px;
-    font-size: 1rem;
-    margin-top: 12px;
-  }
-}
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
+/* ── Accessibility ── */
 @media (prefers-reduced-motion: reduce) {
-  .content,
-  .badge,
-  .heading,
-  .subheading,
-  .description,
-  .button {
-    animation: none;
-    transition: none;
-  }
-}
-
-/* =========================================================
-   LANDSCAPE MOBILE (SHORT HEIGHT)
-========================================================= */
-@media (max-height: 600px) {
-  .heroContainer {
-    min-height: auto;
-    padding-top: 70px;
-    padding-bottom: 20px;
-  }
-
-  .content {
-    gap: 12px;
-  }
-
-  .heading {
-    font-size: 1.4rem;
-  }
-
-  .subheading {
-    font-size: 0.9rem;
-    margin-top: 4px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-    margin-top: 4px;
-  }
+  .image        { animation: none; }
+  .scrollLine   { animation: none; }
+  .progressFill { transition: none; }
 }
