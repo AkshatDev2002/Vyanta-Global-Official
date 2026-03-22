@@ -8,6 +8,7 @@
 ── */
 .hero {
   position: relative;
+  z-index: 1; /* explicitly low — never competes with nav z-index: 9999 */
   /* Break out of parent container constraints */
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -90,8 +91,7 @@
 
 /* Small tag above headline */
 .slideTag {
-  font-size: 1rem;
-  margin-left: 15px;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -251,7 +251,7 @@
 /* ── Scroll hint ── */
 .scrollHint {
   position: absolute;
-  bottom: 6px;
+  bottom: 36px;
   left: 72px;
   z-index: 20;
   display: flex;
@@ -265,6 +265,12 @@
 
 .scrollHint:hover { opacity: 1; }
 
+.scrollLine {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.7));
+  animation: scrollPulse 2s ease-in-out infinite;
+}
 
 @keyframes scrollPulse {
   0%, 100% { opacity: 0.4; transform: scaleY(1); }
