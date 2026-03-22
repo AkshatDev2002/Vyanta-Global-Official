@@ -306,7 +306,7 @@
   backdrop-filter: blur(48px);
   -webkit-backdrop-filter: blur(48px);
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Header row: logo left, [lang + burger] right — no overflow */
