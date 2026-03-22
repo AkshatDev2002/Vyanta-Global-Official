@@ -37,7 +37,7 @@ const SLIDES = [
   },
   {
     id: 5,
-    src: "/hero/hero5.jpg",
+    src: "/hero/mobile.jpg",
     headline: "Mobile & Web Development",
     sub: "High-performance apps and websites engineered for scale, speed, and user experience",
     href: "/services/mobile",
